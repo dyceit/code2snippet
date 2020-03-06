@@ -1,15 +1,15 @@
 var fs = require("fs");
 
-var vueFile = '/Users/dyce/futong/joinf-dbutils/frontend/.vscode/code2snippet/code2snippet.vue';
-var snippetFile = '/Users/dyce/futong/joinf-dbutils/frontend/.vscode/code2snippet/code2snippet.snippet';
+var vueFile = 'code2snippet.vue';
+var snippetFile = 'code2snippet.snippet';
 var data = fs.readFileSync(vueFile);
 var str = toSnippet(data)
 
-var result = `"aa_vue_template_script_style__file": {
-"prefix": "aa_vue_template_script_style__file",
+var result = `"aa_vue__file": {
+"prefix": "aa_vue__file",
 "body": [${str}
 ],
-"description": ""
+"description": "命名格式：aa_vue__file、aa_vue_props__js、aa_vue_props_object__js像这样分组和子片段"
 },
 `
 
