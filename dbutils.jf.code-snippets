@@ -16,6 +16,13 @@
 	// 	"description": "Log output to console"
 	// }
 	// 提示：使用 https://c.runoob.com/front-end/846 快速 html 转 js 字符串。
+	"dbutils.jf.code-snippet": {
+		"prefix": "dbutils.jf.code-snippet",
+		"body": [
+			""
+		],
+		"description": "业务管理系统组件片段"
+	},
 	"jf-container__js_import": {
 		"prefix": "jf-container__js_import",
 		"body": [
@@ -193,6 +200,20 @@
 			"console.log('close-dialog:', err)",
 			"})",
 			"}"
+		],
+		"description": ""
+	},
+	"jf-input-file__html": {
+		"prefix": "jf-input-file__html",
+		"body": [
+			"<jf-input-file v-model=\"${1:ruleForm.file}\" label=\"选择导入文件\" @input=\"$$refs['ruleForm'].validateField('file')\" />"
+		],
+		"description": ""
+	},
+	"jf-input-file__js_import": {
+		"prefix": "jf-input-file__js_import",
+		"body": [
+			"import JfInputFile from '@/components/JfInputFile'"
 		],
 		"description": ""
 	}

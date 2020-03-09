@@ -17,6 +17,13 @@
 	// }
 	// 提示：使用代码片段生成工具 https://gitee.com/dyceit/code2snippet 快速生成片段
 	// debugger
+	"aa.debugger.code-snippet": {
+		"prefix": "aa.debugger.code-snippet",
+		"body": [
+			""
+		],
+		"description": "测试打印数据"
+	},
 	"aa_log__js": {
 		"prefix": "aa_log__js",
 		"body": [

@@ -16,6 +16,13 @@
 	// 	"description": "Log output to console"
 	// }
 	// 提示：使用 https://c.runoob.com/front-end/846 快速 html 转 js 字符串。
+	"dbutils.request.jf.code-snippet": {
+		"prefix": "dbutils.request.jf.code-snippet",
+		"body": [
+			""
+		],
+		"description": "业务管理系统接口请求片段"
+	},
 	"aa_request_async_await__js": {
 		"prefix": "aa_request_async_await__js",
 		"body": [

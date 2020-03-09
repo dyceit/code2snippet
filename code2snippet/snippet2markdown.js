@@ -12,12 +12,16 @@ function init() {
   // console.log('fileList', fileList)
   fileList.forEach((file, index) => {
     if (file.match('vue-element-admin')) return
-    snippetList.push("\n## " + file.replace(/\.\/\.\.\//, '') + "\n")
-    snippetList.push("片段 | 描述")
-    snippetList.push("---|---")
     var obj = getJson(file)
-    Object.keys(obj).forEach((key) => {
-      snippetList.push(obj[key].prefix + ' | ' + obj[key].description)
+    Object.keys(obj).forEach((key, index) => {
+      if (index === 0) {
+        snippetList.push("\n## " + obj[key].description + "\n")
+        snippetList.push(obj[key].prefix + "\n")
+        snippetList.push("片段 | 描述")
+        snippetList.push("---|---")
+      } else {
+        snippetList.push(obj[key].prefix + ' | ' + obj[key].description)
+      }
     })
   })
 
