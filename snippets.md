@@ -1,4 +1,13 @@
 
+## 注释片段
+ 
+ aa.comment.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_comment_author__js | 注释-作者 
+ aa_comment_time__js | 注释-时间 
+ 
 ## 测试打印数据
  
  aa.debugger.code-snippet
@@ -62,6 +71,14 @@
  aa_vue_lifecycle_example__js | vue生命周期-示例 
  aa_vue_methods__js | vue方法 
  aa_vue_nextTick__js | aa_vue_nextTick__js 
+ 
+## api请求片段
+ 
+ dbutils.api.jf.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_api__file | api请求-示例 
  
 ## 业务管理系统常用片段
  

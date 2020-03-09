@@ -1,15 +1,116 @@
-<template>
-  <div class="container">
-  <!-- The template root requires exactly one element -->
-  </div>
-</template>
+import request from '@/utils/request'
+import { erpType } from './config'
 
-<script>
-export default {
-name: '$TM_FILENAME_BASE'
+/**
+* 添加${3:用户}信息
+* @author ${4:戴思阳 <dyceit@qq.com>}
+* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME
+* @param {Object} data 参数
+*/
+export function add${1:User}(data) {
+  return request({
+    url: erpType + '/${2:user}/add',
+    method: 'post',
+    data
+  })
 }
-</script>
 
-<style lang="scss" scoped>
+/**
+* 修改${3:用户}信息
+* @author ${4:戴思阳 <dyceit@qq.com>}
+* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME
+* @param {Object} data 参数
+*/
+export function update${1:User}(data) {
+  return request({
+    url: erpType + '/${2:user}/update',
+    method: 'post',
+    data
+  })
+}
 
-</style>
+/**
+* 删除${3:用户}信息
+* @author ${4:戴思阳 <dyceit@qq.com>}
+* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME
+* @param {Number} id ${3:用户}ID
+*/
+export function delete${1:User}(id) {
+  return request({
+    url: erpType + '/${2:user}/delete/' + id,
+    method: 'get'
+  })
+}
+
+/**
+* 获取${3:用户}列表
+* @author ${4:戴思阳 <dyceit@qq.com>}
+* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME
+* @param {Object} data 参数
+*/
+export function get${1:User}List(data) {
+  return request({
+    url: erpType + '/${2:user}/list',
+    method: 'post',
+    data
+  })
+}
+
+/**
+* 获取${3:用户}详情
+* @author ${4:戴思阳 <dyceit@qq.com>}
+* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME
+* @param {Object} data 参数
+* @param {Number} data.id ${3:用户}ID
+*/
+export function get${1:User}Detail(data) {
+  return request({
+    url: erpType + '/${2:user}/detail',
+    method: 'post',
+    data
+  })
+}
+
+/**
+* 复制${3:用户}信息
+* @author ${4:戴思阳 <dyceit@qq.com>}
+* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME
+* @param {Object} data 参数
+*/
+export function copy${1:User}(data) {
+  return request({
+    url: erpType + '/${2:user}/copy',
+    method: 'post',
+    data
+  })
+}
+
+/**
+* 启用/禁用${3:用户}信息
+* @author ${4:戴思阳 <dyceit@qq.com>}
+* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME
+* @param {Object} data 参数
+* @param {Number} data.id ${3:用户}ID
+* @param {Number} data.isEnable 启用/禁用：1，启用；0，禁用
+*/
+export function setIsEnable${1:User}(data) {
+  return request({
+    url: erpType + '/${2:user}/setIsEnable',
+    method: 'post',
+    data
+  })
+}
+
+/**
+* 导出${3:用户}列表
+* @author ${4:戴思阳 <dyceit@qq.com>}
+* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME
+* @param {Object} data 参数
+*/
+export function export${1:User}List(data) {
+  return request({
+    url: erpType + '/${2:user}/export',
+    method: 'post',
+    data
+  })
+}
