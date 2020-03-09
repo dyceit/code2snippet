@@ -16,7 +16,7 @@
 	// 	"description": "Log output to console"
 	// }
 	// 提示：使用代码片段生成工具快速生成片段：https://gitee.com/dyceit/code2snippet
-  // 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
+	// 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
 	"dbutils.api.jf.code-snippet": {
 		"prefix": "dbutils.api.jf.code-snippet",
 		"body": [

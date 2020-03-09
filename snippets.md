@@ -125,15 +125,6 @@
  el-table-column_for__html |  
  el-table-column_selection__html |  
  el-table-column_operate__html |  
- el-form__html |  
- el-form_detail__html |  
- el-form-item_span__html |  
- el-form-item_input__html |  
- el-form-item_input_number__html |  
- el-form-item_textarea__html |  
- el-form-item_select__html |  
- el-form-item_checkbox__html |  
- el-form-item_radio__html |  
  el-dropdown__html |  
  aa_rules_required_input__js |  
  aa_rules_required_input_number__js |  
@@ -151,6 +142,22 @@
  el-scrollbar__html |  
  aa_localstorage_get__js |  
  aa_localstorage_set__js |  
+ 
+## 业务管理系统-表单片段
+ 
+ dbutils.form.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ el-form__html | 表单容器-默认 
+ el-form_detail__html | 表单容器-详情 
+ el-form-item_span__html | 表单-详情文本 
+ el-form-item_input__html | 表单-文本框 
+ el-form-item_input_number__html | 表单-数字文本框 
+ el-form-item_textarea__html | 表单-文本域 
+ el-form-item_select__html | 表单-下拉框 
+ el-form-item_checkbox__html | 表单-多选框 
+ el-form-item_radio__html | 表单-单选框 
  
 ## 业务管理系统组件片段
  
