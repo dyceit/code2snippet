@@ -21,7 +21,7 @@
 		"body": [
 			""
 		],
-		"description": "api请求片段"
+		"description": "api请求片段（已完成）"
 	},
 	"aa_api__file": {
 		"prefix": "aa_api__file",
@@ -145,5 +145,226 @@
 			""
 		],
 		"description": "api请求-示例"
+	},
+	"aa_api_get__js": {
+		"prefix": "aa_api_get__js",
+		"body": [
+			"/**",
+			"* 删除${3:用户}信息",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Number} id ${3:用户}ID",
+			"*/",
+			"export function delete${1:User}(id) {",
+			"return request({",
+			"url: erpType + '/${2:user}/delete/' + id,",
+			"method: 'get'",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-get"
+	},
+	"aa_api_post__js": {
+		"prefix": "aa_api_post__js",
+		"body": [
+			"/**",
+			"* 修改${3:用户}信息",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"*/",
+			"export function update${1:User}(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/update',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-post"
+	},
+	"aa_api_add__js": {
+		"prefix": "aa_api_add__js",
+		"body": [
+			"/**",
+			"* 添加${3:用户}信息",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"*/",
+			"export function add${1:User}(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/add',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-添加信息"
+	},
+	"aa_api_update__js": {
+		"prefix": "aa_api_update__js",
+		"body": [
+			"/**",
+			"* 修改${3:用户}信息",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"*/",
+			"export function update${1:User}(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/update',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-修改信息"
+	},
+	"aa_api_delete__js": {
+		"prefix": "aa_api_delete__js",
+		"body": [
+			"/**",
+			"* 删除${3:用户}信息",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Number} id ${3:用户}ID",
+			"*/",
+			"export function delete${1:User}(id) {",
+			"return request({",
+			"url: erpType + '/${2:user}/delete/' + id,",
+			"method: 'get'",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-删除信息"
+	},
+	"aa_api_list__js": {
+		"prefix": "aa_api_list__js",
+		"body": [
+			"/**",
+			"* 获取${3:用户}列表",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"*/",
+			"export function get${1:User}List(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/list',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-获取列表"
+	},
+	"aa_api_detail__js": {
+		"prefix": "aa_api_detail__js",
+		"body": [
+			"/**",
+			"* 获取${3:用户}详情",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"* @param {Number} data.id ${3:用户}ID",
+			"*/",
+			"export function get${1:User}Detail(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/detail',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-获取详情"
+	},
+	"aa_api_copy__js": {
+		"prefix": "aa_api_copy__js",
+		"body": [
+			"/**",
+			"* 复制${3:用户}信息",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"*/",
+			"export function copy${1:User}(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/copy',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-复制信息"
+	},
+	"aa_api_setIsEnable__js": {
+		"prefix": "aa_api_setIsEnable__js",
+		"body": [
+			"/**",
+			"* 启用/禁用${3:用户}信息",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"* @param {Number} data.id ${3:用户}ID",
+			"* @param {Number} data.isEnable 启用/禁用：1，启用；0，禁用",
+			"*/",
+			"export function setIsEnable${1:User}(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/setIsEnable',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-启用禁用"
+	},
+	"aa_api_export__js": {
+		"prefix": "aa_api_export__js",
+		"body": [
+			"/**",
+			"* 导出${3:用户}列表",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"*/",
+			"export function export${1:User}List(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/export',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-导出列表"
+	},
+	"aa_api_options__js": {
+		"prefix": "aa_api_options__js",
+		"body": [
+			"/**",
+			"* 获取${3:用户}选项",
+			"* @author ${4:戴思阳 <dyceit@qq.com>}",
+			"* @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @param {Object} data 参数",
+			"*/",
+			"export function get${1:User}Options(data) {",
+			"return request({",
+			"url: erpType + '/${2:user}/options',",
+			"method: 'post',",
+			"data",
+			"})",
+			"}",
+			""
+		],
+		"description": "api请求-获取选项"
 	}
 }

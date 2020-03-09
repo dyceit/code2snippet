@@ -72,13 +72,24 @@
  aa_vue_methods__js | vue方法 
  aa_vue_nextTick__js | aa_vue_nextTick__js 
  
-## api请求片段
+## api请求片段（已完成）
  
  dbutils.api.jf.code-snippet
  
  片段 | 描述 
  ---|--- 
  aa_api__file | api请求-示例 
+ aa_api_get__js | api请求-get 
+ aa_api_post__js | api请求-post 
+ aa_api_add__js | api请求-添加信息 
+ aa_api_update__js | api请求-修改信息 
+ aa_api_delete__js | api请求-删除信息 
+ aa_api_list__js | api请求-获取列表 
+ aa_api_detail__js | api请求-获取详情 
+ aa_api_copy__js | api请求-复制信息 
+ aa_api_setIsEnable__js | api请求-启用禁用 
+ aa_api_export__js | api请求-导出列表 
+ aa_api_options__js | api请求-获取选项 
  
 ## 业务管理系统常用片段
  
