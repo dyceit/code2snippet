@@ -1,0 +1,154 @@
+{
+  "el-input__trim": {
+    "prefix": "el-input__trim",
+    "body": [
+      "<el-input v-model.trim=\"${1}\" placeholder=\"请输入${2}\" style=\"width:200px\"></el-input>"
+    ]
+  },
+  "el-input-number": {
+    "prefix": "el-input__number",
+    "body": [
+      "<el-input v-model.number=\"${1}\" placeholder=\"请输入${2}\" style=\"width:200px\" type=\"number\"></el-input>"
+    ]
+  },
+  "el-input__checkbox--single": {
+    "prefix": "el-input__checkbox--single",
+    "body": ["<el-checkbox v-model=\"${1}\" label=\"true\">${3}</el-checkbox>"]
+  },
+  "el-input__checkbox--group": {
+    "prefix": "el-input__checkbox--group",
+    "body": [
+      "<el-checkbox-group v-model=\"${1}\">",
+      "\t <el-checkbox  :label=\"${2}\">${2}</el-checkbox>",
+      "</el-checkbox-group>"
+    ]
+  },
+  "el-input__switch": {
+    "prefix": "el-input__switch",
+    "body": [
+      "<el-switch v-model=\"${1}\" active-color=\"#13ce66\" inactive-color=\"#ff4949\"/>"
+    ]
+  },
+  "el-input__select": {
+    "prefix": "el-input__select",
+    "body": [
+      "\t<el-select v-model=\"${1}\" clearable placeholder=\"请选择${2}\">",
+      "\t\t<el-option v-for=\"item in ${4}\" :key=\"item.value\" :label=\"item.label\" :value=\"item.value\">",
+      "\t\t</el-option>",
+      "\t</el-select>"
+    ]
+  },
+  "el-input__dateTime": {
+    "prefix": "el-input__dateTime",
+    "body": ["<dateTime v-model=\"${1}\" />"]
+  },
+  "el-input__dateRange": {
+    "prefix": "el-input__dateRange",
+    "body": [
+      "<date-range :start.sync=\"${1:start_time}\" :end.sync=\"${2:end_time}\"/>"
+    ]
+  },
+  "el-input__textarea": {
+    "prefix": "el-input__textarea",
+    "body": [
+      "<el-input :rows=\"2\" v-model=\"$1\" type=\"textarea\"  placeholder=\"请输入${2}\" @blur=\"${3}\"/>"
+    ]
+  },
+  "el-input__radio": {
+    "prefix": "el-input__radio",
+    "body": [
+      "<el-radio-group v-model=\"${1}\">",
+      "\t <el-radio :label=\"${2}\">${2}</el-radio>",
+      "</el-radio-group>"
+    ]
+  },
+
+  "el-input__trim--query": {
+    "prefix": "el-input__trim--query",
+    "body": [
+      "<el-input v-model.trim=\"query.${1}\" placeholder=\"请输入${2}\"  style=\"width:200px\" @keyup.enter.native=\"${3}\"></el-input>"
+    ]
+  },
+  "el-input__number--query": {
+    "prefix": "el-input__number--query",
+    "body": [
+      "<el-input v-model.number=\"query.${1}\" placeholder=\"请输入${2}\" style=\"width:200px\" type=\"number\" @keyup.enter.native=\"${3}\"></el-input>"
+    ]
+  },
+  "el-input__checkbox--query": {
+    "prefix": "el-input__checkbox--query",
+    "body": [
+      "<el-checkbox v-model=\"${1}\" label=\"true\" @change=\"${2}\">${3}</el-checkbox>"
+    ]
+  },
+  "el-input__select--query": {
+    "prefix": "el-input__select--query",
+    "body": [
+      "\t<el-select v-model=\"query.${1}\" clearable placeholder=\"请选择${2}\" @change=\"${3}\">",
+      "\t\t<el-option v-for=\"item in ${4}\" :key=\"item.value\" :label=\"item.label\" :value=\"item.value\">",
+      "\t\t</el-option>",
+      "\t</el-select>"
+    ]
+  },
+  "el-input__dateRange--query": {
+    "prefix": "el-input__dateRange--query",
+    "body": [
+      "<date-range :start.sync=\"query.${1:start_time}\" :end.sync=\"query.${2:end_time}\" @change=\"${3}\" />"
+    ]
+  },
+
+  "el-small-button__primary": {
+    "prefix": "el-button--primary",
+    "body": [
+      "<el-button size=\"small\" type=\"primary\" @click=\"${1}\">${2}</el-button>"
+    ]
+  },
+  "el-small-button__success": {
+    "prefix": "el-button--success",
+    "body": [
+      "<el-button size=\"small\" type=\"success\" @click=\"${1}\">${2}</el-button>"
+    ]
+  },
+  "el-small-button__warning": {
+    "prefix": "el-button--warning",
+    "body": [
+      "<el-button size=\"small\" type=\"warning\" @click=\"${1}\">${2}</el-button>"
+    ]
+  },
+  "el-small-button__danger": {
+    "prefix": "el-button--danger",
+    "body": [
+      "<el-button size=\"small\" type=\"danger\" @click=\"${1}\">${2}</el-button>"
+    ]
+  },
+  "el-button__search-icon ": {
+    "prefix": "el-button--searchIcon",
+    "body": [
+      "<el-button size==\"small\" type=\"primary\" style=\"margin-left: 10px\" icon=\"el-icon-search\" @click=\"${1}\">搜索</el-button>"
+    ]
+  },
+  "el-button__export-icon ": {
+    "prefix": "el-button--exportIcon",
+    "body": [
+      "<el-button :loading=\"downloadLoading\" size==\"small\" type=\"primary\" style=\"margin-left: 10px\" icon=\"el-icon-download\" @click=\"handleDownload\">导出</el-button>"
+    ]
+  },
+  "el-button__create-icon": {
+    "prefix": "el-button--createIcon",
+    "body": [
+      "<el-button size==\"small\" type=\"primary\" style=\"margin-left: 10px\" icon=\"el-icon-edit-outline\" @click=\"${1}\">创建</el-button>"
+    ]
+  },
+  "el-button__add-icon": {
+    "prefix": "el-button--addIcon",
+    "body": [
+      "<el-button size==\"small\" type=\"primary\" style=\"margin-left: 10px\" icon=\"el-icon-plus\" @click=\"${1}\">新增</el-button>"
+    ]
+  },
+  "el-button__delete-icon": {
+    "prefix": "el-button--deleteIcon",
+    "body": [
+      "<el-button size==\"small\" type=\"primary\" style=\"margin-left: 10px\" icon=\"el-icon-minus\" @click=\"${1}\">新增</el-button>"
+    ]
+  }
+}

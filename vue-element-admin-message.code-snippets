@@ -1,0 +1,37 @@
+{
+  "a successfull message after operate success": {
+    "prefix": "l-message__success",
+    "body": [
+      "this.\\$message.success( '${1:更新成功}')"
+    ],
+    "description": "Used to show feedback after an activity"
+  },
+  "a error message after operate defeat": {
+    "prefix": "l-message__error",
+    "body": [
+      "this.\\$message.error('${1:更新失败}')"
+    ],
+    "description": "Used to show feedback after an activity"
+  },
+  "to confirm ": {
+    "prefix": "l-message__confirm",
+    "body": [
+      "this.\\$confirm(this.\\$t('tips.isDelete'), this.\\$t('title.tips'),",
+      "\t {",
+      "\t\t confirmButtonText: this.\\$t('button.confirm'),",
+      "\t\t cancelButtonText: this.\\$t('button.cancel'),",
+      "\t\t type: 'warning'",
+      "\t\t }).then(() => {",
+      "\t\t\t this.\\$message({",
+      "\t\t\t\t type: 'success',",
+      "\t\t\t\t message: this.\\$t('tips.deleteSuccess')",
+      "\t\t\t });",
+      "\t\t }).catch(() => {",
+      "\t\t\t this.\\$message({",
+      "\t\t\t\t type: 'info',",
+      "\t\t\t\t message: '已取消删除'",
+      "\t\t\t });",
+      "\t\t\t });"
+    ]
+  }
+}

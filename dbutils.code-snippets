@@ -1,0 +1,589 @@
+{
+	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	// 提示：使用 https://c.runoob.com/front-end/846 快速 html 转 js 字符串。
+	"aa_snippet__json": {
+		"prefix": "aa_snippet__json",
+		"body": [
+			"\"${1:aa_group_name__type}\": {",
+			"\"prefix\": \"${1:aa_group_name__type}\",",
+			"\"body\": [",
+			"\"${2:// snippet body}\"",
+			"],",
+			"\"description\": \"$3\"",
+			"},"
+		],
+	},
+	"aa_log__js": {
+		"prefix": "aa_log__js",
+		"body": [
+			"console.log('${1:data}', ${2:data})",
+		],
+	},
+	"aa_log_stringify__js": {
+		"prefix": "aa_log_stringify__js",
+		"body": [
+			"console.log('${1:data}', JSON.stringify(${2:data}))",
+		],
+	},
+	"aa_log_return__js": {
+		"prefix": "aa_log_return__js",
+		"body": [
+			"if(data){",
+			"console.log('${1:data}', ${2:data})",
+			"return false",
+			"}"
+		],
+	},
+	"aa_lang__js": {
+		"prefix": "aa_lang__js",
+		"body": [
+			"$$t('${1:button.import}')"
+		],
+	},
+	"aa_helper_modal_open__js": {
+		"prefix": "aa_helper_modal_open__js",
+		"body": [
+			"${1:showDemoDialog}() {",
+			"this.helper.modal.open(${2:demoDialog}, {",
+			"parent: this,",
+			"propsData: {",
+			"},",
+			"data: {",
+			"}",
+			"}).then(res => {",
+			"console.log(res)",
+			"}, err => {",
+			"console.log('close-dialog:', err)",
+			"})",
+			"},",
+			"$0"
+		]
+	},
+	"aa_import_options__js": {
+		"prefix": "aa_import_options__js",
+		"body": [
+			"import { $1 } from '@/utils/options'",
+			""
+		],
+		"description": "引用options中的选项值"
+	},
+	"aa_import_common__js": {
+		"prefix": "aa_import_common__js",
+		"body": [
+			"import { $1 } from '@/utils/common'",
+			""
+		],
+		"description": "引用common中的方法"
+	},
+	"aa_import_lodash__js": {
+		"prefix": "aa_import_lodash__js",
+		"body": [
+			"import _ from 'lodash'",
+			"// https://www.lodashjs.com/docs/latest"
+		],
+		"description": "引用lodash工具类"
+	},
+	"aa_import_component__js": {
+		"prefix": "aa_import_component__js",
+		"body": [
+			"import ${1:MyComponent} from '@/components/${1:MyComponent}'"
+		],
+		"description": "引用公共组件"
+	},
+	"aa_import_frontendpage__js": {
+		"prefix": "aa_import_frontendpage__js",
+		"body": [
+			"import frontEndPage from '@/components/mixins/frontEndPage'"
+		],
+	},
+	"aa_mixins_frontendpage__js": {
+		"prefix": "aa_mixins_frontendpage__js",
+		"body": [
+			"mixins: [frontEndPage],"
+		],
+	},
+	"aa_frontendpage__html": {
+		"prefix": "aa_frontendpage__html",
+		"body": [
+			"<div v-if=\"listData.length\" class=\"mar-t-10\">",
+			"<el-pagination",
+			":current-page=\"currentPage\"",
+			":page-size=\"pageSize\"",
+			":total=\"total\"",
+			"layout=\"total, prev, pager, next, jumper\"",
+			"small",
+			"background",
+			"@current-change=\"handleCurrentChange\" />",
+			"</div>"
+		],
+	},
+	"aa_customControls__js_mixin_import": {
+		"prefix": "aa_customControls__js_import",
+		"body": [
+			"import customControls from '@/components/CustomControls/mixins/controls'"
+		],
+	},
+	"aa_customControls__js_mixins": {
+		"prefix": "aa_customControls__js_mixins",
+		"body": [
+			"mixins: [customControls],"
+		],
+	},
+	"aa_component_vuedraggable__js_import": {
+		"prefix": "aa_component_vuedraggable__js_import",
+		"body": [
+			"import draggable from 'vuedraggable'",
+			"// https://www.jianshu.com/p/68341b54d993"
+		],
+	},
+	"aa_component_vuedraggable__html": {
+		"prefix": "aa_component_vuedraggable__html",
+		"body": [
+			"<draggable v-model=\"ruleForm.values\">",
+			"<div v-for=\"(item, index) in ruleForm.values\" :key=\"item._id\">",
+			"</div>",
+			"</draggable>"
+		],
+	},
+	"aa_save_validate__js": {
+		"prefix": "aa_save_validate__js",
+		"body": [
+			"save(formName) {",
+			"this.$$refs[formName].validate((valid) => {",
+			"if (valid) {",
+			"addForm(this.ruleForm.name).then(res => {",
+			"this.saveCallback(res)",
+			"})",
+			"}",
+			"})",
+			"},"
+		]
+	},
+	"aa_reset_form_validate__js": {
+		"prefix": "aa_reset_form_validate__js",
+		"body": [
+			"resetForm(formName) {",
+			"this.$$refs[formName].resetFields()",
+			"},"
+		]
+	},
+	"aa_jsdoc__comment": {
+		"prefix": "aa_jsdoc__comment",
+		"body": [
+			"/**",
+			"* @module components/Counter",
+			"* @author ${1:杜伟坡} <${2:dovapour}@qq.com>",
+			"* @desc 计数器组件",
+			"* @example <Counter :counter-initor=\"5\" :step=\"2\"></Counter>",
+			"* @vue-prop {Number} conterInitor - 计数器初始值",
+			"* @vue-prop {Number} [step=1] - 增加步长",
+			"* @vue-data {Number} counter - 计数器当前值",
+			"* @vue-computed {String} message",
+			"* @vue-event {Number} increment - 计数器增加后，触发事件",
+			"* @vue-event {Number} decrement - 计数器减小后，触发事件",
+			"* https://github.com/Kocal/jsdoc-vuejs",
+			"*/"
+		]
+	},
+	"el-button_small_add__html": {
+		"prefix": "el-button_small_add__html",
+		"body": [
+			"<el-button size=\"small\" type=\"primary\" icon=\"el-icon-plus\" @click=\"add\">{{ $$t('button.add') }}</el-button>"
+		],
+	},
+	"el-button_small_save__html": {
+		"prefix": "el-button_small_save__html",
+		"body": [
+			"<el-button size=\"small\" type=\"primary\" @click=\"save('ruleForm')\">{{ $$t('button.save') }}</el-button>"
+		],
+	},
+	"el-button_small_cancel__html": {
+		"prefix": "el-button_small_cancel__html",
+		"body": [
+			"<el-button size=\"small\" @click=\"reject\">{{ $$t('button.cancel') }}</el-button>",
+			"$0"
+		],
+	},
+	"el-dialog__file": {
+		"prefix": "el-dialog__file",
+		"body": [
+			"<template>",
+			"<el-dialog",
+			"v-el-drag-dialog",
+			":close-on-click-modal=\"false\"",
+			":visible.sync=\"visible\"",
+			":title=\"${1:title}\"",
+			"width=\"${2:500px}\"",
+			"custom-class=\"el-dialog-form\"",
+			"@close=\"reject\">",
+			"<!-- 注 : 弹框尺寸规范：宽度分别为400px、500px、600px、720px、980px、1100px，高度限520px以内，内容一屏展示不完加滚动条；",
+			"一般情况标题和内容离左右外边框距离20px,表单的标题字段固定宽度为6个字宽度（一般为72px）,表单为两列时，两列间距为10px。 ",
+			"custom-class: el-dialog-fullscreen全屏、el-dialog-form表单、el-dialog-custom上填充为0-->",
+			"",
+			"<div slot=\"footer\" class=\"dialog-footer\">",
+			"<el-button size=\"small\" @click=\"reject\">{{ $$t('button.cancel') }}<\/el-button>",
+			"<el-button size=\"small\" type=\"primary\" @click=\"save('ruleForm')\">{{ $$t('button.save') }}<\/el-button>",
+			"<\/div>",
+			"<\/el-dialog>",
+			"<\/template>",
+			"",
+			"<script>",
+			"export default {",
+			"name: '${3:DemoDialog}',",
+			"data() {",
+			"return {",
+			"visible: false",
+			"}",
+			"},",
+			"methods: {",
+			"save() {",
+			"console.log('save button clicked.')",
+			"this.resolve(1)",
+			"}",
+			"}",
+			"}",
+			"<\/script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			"",
+			"<\/style>",
+			"",
+			"$0"
+		],
+	},
+	"el-dialog__html": {
+		"prefix": "el-dialog__html",
+		"body": [
+			"<el-dialog",
+			"v-el-drag-dialog",
+			":close-on-click-modal=\"false\"",
+			":visible.sync=\"visible\"",
+			":title=\"${1:title}\"",
+			"width=\"${2:500px}\"",
+			"custom-class=\"el-dialog-form\"",
+			"@close=\"reject\">",
+			"<!-- 注 : 弹框尺寸规范：宽度分别为400px、500px、600px、720px、980px、1100px，高度限520px以内，内容一屏展示不完加滚动条；",
+			"一般情况标题和内容离左右外边框距离20px,表单的标题字段固定宽度为6个字宽度（一般为72px）,表单为两列时，两列间距为10px。 ",
+			"custom-class: el-dialog-fullscreen全屏、el-dialog-form表单、el-dialog-custom上填充为0-->",
+			"",
+			"<div slot=\"footer\" class=\"dialog-footer\">",
+			"<el-button size=\"small\" @click=\"reject\">{{ $$t('button.cancel') }}<\/el-button>",
+			"<el-button size=\"small\" type=\"primary\" @click=\"save('ruleForm')\">{{ $$t('button.save') }}<\/el-button>",
+			"<\/div>",
+			"<\/el-dialog>",
+			"$0"
+		],
+	},
+	"el-tooltip__html": {
+		"prefix": "el-tooltip__html",
+		"body": [
+			"<el-tooltip :enterable=\"false\" :open-delay=\"300\" :content=\"${1:'提示内容'}\" placement=\"${2:right}\">",
+			"${3:<icon :size=\"14\" :color=\"gColor.iconColorDefault\" type=\"iconwenhao-xian\" />}",
+			"</el-tooltip>"
+		],
+	},
+	// el-table
+	"el-table_loading__html": {
+		"prefix": "el-table_loading__html",
+		"body": [
+			"<el-table",
+			"v-loading=\"listLoading\"",
+			"ref=\"table\"",
+			":data=\"tableData\"",
+			"element-loading-text=\"Loading\"",
+			"element-loading-spinner=\"el-icon-loading\"",
+			"size=\"mini\"",
+			"fit",
+			"highlight-current-row>"
+		],
+	},
+	"el-table_rowclick__html": {
+		"prefix": "el-table_rowclick__html",
+		"body": [
+			"<el-table",
+			"v-loading=\"listLoading\"",
+			"ref=\"table\"",
+			":data=\"tableData\"",
+			"element-loading-text=\"Loading\"",
+			"element-loading-spinner=\"el-icon-loading\"",
+			"size=\"mini\"",
+			"fit",
+			"highlight-current-row",
+			"@row-click=\"handleRowClick\">"
+		],
+	},
+	"el-table-column_for__html": {
+		"prefix": "el-table-column_for__html",
+		"body": [
+			"<el-table-column",
+			"v-for=\"(item, index) in tableHead.filter(item => !item.disable)\"",
+			":key=\"item.name\"",
+			":label=\"item.showName\"",
+			":prop=\"item.name\"",
+			":min-width=\"item.minWidth\"",
+			"show-overflow-tooltip>",
+			"<!-- show-overflow-tooltip列比较多的情况不建议使用，影响性能 -->",
+			"<template slot-scope=\"scope\">",
+			"<controls :form-value=\"scope.row\" :index=\"index\" :item-data=\"item\" v-bind=\"item.props\" />",
+			"</template>",
+			"</el-table-column>"
+		],
+	},
+	"el-table-column_selection__html": {
+		"prefix": "el-table-column_selection__html",
+		"body": [
+			"<el-table-column :fixed=\"'left'\" type=\"selection\" align=\"center\" width=\"40\" />"
+		],
+	},
+	"el-table-column_operate__html": {
+		"prefix": "el-table-column_operate__html",
+		"body": [
+			"<el-table-column :label=\"$$t('title.operate')\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"<el-button type=\"text\" icon=\"el-icon-edit\" @click=\"edit(scope.row)\" />",
+			"<el-button type=\"text\" icon=\"el-icon-delete\" @click=\"del(scope.row)\" />",
+			"</template>",
+			"</el-table-column>"
+		],
+	},
+	// el-form
+	"el-form__html": {
+		"prefix": "el-form__html",
+		"body": [
+			"<el-form ref=\"ruleForm\" :model=\"ruleForm\" :rules=\"rules\" size=\"small\" label-width=\"100px\" style=\"padding-right:40px;\">",
+			"$0",
+			"</el-form>"
+		],
+	},
+	"el-form_detail__html": {
+		"prefix": "el-form_detail__html",
+		"body": [
+			"<el-form ref=\"detailForm\" size=\"small\" label-width=\"100px\" class=\"detail-form\">",
+			"$0",
+			"</el-form>"
+		],
+	},
+	"el-form-item_span__html": {
+		"prefix": "el-form-item_span__html",
+		"body": [
+			"<el-form-item :label=\"$$t('${1:title.schemeName}')\">",
+			"<span>{{ ${2:tableData.cname} }}</span>",
+			"</el-form-item>"
+		],
+	},
+	"el-form-item_input__html": {
+		"prefix": "el-form-item_input__html",
+		"body": [
+			"<el-form-item :label=\"$$t('${1:title.schemeName}')\" prop=\"${2:bName}\">",
+			"<el-input v-model=\"ruleForm.${2:bName}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('${1:title.schemeName}')\" clearable />",
+			"</el-form-item>"
+		],
+	},
+	"el-form-item_input_number__html": {
+		"prefix": "el-form-item_input_number__html",
+		"body": [
+			"<el-form-item :label=\"$$t('${1:title.schemeName}')\" prop=\"${2:bName}\">",
+			"<el-input v-model.number=\"ruleForm.${2:bName}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('${1:title.schemeName}')\" clearable />",
+			"</el-form-item>"
+		],
+	},
+	"el-form-item_textarea__html": {
+		"prefix": "el-form-item_textarea__html",
+		"body": [
+			"<el-form-item :label=\"$$t('${1:title.memo}')\" prop=\"${2:memo}\">",
+			"<el-input v-model=\"ruleForm.${2:memo}\" :autosize=\"{ minRows: 2, maxRows: 4}\" :placeholder=\"$t('tips.inputMemo')\" type=\"textarea\" clearable />",
+			"</el-form-item>"
+		],
+	},
+	"el-form-item_select__html": {
+		"prefix": "el-form-item_select__html",
+		"body": [
+			"<el-form-item :label=\"$$t('${1:title.schemeType}')\" prop=\"${2:bType}\">",
+			"<el-select v-model=\"ruleForm.${2:bType}\" :placeholder=\"$$t('${3:placeholder.select}') + $$t('${1:title.schemeType}')\" clearable>",
+			"<el-option v-for=\"item in showPositionOptions\" :label=\"item.label\" :value=\"item.value\" :key=\"item.value\" />",
+			"</el-select>",
+			"</el-form-item>"
+		],
+	},
+	"el-form-item_checkbox__html": {
+		"prefix": "el-form-item_checkbox__html",
+		"body": [
+			"<el-form-item :label=\"$$t('${1:title.schemeType}')\" prop=\"${2:bType}\">",
+			"<el-checkbox-group v-model=\"ruleForm.${2:bType}\">",
+			"<!-- 手写 -->",
+			"<el-checkbox label=\"1\">{{ $$t('title.publicScheme') }}</el-checkbox>",
+			"<!-- 循环 -->",
+			"<el-checkbox v-for=\"item in schemeTypeOptions\" :label=\"item.value\" :key=\"item.value\">{{ item.label }}</el-checkbox>",
+			"</el-checkbox-group>",
+			"</el-form-item>"
+		],
+	},
+	"el-form-item_radio__html": {
+		"prefix": "el-form-item_radio__html",
+		"body": [
+			"<el-form-item :label=\"$$t('${1:title.schemeType}')\" prop=\"${2:bType}\">",
+			"<el-radio-group v-model=\"ruleForm.${2:bType}\">",
+			"<!-- 手写 -->",
+			"<el-radio label=\"1\">{{ $$t('title.publicScheme') }}</el-radio>",
+			"<!-- 循环 -->",
+			"<el-radio v-for=\"item in schemeTypeOptions\" :label=\"item.value\" :key=\"item.value\">{{ item.label }}</el-radio>",
+			"</el-radio-group>",
+			"</el-form-item>"
+		],
+	},
+	"el-dropdown__html": {
+		"prefix": "el-dropdown__html",
+		"body": [
+			"<el-dropdown @command=\"syncProduct\">",
+			"<el-button size=\"small\">",
+			"{{ $t('button.sync') }}",
+			"<i class=\"el-icon-arrow-down el-icon--right\" />",
+			"</el-button>",
+			"<el-dropdown-menu slot=\"dropdown\">",
+			"<el-dropdown-item command=\"all\">同步全部产品</el-dropdown-item>",
+			"<el-dropdown-item command=\"selected\">同步选择产品</el-dropdown-item>",
+			"</el-dropdown-menu>",
+			"</el-dropdown>"
+		],
+		"description": ""
+	},
+	// rules required
+	"aa_rules_required_input__js": {
+		"prefix": "aa_rules_required_input__js",
+		"body": [
+			"{ required: true, message: '${1:请输入名称}', trigger: 'blur' },"
+		],
+	},
+	"aa_rules_required_input_number__js": {
+		"prefix": "aa_rules_required_input_number__js",
+		"body": [
+			"{ type: 'number', message: '${1:请输入数字类型}', trigger: 'blur' },"
+		],
+	},
+	"aa_rules_required_select__js": {
+		"prefix": "aa_rules_required_select__js",
+		"body": [
+			"{ required: true, message: '${1:请选择类型}', trigger: 'change' },"
+		],
+	},
+	"aa_rules_required_checkbox__js": {
+		"prefix": "aa_rules_required_checkbox__js",
+		"body": [
+			"{ required: true, type: 'array', message: '${1:请至少选择一个性质}', trigger: 'change' },"
+		],
+	},
+	"aa_rules_required_datetime__js": {
+		"prefix": "aa_rules_required_datetime__js",
+		"body": [
+			"{ required: true, type: 'date', message: '${1:请选择日期}', trigger: 'change' },"
+		],
+	},
+	// rules length
+	"aa_rules_min_max_length__js": {
+		"prefix": "aa_rules_min_max_length__js",
+		"body": [
+			"{ min: ${1:1}, max: ${2:30}, message: '长度在 ${1:1} 到 ${2:30} 个字符', trigger: 'blur' },"
+		],
+	},
+	"aa_rules_min_length__js": {
+		"prefix": "aa_rules_min_length__js",
+		"body": [
+			"{ min: ${1:1}, message: '最少 ${1:1} 个字符', trigger: 'blur' },"
+		],
+	},
+	"aa_rules_max_length__js": {
+		"prefix": "aa_rules_max_length__js",
+		"body": [
+			"{ max: ${2:30}, message: '最多 ${2:30} 个字符', trigger: 'blur' },"
+		],
+	},
+	"aa_rules_validator__js": {
+		"prefix": "aa_rules_validator__js",
+		"body": [
+			"{ validator: this.$$rules.ipAddress, trigger: 'blur' },"
+		],
+	},
+	// sertable
+	"aa_sortable_import__js": {
+		"prefix": "aa_sortable_import__js",
+		"body": [
+			"import Sortable from 'sortablejs'"
+		],
+		"description": "引入拖动排序"
+	},
+	"aa_sortable_call__js": {
+		"prefix": "aa_sortable_call__js",
+		"body": [
+			"setTimeout(() => {",
+			"this.rowSort()",
+			"}, 500)"
+		],
+		"description": "调用表格行拖动排序方法"
+	},
+	"aa_sortable_rowkey__js": {
+		"prefix": "aa_sortable_rowkey__js",
+		"body": [
+			"rowKey(row) {",
+			"return row.tableName + '_' + row.name",
+			"},"
+		],
+		"description": "表格行拖动排序的唯一键"
+	},
+	"aa_sortable_rowsort__js": {
+		"prefix": "aa_sortable_rowsort__js",
+		"body": [
+			"// 表格行拖动排序",
+			"// el-table ref=\"table\" 确定要排序的表格，:row-key=\"rowKey\" 唯一键解决渲染复用问题，:row-style=\"{'cursor':'move'}\" 设置鼠标样式",
+			"// this.tableData 是要排序的对象数组，根据情况设置",
+			"rowSort() {",
+			"const tbody = this.$$refs.table.$$el.querySelector('.el-table__body-wrapper table tbody')",
+			"const _this = this",
+			"Sortable.create(tbody, {",
+			"onEnd({ newIndex, oldIndex }) {",
+			"const currRow = _this.tableData.splice(oldIndex, 1)[0]",
+			"_this.tableData.splice(newIndex, 0, currRow)",
+			"}",
+			"})",
+			"},"
+		],
+		"description": ""
+	},
+	"el-scrollbar__html": {
+		"prefix": "el-scrollbar__html",
+		"body": [
+			"<el-scrollbar ref=\"elscrollbar\" class=\"x-hidden\" style=\"height: 100%\">",
+			"$0",
+			"</el-scrollbar>"
+		],
+		"description": ""
+	},
+	"aa_localstorage_get__js": {
+		"prefix": "aa_localstorage_get__js",
+		"body": [
+			"const arr = JSON.parse(localStorage.getItem('${1:settingQuickScheme}')) || []"
+		],
+		"description": ""
+	},
+	"aa_localstorage_set__js": {
+		"prefix": "aa_localstorage_set__js",
+		"body": [
+			"localStorage.setItem('${1:settingQuickScheme}', JSON.stringify(${2:this.schemeOptions}))"
+		],
+		"description": ""
+	},
+}

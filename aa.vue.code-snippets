@@ -1,0 +1,663 @@
+{
+	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	// 提示：使用代码片段生成工具 https://gitee.com/dyceit/code2snippet 快速生成片段
+	// vue file
+	"aa_vue__file": {
+		"prefix": "aa_vue__file",
+		"body": [
+			"<template>",
+			"<div class=\"container\">",
+			"<!--  template下只能包含一年根节点，这里统一加div.container -->",
+			"</div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"name: '$TM_FILENAME_BASE',",
+			"$0",
+			"}",
+			"</script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			".container {",
+			"// 如果没有样式，可以删除style，本项目一般不用写样式",
+			"}",
+			"</style>",
+			""
+		],
+		"description": "vue组件模板，生成template、script、style，并根据文件名生成组件name"
+	},
+	// 全局
+	"aa_vue_global_directive_example__js": {
+		"prefix": "aa_vue_global_directive_example__js",
+		"body": [
+			"// 注册全局自定义指令 `v-focus`",
+			"Vue.directive('focus', {",
+			"// 当被绑定的元素插入到 DOM 中时……",
+			"inserted: function(el) {",
+			"// 聚焦元素",
+			"el.focus()",
+			"}",
+			"})",
+			""
+		],
+		"description": "vue全局指令-示例"
+	},
+	"aa_vue_global_filter_example__js": {
+		"prefix": "aa_vue_global_filter_example__js",
+		"body": [
+			"// 全局注册过滤器",
+			"Vue.filter(\"capitalize\", function(value) {",
+			"if (!value) return \"\"",
+			"value = value.toString()",
+			"return value.charAt(0).toUpperCase() + value.slice(1)",
+			"})",
+			""
+		],
+		"description": "vue全局过滤器-示例"
+	},
+	// vue components
+	"aa_vue_components__js": {
+		"prefix": "aa_vue_components__js",
+		"body": [
+			"components: {",
+			"$0",
+			"}"
+		],
+		"description": "vue组件引入"
+	},
+	// vue directives
+	"aa_vue_directives__js": {
+		"prefix": "aa_vue_directives__js",
+		"body": [
+			"// 局部指令，https://cn.vuejs.org/v2/guide/custom-directive.html",
+			"directives: {",
+			"$0",
+			"}",
+		],
+		"description": "vue局部指令"
+	},
+	"aa_vue_directives_inserted__js": {
+		"prefix": "aa_vue_directives_inserted__js",
+		"body": [
+			"/**",
+			"* 光标聚焦",
+			"* @example <el-input v-focus />",
+			"*/",
+			"focus: {",
+			"// 当被绑定的元素插入到DOM中时",
+			"inserted: function(el) {",
+			"el.focus()",
+			"}",
+			"}",
+		],
+		"description": "vue局部指令-当被绑定的元素插入到DOM中时"
+	},
+	"aa_vue_directives_bind__js": {
+		"prefix": "aa_vue_directives_bind__js",
+		"body": [
+			"/**",
+			"* 固定悬浮",
+			"* @example <div v-pin=\"200\">内容</div>",
+			"*/",
+			"pin: {",
+			"// 只调用一次，指令第一次绑定到元素时调用",
+			"bind: function(el, binding, vnode) {",
+			"el.style.position = 'fixed'",
+			"el.style.top = binding.value + 'px'",
+			"}",
+			"}",
+		],
+		"description": "vue局部指令-指令第一次绑定到元素时调用"
+	},
+	// vue filters
+	"aa_vue_filters__js": {
+		"prefix": "aa_vue_filters__js",
+		"body": [
+			"filters: {",
+			"$0",
+			"}"
+		],
+		"description": "vue过滤器"
+	},
+	"aa_vue_filters_val__js": {
+		"prefix": "aa_vue_filters_val__js",
+		"body": [
+			"capitalize: function(value) {",
+			"if (!value) return ''",
+			"value = value.toString()",
+			"return value.charAt(0).toUpperCase() + value.slice(1)",
+			"}",
+		],
+		"description": "vue过滤器-定义不带参数，{{ str | capitalize}}"
+	},
+	"aa_vue_filters_args__js": {
+		"prefix": "aa_vue_filters_args__js",
+		"body": [
+			"capitalize: function(value, arg1) {",
+			"if (!value) return ''",
+			"value = value.toString()",
+			"return value.charAt(0).toUpperCase() + value.slice(1)",
+			"}",
+		],
+		"description": "vue过滤器-定义带参数，{{ str | capitalize(arg1)}}"
+	},
+	"aa_vue_filter__html": {
+		"prefix": "aa_vue_filter__html",
+		"body": [
+			"{{ message | capitalize }}",
+			""
+		],
+		"description": "过滤器：在双花括号中，如果带参filterName(param)"
+	},
+	// vue props
+	"aa_vue_props__js": {
+		"prefix": "aa_vue_props__js",
+		"body": [
+			"props: {",
+			"$0",
+			"}"
+		],
+		"description": "vue组件属性"
+	},
+	"aa_vue_props_number__js": {
+		"prefix": "aa_vue_props_number__js",
+		"body": [
+			"${1:num}: {",
+			"type: Number,",
+			"default: 0",
+			"}"
+		],
+		"description": "vue组件属性-数字类型"
+	},
+	"aa_vue_props_string__js": {
+		"prefix": "aa_vue_props_string__js",
+		"body": [
+			"${1:str}: {",
+			"type: String,",
+			"default: ''",
+			"}"
+		],
+		"description": "vue组件属性-字符串类型"
+	},
+	"aa_vue_props_boolean__js": {
+		"prefix": "aa_vue_props_boolean__js",
+		"body": [
+			"${1:bool}: {",
+			"type: Boolean,",
+			"default: false",
+			"}"
+		],
+		"description": "vue组件属性-布尔类型"
+	},
+	"aa_vue_props_array__js": {
+		"prefix": "aa_vue_props_array__js",
+		"body": [
+			"${1:arr}: {",
+			"type: Array,",
+			"default: () => []",
+			"}"
+		],
+		"description": "vue组件属性-数组类型，引用传参，不用emit也能改变父组件的值"
+	},
+	"aa_vue_props_object__js": {
+		"prefix": "aa_vue_props_object__js",
+		"body": [
+			"${1:obj}: {",
+			"type: Object,",
+			"default: () => { return {} }",
+			"}"
+		],
+		"description": "vue组件属性-对象类型，引用传参，不用emit也能改变父组件的值"
+	},
+	"aa_vue_props_function__js": {
+		"prefix": "aa_vue_props_function__js",
+		"body": [
+			"func: {",
+			"validator: function(val) {",
+			"return [\"success\", \"warning\", \"danger\"].includes(val)",
+			"}",
+			"}",
+			""
+		],
+		"description": "vue组件属性-函数类型"
+	},
+	"aa_vue_props_multiple__js": {
+		"prefix": "aa_vue_props_multiple__js",
+		"body": [
+			"${1:strNum}: {",
+			"type: [String, Number],",
+			"default: ''",
+			"}"
+		],
+		"description": "vue组件属性-多个类型"
+	},
+	"aa_vue_props_required__js": {
+		"prefix": "aa_vue_props_required__js",
+		"body": [
+			"${1:str}: {",
+			"type: String,",
+			"required: true",
+			"}"
+		],
+		"description": "vue组件属性-必填"
+	},
+	"aa_vue_props_example__js": {
+		"prefix": "aa_vue_props_example__js",
+		"body": [
+			"props: {",
+			"// 数字类型",
+			"num: {",
+			"type: Number,",
+			"default: 0",
+			"},",
+			"// 字符串类型",
+			"str: {",
+			"type: String,",
+			"default: ''",
+			"},",
+			"// 布尔类型",
+			"bool: {",
+			"type: Boolean,",
+			"default: false",
+			"},",
+			"// 数组类型，工厂函数",
+			"arr: {",
+			"type: Array,",
+			"default: () => []",
+			"},",
+			"// 对象类型，工厂函数",
+			"obj: {",
+			"type: Object,",
+			"default: () => { return {} }",
+			"},",
+			"// 多类型",
+			"strNum: {",
+			"type: [String, Number],",
+			"default: ''",
+			"},",
+			"// 必填",
+			"str: {",
+			"type: String,",
+			"required: ''",
+			"},",
+			"// 函数类型",
+			"func: {",
+			"validator: function(val) {",
+			"return [\"success\", \"warning\", \"danger\"].includes(val)",
+			"}",
+			"}",
+			"},",
+			""
+		],
+		"description": "vue组件属性-示例"
+	},
+	// vue data
+	"aa_vue_data__js": {
+		"prefix": "aa_vue_data__js",
+		"body": [
+			"data() {",
+			"return {",
+			"$0",
+			"}",
+			"}",
+		],
+		"description": "vue实例的响应式数据对象，只有当实例被创建时就已经存在于data中的属性才是响应式的"
+	},
+	"aa_vue_data_example__js": {
+		"prefix": "aa_vue_data_example__js",
+		"body": [
+			"data() {",
+			"return {",
+			"str: '', // 字符串 String",
+			"num: 0, // 字数 Number",
+			"bool: false, // 布尔值 Boolean",
+			"arr: [], // 数组 Array",
+			"obj: {}, // 对象 Object",
+			"err: null, // 错误 Error 空值",
+			"val: undefined, // 未定义 变量",
+			"msg: '', // 消息",
+			"code: 0, // 状态码",
+			"status: 0, // 状态码",
+			"id: 0, // 编号",
+			"options: [ // 选项枚举，统一使用 value/label作为值和名称变量名",
+			"{",
+			"value: 0, // 项目值",
+			"label: '名称' // 项目名称",
+			"}",
+			"]",
+			"}",
+			"},"
+		],
+		"description": "vue实例的响应式数据对象示例"
+	},
+	// vue computed
+	"aa_vue_computed__js": {
+		"prefix": "aa_vue_computed__js",
+		"body": [
+			"computed: {",
+			"$0",
+			"}"
+		],
+		"description": "vue计算属性"
+	},
+	"aa_vue_computed_val__js": {
+		"prefix": "aa_vue_computed_val__js",
+		"body": [
+			"${1:val}() {",
+			"return ${2:this.str + this.num}",
+			"}",
+		],
+		"description": "vue计算属性-定义格式"
+	},
+	"aa_vue_computed_example__js": {
+		"prefix": "aa_vue_computed_example__js",
+		"body": [
+			"// vue计算属性",
+			"computed: {",
+			"val() {",
+			"return this.str + this.num",
+			"}",
+			"},",
+			""
+		],
+		"description": "vue计算属性-示例"
+	},
+	// vue watch
+	"aa_vue_watch__js": {
+		"prefix": "aa_vue_watch__js",
+		"body": [
+			"watch: {",
+			"$0",
+			"}",
+		],
+		"description": "vue数据侦听"
+	},
+	"aa_vue_watch_val__js": {
+		"prefix": "aa_vue_watch_val__js",
+		"body": [
+			"${1:val}(n, o) {",
+			"console.log('${1:val}', n)",
+			"}",
+		],
+		"description": "vue数据侦听-基本类型"
+	},
+	"aa_vue_watch_deep__js": {
+		"prefix": "aa_vue_watch_deep__js",
+		"body": [
+			"${1:obj}: {",
+			"handler(n, o) {",
+			"console.log('${1:obj}', n)",
+			"},",
+			"deep: true",
+			"}",
+		],
+		"description": "vue数据侦听-引用类型"
+	},
+	"aa_vue_watch_immediate__js": {
+		"prefix": "aa_vue_watch_immediate__js",
+		"body": [
+			"${1:obj}: {",
+			"handler(n, o) {",
+			"console.log('${1:obj}', n)",
+			"},",
+			"deep: true,",
+			"immediate: true",
+			"}",
+		],
+		"description": "vue数据侦听-该回调将会在侦听开始之后被立即调用"
+	},
+	"aa_vue_watch_multiple__js": {
+		"prefix": "aa_vue_watch_multiple__js",
+		"body": [
+			"val: [",
+			"function handle1(n, o) {",
+			"console.log('handle1', n)",
+			"},",
+			"function handle2(n, o) {",
+			"console.log('handle2', n)",
+			"}",
+			"]",
+		],
+		"description": "vue数据侦听-多个方法"
+	},
+	"aa_vue_watch_prop__js": {
+		"prefix": "aa_vue_watch_prop__js",
+		"body": [
+			"'obj.num': function(n, o) {",
+			"console.log('obj.num', n)",
+			"}",
+			""
+		],
+		"description": "vue数据侦听-对象属性"
+	},
+	"aa_vue_watch_example__js": {
+		"prefix": "aa_vue_watch_example__js",
+		"body": [
+			"watch: {",
+			"// 值类型(基本类型)：字符串（String）、数字(Number)、布尔(Boolean)、对空（Null）、未定义（Undefined）、Symbol。",
+			"val(n, o) {",
+			"console.log('val', n)",
+			"},",
+			"// 引用数据类型(复杂)：对象(Object)、数组(Array)、函数(Function)。",
+			"// 深度 watcher",
+			"obj: {",
+			"handler(n, o) {",
+			"console.log('obj', n)",
+			"},",
+			"deep: true",
+			"},",
+			"// 该回调将会在侦听开始之后被立即调用",
+			"obj1: {",
+			"handler(n, o) {",
+			"console.log('obj1', n)",
+			"},",
+			"deep: true,",
+			"immediate: true",
+			"},",
+			"// 多个侦听方法",
+			"val1: [",
+			"function handle1(n, o) {",
+			"console.log('handle1', n)",
+			"},",
+			"function handle2(n, o) {",
+			"console.log('handle2', n)",
+			"}",
+			"],",
+			"// 对应属性 this.obj.num",
+			"'obj.num': function(n, o) {",
+			"console.log('obj.num', n)",
+			"}",
+			"}",
+			""
+		],
+		"description": "vue数据侦听-示例"
+	},
+	"aa_vue_lifecycle_beforeCreate__js": {
+		"prefix": "aa_vue_lifecycle_beforeCreate__js",
+		"body": [
+			"beforeCreate() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。"
+	},
+	"aa_vue_lifecycle_created__js": {
+		"prefix": "aa_vue_lifecycle_created__js",
+		"body": [
+			"created() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。"
+	},
+	"aa_vue_lifecycle_beforeMount__js": {
+		"prefix": "aa_vue_lifecycle_beforeMount__js",
+		"body": [
+			"beforeMount() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-在挂载开始之前被调用：相关的 render 函数首次被调用。该钩子在服务器端渲染期间不被调用。"
+	},
+	"aa_vue_lifecycle_mounted__js": {
+		"prefix": "aa_vue_lifecycle_mounted__js",
+		"body": [
+			"mounted() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted"
+	},
+	"aa_vue_lifecycle_beforeUpdate__js": {
+		"prefix": "aa_vue_lifecycle_beforeUpdate__js",
+		"body": [
+			"beforeUpdate() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。该钩子在服务器端渲染期间不被调用，因为只有初次渲染会在服务端进行。"
+	},
+	"aa_vue_lifecycle_updated__js": {
+		"prefix": "aa_vue_lifecycle_updated__js",
+		"body": [
+			"updated() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。注意 updated 不会承诺所有的子组件也都一起被重绘。如果你希望等到整个视图都重绘完毕，可以用 vm.$nextTick 替换掉 updated：该钩子在服务器端渲染期间不被调用。"
+	},
+	"aa_vue_lifecycle_activated__js": {
+		"prefix": "aa_vue_lifecycle_activated__js",
+		"body": [
+			"activated() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-keep-alive 组件激活时调用。该钩子在服务器端渲染期间不被调用。"
+	},
+	"aa_vue_lifecycle_deactivated__js": {
+		"prefix": "aa_vue_lifecycle_deactivated__js",
+		"body": [
+			"deactivated() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-keep-alive 组件停用时调用。该钩子在服务器端渲染期间不被调用。"
+	},
+	"aa_vue_lifecycle_beforeDestroy__js": {
+		"prefix": "aa_vue_lifecycle_beforeDestroy__js",
+		"body": [
+			"beforeDestroy() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-实例销毁之前调用。在这一步，实例仍然完全可用。该钩子在服务器端渲染期间不被调用。"
+	},
+	"aa_vue_lifecycle_destroyed__js": {
+		"prefix": "aa_vue_lifecycle_destroyed__js",
+		"body": [
+			"destroyed() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-Vue实例销毁后调用。调用后，Vue实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。该钩子在服务器端渲染期间不被调用。"
+	},
+	"aa_vue_lifecycle_errorCaptured__js": {
+		"prefix": "aa_vue_lifecycle_errorCaptured__js",
+		"body": [
+			"errorCaptured() {",
+			"$0",
+			"}",
+		],
+		"description": "vue生命周期-异常捕获"
+	},
+	"aa_vue_lifecycle_example__js": {
+		"prefix": "aa_vue_lifecycle_example__js",
+		"body": [
+			"beforeCreate() {",
+			"// 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。",
+			"},",
+			"created() {",
+			"// 在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。",
+			"},",
+			"beforeMount() {",
+			"// 在挂载开始之前被调用：相关的 render 函数首次被调用。该钩子在服务器端渲染期间不被调用。",
+			"},",
+			"mounted() {",
+			"// el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。",
+			"// 注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted：",
+			"this.$nextTick(function() {",
+			"// Code that will run only after the",
+			"// entire view has been rendered",
+			"})",
+			"},",
+			"beforeUpdate() {",
+			"// 数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。该钩子在服务器端渲染期间不被调用，因为只有初次渲染会在服务端进行。",
+			"},",
+			"updated() {",
+			"// 由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。",
+			"// 当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。",
+			"// 注意 updated 不会承诺所有的子组件也都一起被重绘。如果你希望等到整个视图都重绘完毕，可以用 vm.$nextTick 替换掉 updated：",
+			"this.$nextTick(function() {",
+			"// Code that will run only after the",
+			"// entire view has been re-rendered",
+			"})",
+			"// 该钩子在服务器端渲染期间不被调用。",
+			"},",
+			"activated() {",
+			"// keep-alive 组件激活时调用。",
+			"// 该钩子在服务器端渲染期间不被调用。",
+			"},",
+			"deactivated() {",
+			"// keep-alive 组件停用时调用。",
+			"// 该钩子在服务器端渲染期间不被调用。",
+			"},",
+			"beforeDestroy() {",
+			"// 实例销毁之前调用。在这一步，实例仍然完全可用。",
+			"// 该钩子在服务器端渲染期间不被调用。",
+			"},",
+			"destroyed() {",
+			"// Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。",
+			"// 该钩子在服务器端渲染期间不被调用。",
+			"},",
+			"errorCaptured() {",
+			"// 异常捕获，不常用",
+			"},",
+		],
+		"description": "vue生命周期-示例"
+	},
+	"aa_vue_methods__js": {
+		"prefix": "aa_vue_methods__js",
+		"body": [
+			"methods: {",
+			"$0",
+			"},$1"
+		],
+	},
+	"aa_vue_nextTick__js": {
+		"prefix": "aa_vue_nextTick__js",
+		"body": [
+			"this.$$nextTick(function() {",
+			"// Code that will run only after the",
+			"// entire view has been re-rendered",
+			"$0",
+			"})"
+		],
+	},
+}
