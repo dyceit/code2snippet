@@ -27,33 +27,14 @@
 			"\"description\": \"$3\"",
 			"},"
 		],
-	},
-	"aa_log__js": {
-		"prefix": "aa_log__js",
-		"body": [
-			"console.log('${1:data}', ${2:data})",
-		],
-	},
-	"aa_log_stringify__js": {
-		"prefix": "aa_log_stringify__js",
-		"body": [
-			"console.log('${1:data}', JSON.stringify(${2:data}))",
-		],
-	},
-	"aa_log_return__js": {
-		"prefix": "aa_log_return__js",
-		"body": [
-			"if(data){",
-			"console.log('${1:data}', ${2:data})",
-			"return false",
-			"}"
-		],
+		"description": "创建代码片段示例"
 	},
 	"aa_lang__js": {
 		"prefix": "aa_lang__js",
 		"body": [
 			"$$t('${1:button.import}')"
 		],
+		"description": "打印多语言"
 	},
 	"aa_helper_modal_open__js": {
 		"prefix": "aa_helper_modal_open__js",
@@ -72,7 +53,8 @@
 			"})",
 			"},",
 			"$0"
-		]
+		],
+		"description": "打开弹窗"
 	},
 	"aa_import_options__js": {
 		"prefix": "aa_import_options__js",
@@ -110,12 +92,14 @@
 		"body": [
 			"import frontEndPage from '@/components/mixins/frontEndPage'"
 		],
+		"description": ""
 	},
 	"aa_mixins_frontendpage__js": {
 		"prefix": "aa_mixins_frontendpage__js",
 		"body": [
 			"mixins: [frontEndPage],"
 		],
+		"description": "前端分页-混入"
 	},
 	"aa_frontendpage__html": {
 		"prefix": "aa_frontendpage__html",
@@ -131,18 +115,21 @@
 			"@current-change=\"handleCurrentChange\" />",
 			"</div>"
 		],
+		"description": "前端分页-html"
 	},
 	"aa_customControls__js_mixin_import": {
 		"prefix": "aa_customControls__js_import",
 		"body": [
 			"import customControls from '@/components/CustomControls/mixins/controls'"
 		],
+		"description": ""
 	},
 	"aa_customControls__js_mixins": {
 		"prefix": "aa_customControls__js_mixins",
 		"body": [
 			"mixins: [customControls],"
 		],
+		"description": ""
 	},
 	"aa_component_vuedraggable__js_import": {
 		"prefix": "aa_component_vuedraggable__js_import",
@@ -150,6 +137,7 @@
 			"import draggable from 'vuedraggable'",
 			"// https://www.jianshu.com/p/68341b54d993"
 		],
+		"description": ""
 	},
 	"aa_component_vuedraggable__html": {
 		"prefix": "aa_component_vuedraggable__html",
@@ -159,6 +147,7 @@
 			"</div>",
 			"</draggable>"
 		],
+		"description": ""
 	},
 	"aa_save_validate__js": {
 		"prefix": "aa_save_validate__js",
@@ -172,7 +161,8 @@
 			"}",
 			"})",
 			"},"
-		]
+		],
+		"description": ""
 	},
 	"aa_reset_form_validate__js": {
 		"prefix": "aa_reset_form_validate__js",
@@ -180,7 +170,8 @@
 			"resetForm(formName) {",
 			"this.$$refs[formName].resetFields()",
 			"},"
-		]
+		],
+		"description": ""
 	},
 	"aa_jsdoc__comment": {
 		"prefix": "aa_jsdoc__comment",
@@ -198,19 +189,22 @@
 			"* @vue-event {Number} decrement - 计数器减小后，触发事件",
 			"* https://github.com/Kocal/jsdoc-vuejs",
 			"*/"
-		]
+		],
+		"description": ""
 	},
 	"el-button_small_add__html": {
 		"prefix": "el-button_small_add__html",
 		"body": [
 			"<el-button size=\"small\" type=\"primary\" icon=\"el-icon-plus\" @click=\"add\">{{ $$t('button.add') }}</el-button>"
 		],
+		"description": ""
 	},
 	"el-button_small_save__html": {
 		"prefix": "el-button_small_save__html",
 		"body": [
 			"<el-button size=\"small\" type=\"primary\" @click=\"save('ruleForm')\">{{ $$t('button.save') }}</el-button>"
 		],
+		"description": ""
 	},
 	"el-button_small_cancel__html": {
 		"prefix": "el-button_small_cancel__html",
@@ -218,6 +212,7 @@
 			"<el-button size=\"small\" @click=\"reject\">{{ $$t('button.cancel') }}</el-button>",
 			"$0"
 		],
+		"description": ""
 	},
 	"el-dialog__file": {
 		"prefix": "el-dialog__file",
@@ -265,6 +260,7 @@
 			"",
 			"$0"
 		],
+		"description": ""
 	},
 	"el-dialog__html": {
 		"prefix": "el-dialog__html",
@@ -288,6 +284,7 @@
 			"<\/el-dialog>",
 			"$0"
 		],
+		"description": ""
 	},
 	"el-tooltip__html": {
 		"prefix": "el-tooltip__html",
@@ -296,6 +293,7 @@
 			"${3:<icon :size=\"14\" :color=\"gColor.iconColorDefault\" type=\"iconwenhao-xian\" />}",
 			"</el-tooltip>"
 		],
+		"description": ""
 	},
 	// el-table
 	"el-table_loading__html": {
@@ -311,6 +309,7 @@
 			"fit",
 			"highlight-current-row>"
 		],
+		"description": ""
 	},
 	"el-table_rowclick__html": {
 		"prefix": "el-table_rowclick__html",
@@ -326,6 +325,7 @@
 			"highlight-current-row",
 			"@row-click=\"handleRowClick\">"
 		],
+		"description": ""
 	},
 	"el-table-column_for__html": {
 		"prefix": "el-table-column_for__html",
@@ -343,12 +343,14 @@
 			"</template>",
 			"</el-table-column>"
 		],
+		"description": ""
 	},
 	"el-table-column_selection__html": {
 		"prefix": "el-table-column_selection__html",
 		"body": [
 			"<el-table-column :fixed=\"'left'\" type=\"selection\" align=\"center\" width=\"40\" />"
 		],
+		"description": ""
 	},
 	"el-table-column_operate__html": {
 		"prefix": "el-table-column_operate__html",
@@ -360,6 +362,7 @@
 			"</template>",
 			"</el-table-column>"
 		],
+		"description": ""
 	},
 	// el-form
 	"el-form__html": {
@@ -369,6 +372,7 @@
 			"$0",
 			"</el-form>"
 		],
+		"description": ""
 	},
 	"el-form_detail__html": {
 		"prefix": "el-form_detail__html",
@@ -377,6 +381,7 @@
 			"$0",
 			"</el-form>"
 		],
+		"description": ""
 	},
 	"el-form-item_span__html": {
 		"prefix": "el-form-item_span__html",
@@ -385,6 +390,7 @@
 			"<span>{{ ${2:tableData.cname} }}</span>",
 			"</el-form-item>"
 		],
+		"description": ""
 	},
 	"el-form-item_input__html": {
 		"prefix": "el-form-item_input__html",
@@ -393,6 +399,7 @@
 			"<el-input v-model=\"ruleForm.${2:bName}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('${1:title.schemeName}')\" clearable />",
 			"</el-form-item>"
 		],
+		"description": ""
 	},
 	"el-form-item_input_number__html": {
 		"prefix": "el-form-item_input_number__html",
@@ -401,6 +408,7 @@
 			"<el-input v-model.number=\"ruleForm.${2:bName}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('${1:title.schemeName}')\" clearable />",
 			"</el-form-item>"
 		],
+		"description": ""
 	},
 	"el-form-item_textarea__html": {
 		"prefix": "el-form-item_textarea__html",
@@ -409,6 +417,7 @@
 			"<el-input v-model=\"ruleForm.${2:memo}\" :autosize=\"{ minRows: 2, maxRows: 4}\" :placeholder=\"$t('tips.inputMemo')\" type=\"textarea\" clearable />",
 			"</el-form-item>"
 		],
+		"description": ""
 	},
 	"el-form-item_select__html": {
 		"prefix": "el-form-item_select__html",
@@ -419,6 +428,7 @@
 			"</el-select>",
 			"</el-form-item>"
 		],
+		"description": ""
 	},
 	"el-form-item_checkbox__html": {
 		"prefix": "el-form-item_checkbox__html",
@@ -432,6 +442,7 @@
 			"</el-checkbox-group>",
 			"</el-form-item>"
 		],
+		"description": ""
 	},
 	"el-form-item_radio__html": {
 		"prefix": "el-form-item_radio__html",
@@ -445,6 +456,7 @@
 			"</el-radio-group>",
 			"</el-form-item>"
 		],
+		"description": ""
 	},
 	"el-dropdown__html": {
 		"prefix": "el-dropdown__html",
@@ -468,30 +480,35 @@
 		"body": [
 			"{ required: true, message: '${1:请输入名称}', trigger: 'blur' },"
 		],
+		"description": ""
 	},
 	"aa_rules_required_input_number__js": {
 		"prefix": "aa_rules_required_input_number__js",
 		"body": [
 			"{ type: 'number', message: '${1:请输入数字类型}', trigger: 'blur' },"
 		],
+		"description": ""
 	},
 	"aa_rules_required_select__js": {
 		"prefix": "aa_rules_required_select__js",
 		"body": [
 			"{ required: true, message: '${1:请选择类型}', trigger: 'change' },"
 		],
+		"description": ""
 	},
 	"aa_rules_required_checkbox__js": {
 		"prefix": "aa_rules_required_checkbox__js",
 		"body": [
 			"{ required: true, type: 'array', message: '${1:请至少选择一个性质}', trigger: 'change' },"
 		],
+		"description": ""
 	},
 	"aa_rules_required_datetime__js": {
 		"prefix": "aa_rules_required_datetime__js",
 		"body": [
 			"{ required: true, type: 'date', message: '${1:请选择日期}', trigger: 'change' },"
 		],
+		"description": ""
 	},
 	// rules length
 	"aa_rules_min_max_length__js": {
@@ -499,24 +516,28 @@
 		"body": [
 			"{ min: ${1:1}, max: ${2:30}, message: '长度在 ${1:1} 到 ${2:30} 个字符', trigger: 'blur' },"
 		],
+		"description": ""
 	},
 	"aa_rules_min_length__js": {
 		"prefix": "aa_rules_min_length__js",
 		"body": [
 			"{ min: ${1:1}, message: '最少 ${1:1} 个字符', trigger: 'blur' },"
 		],
+		"description": ""
 	},
 	"aa_rules_max_length__js": {
 		"prefix": "aa_rules_max_length__js",
 		"body": [
 			"{ max: ${2:30}, message: '最多 ${2:30} 个字符', trigger: 'blur' },"
 		],
+		"description": ""
 	},
 	"aa_rules_validator__js": {
 		"prefix": "aa_rules_validator__js",
 		"body": [
 			"{ validator: this.$$rules.ipAddress, trigger: 'blur' },"
 		],
+		"description": ""
 	},
 	// sertable
 	"aa_sortable_import__js": {
@@ -585,5 +606,5 @@
 			"localStorage.setItem('${1:settingQuickScheme}', JSON.stringify(${2:this.schemeOptions}))"
 		],
 		"description": ""
-	},
+	}
 }

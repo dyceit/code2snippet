@@ -176,6 +176,7 @@
 			"import JfIcometProgress from '@/components/JfIcometProgress'",
 			"$0"
 		],
+		"description": ""
 	},
 	"jf-icomet-progress__js_open_dialog": {
 		"prefix": "jf-icomet-progress__js_open_dialog",
@@ -193,5 +194,6 @@
 			"})",
 			"}"
 		],
-	},
+		"description": ""
+	}
 }

@@ -15,19 +15,30 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	// 提示：使用 https://c.runoob.com/front-end/846 快速 html 转 js 字符串。
-	"jf-input-file__html": {
-		"prefix": "jf-input-file__html",
+	// 提示：使用代码片段生成工具 https://gitee.com/dyceit/code2snippet 快速生成片段
+	// debugger
+	"aa_log__js": {
+		"prefix": "aa_log__js",
 		"body": [
-			"<jf-input-file v-model=\"${1:ruleForm.file}\" label=\"选择导入文件\" @input=\"$$refs['ruleForm'].validateField('file')\" />"
+			"console.log('${1:data}', ${2:data})"
 		],
-		"description": ""
+		"description": "打印数据"
 	},
-	"jf-input-file__js_import": {
-		"prefix": "jf-input-file__js_import",
+	"aa_log_stringify__js": {
+		"prefix": "aa_log_stringify__js",
 		"body": [
-			"import JfInputFile from '@/components/JfInputFile'"
+			"console.log('${1:data}', JSON.stringify(${2:data}))"
 		],
-		"description": ""
+		"description": "打印对象为字符串，方便复制"
+	},
+	"aa_log_return__js": {
+		"prefix": "aa_log_return__js",
+		"body": [
+			"if(data){",
+			"console.log('${1:data}', ${2:data})",
+			"return false",
+			"}"
+		],
+		"description": "打印并终止"
 	}
 }

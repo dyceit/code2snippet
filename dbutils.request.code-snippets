@@ -27,7 +27,8 @@
 			"return undefined",
 			"}",
 			"}"
-		]
+		],
+		"description": ""
 	},
 	"aa_request_then__js": {
 		"prefix": "aa_request_then__js",
@@ -41,7 +42,8 @@
 			"}",
 			"})",
 			"}"
-		]
+		],
+		"description": ""
 	},
 	"aa_request_res_message__js": {
 		"prefix": "aa_request_res_message__js",
@@ -52,7 +54,8 @@
 			"} else {",
 			"this.$$message.error(this.$$t('tips.${3:operateFail}'))",
 			"}"
-		]
+		],
+		"description": ""
 	},
 	"aa_request_res_data__js": {
 		"prefix": "aa_request_res_data__js",
@@ -62,7 +65,8 @@
 			"} else {",
 			"return undefined",
 			"}"
-		]
+		],
+		"description": ""
 	},
 	"aa_request_getDetail_then__js": {
 		"prefix": "aa_request_getDetail_then__js",
@@ -94,5 +98,5 @@
 			"}"
 		],
 		"description": "获取数据async"
-	},
+	}
 }
