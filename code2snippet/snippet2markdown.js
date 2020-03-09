@@ -12,7 +12,7 @@ function init() {
   // console.log('fileList', fileList)
   fileList.forEach((file, index) => {
     if (file.match('vue-element-admin')) return
-    snippetList.push("\n## " + file + "\n")
+    snippetList.push("\n## " + file.replace(/\.\/\.\.\//, '') + "\n")
     snippetList.push("片段 | 描述")
     snippetList.push("---|---")
     var obj = getJson(file)

@@ -1,5 +1,5 @@
 
-## ./../aa.debugger.code-snippets
+## aa.debugger.code-snippets
  
  片段 | 描述 
  ---|--- 
@@ -7,7 +7,7 @@
  aa_log_stringify__js | 打印对象为字符串，方便复制 
  aa_log_return__js | 打印并终止 
  
-## ./../aa.vue.code-snippets
+## aa.vue.code-snippets
  
  片段 | 描述 
  ---|--- 
@@ -59,7 +59,7 @@
  aa_vue_methods__js | vue方法 
  aa_vue_nextTick__js | aa_vue_nextTick__js 
  
-## ./../dbutils.code-snippets
+## dbutils.code-snippets
  
  片段 | 描述 
  ---|--- 
@@ -118,7 +118,7 @@
  aa_localstorage_get__js |  
  aa_localstorage_set__js |  
  
-## ./../dbutils.jf.code-snippets
+## dbutils.jf.code-snippets
  
  片段 | 描述 
  ---|--- 
@@ -138,14 +138,14 @@
  jf-icomet-progress__js_import |  
  jf-icomet-progress__js_open_dialog |  
  
-## ./../dbutils.jf.upload.code-snippets
+## dbutils.jf.upload.code-snippets
  
  片段 | 描述 
  ---|--- 
  jf-input-file__html |  
  jf-input-file__js_import |  
  
-## ./../dbutils.request.code-snippets
+## dbutils.request.code-snippets
  
  片段 | 描述 
  ---|--- 
