@@ -15,7 +15,8 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	// 提示：使用 https://c.runoob.com/front-end/846 快速 html 转 js 字符串。
+	// 提示：使用代码片段生成工具快速生成片段：https://gitee.com/dyceit/code2snippet
+  // 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
 	"dbutils.code-snippet": {
 		"prefix": "dbutils.code-snippet",
 		"body": [
@@ -368,100 +369,6 @@
 			"<el-button type=\"text\" icon=\"el-icon-delete\" @click=\"del(scope.row)\" />",
 			"</template>",
 			"</el-table-column>"
-		],
-		"description": ""
-	},
-	// el-form
-	"el-form__html": {
-		"prefix": "el-form__html",
-		"body": [
-			"<el-form ref=\"ruleForm\" :model=\"ruleForm\" :rules=\"rules\" size=\"small\" label-width=\"100px\" style=\"padding-right:40px;\">",
-			"$0",
-			"</el-form>"
-		],
-		"description": ""
-	},
-	"el-form_detail__html": {
-		"prefix": "el-form_detail__html",
-		"body": [
-			"<el-form ref=\"detailForm\" size=\"small\" label-width=\"100px\" class=\"detail-form\">",
-			"$0",
-			"</el-form>"
-		],
-		"description": ""
-	},
-	"el-form-item_span__html": {
-		"prefix": "el-form-item_span__html",
-		"body": [
-			"<el-form-item :label=\"$$t('${1:title.schemeName}')\">",
-			"<span>{{ ${2:tableData.cname} }}</span>",
-			"</el-form-item>"
-		],
-		"description": ""
-	},
-	"el-form-item_input__html": {
-		"prefix": "el-form-item_input__html",
-		"body": [
-			"<el-form-item :label=\"$$t('${1:title.schemeName}')\" prop=\"${2:bName}\">",
-			"<el-input v-model=\"ruleForm.${2:bName}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('${1:title.schemeName}')\" clearable />",
-			"</el-form-item>"
-		],
-		"description": ""
-	},
-	"el-form-item_input_number__html": {
-		"prefix": "el-form-item_input_number__html",
-		"body": [
-			"<el-form-item :label=\"$$t('${1:title.schemeName}')\" prop=\"${2:bName}\">",
-			"<el-input v-model.number=\"ruleForm.${2:bName}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('${1:title.schemeName}')\" clearable />",
-			"</el-form-item>"
-		],
-		"description": ""
-	},
-	"el-form-item_textarea__html": {
-		"prefix": "el-form-item_textarea__html",
-		"body": [
-			"<el-form-item :label=\"$$t('${1:title.memo}')\" prop=\"${2:memo}\">",
-			"<el-input v-model=\"ruleForm.${2:memo}\" :autosize=\"{ minRows: 2, maxRows: 4}\" :placeholder=\"$t('tips.inputMemo')\" type=\"textarea\" clearable />",
-			"</el-form-item>"
-		],
-		"description": ""
-	},
-	"el-form-item_select__html": {
-		"prefix": "el-form-item_select__html",
-		"body": [
-			"<el-form-item :label=\"$$t('${1:title.schemeType}')\" prop=\"${2:bType}\">",
-			"<el-select v-model=\"ruleForm.${2:bType}\" :placeholder=\"$$t('${3:placeholder.select}') + $$t('${1:title.schemeType}')\" clearable>",
-			"<el-option v-for=\"item in showPositionOptions\" :label=\"item.label\" :value=\"item.value\" :key=\"item.value\" />",
-			"</el-select>",
-			"</el-form-item>"
-		],
-		"description": ""
-	},
-	"el-form-item_checkbox__html": {
-		"prefix": "el-form-item_checkbox__html",
-		"body": [
-			"<el-form-item :label=\"$$t('${1:title.schemeType}')\" prop=\"${2:bType}\">",
-			"<el-checkbox-group v-model=\"ruleForm.${2:bType}\">",
-			"<!-- 手写 -->",
-			"<el-checkbox label=\"1\">{{ $$t('title.publicScheme') }}</el-checkbox>",
-			"<!-- 循环 -->",
-			"<el-checkbox v-for=\"item in schemeTypeOptions\" :label=\"item.value\" :key=\"item.value\">{{ item.label }}</el-checkbox>",
-			"</el-checkbox-group>",
-			"</el-form-item>"
-		],
-		"description": ""
-	},
-	"el-form-item_radio__html": {
-		"prefix": "el-form-item_radio__html",
-		"body": [
-			"<el-form-item :label=\"$$t('${1:title.schemeType}')\" prop=\"${2:bType}\">",
-			"<el-radio-group v-model=\"ruleForm.${2:bType}\">",
-			"<!-- 手写 -->",
-			"<el-radio label=\"1\">{{ $$t('title.publicScheme') }}</el-radio>",
-			"<!-- 循环 -->",
-			"<el-radio v-for=\"item in schemeTypeOptions\" :label=\"item.value\" :key=\"item.value\">{{ item.label }}</el-radio>",
-			"</el-radio-group>",
-			"</el-form-item>"
 		],
 		"description": ""
 	},

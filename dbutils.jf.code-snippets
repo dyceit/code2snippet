@@ -15,7 +15,8 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	// 提示：使用 https://c.runoob.com/front-end/846 快速 html 转 js 字符串。
+	// 提示：使用代码片段生成工具快速生成片段：https://gitee.com/dyceit/code2snippet
+  // 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
 	"dbutils.jf.code-snippet": {
 		"prefix": "dbutils.jf.code-snippet",
 		"body": [
