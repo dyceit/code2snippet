@@ -52,6 +52,8 @@ function myFunction() {
 
 使用片段自动生成作者和时间。
 
+请使用**中文全名和qq邮箱**这样大家知道是谁并能能过qq号联系
+
 ```javascript
 /**
  * 方法描述
