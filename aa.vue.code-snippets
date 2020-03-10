@@ -173,6 +173,16 @@
 		],
 		"description": "过滤器：在双花括号中，如果带参filterName(param)"
 	},
+	// vue model
+	"aa_vue_model__js": {
+		"prefix": "aa_vue_model__js",
+		"body": [
+			"model: {",
+			"event: 'update'",
+			"}"
+		],
+		"description": "vue组件属性"
+	},
 	// vue props
 	"aa_vue_props__js": {
 		"prefix": "aa_vue_props__js",
@@ -353,6 +363,14 @@
 			"},"
 		],
 		"description": "vue实例的响应式数据对象示例"
+	},
+	// vue mixins
+	"aa_vue_mixins__js": {
+		"prefix": "aa_vue_mixins__js",
+		"body": [
+			"mixins: [$0],"
+		],
+		"description": "vue混入"
 	},
 	// vue computed
 	"aa_vue_computed__js": {
@@ -654,8 +672,8 @@
 		"prefix": "aa_vue_methods__js",
 		"body": [
 			"methods: {",
-			"$0",
-			"},$1"
+			"$1",
+			"}"
 		],
 		"description": "vue方法"
 	},

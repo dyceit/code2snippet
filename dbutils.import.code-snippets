@@ -17,26 +17,49 @@
 	// }
 	// 提示：使用代码片段生成工具快速生成片段：https://gitee.com/dyceit/code2snippet
 	// 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
-	// comment
-	"aa.comment.code-snippet": {
-		"prefix": "aa.comment.code-snippet",
+	"dbutils.code-snippet": {
+		"prefix": "dbutils.import.code-snippet",
 		"body": [
 			""
 		],
-		"description": "注释片段"
+		"description": "业务管理系统-引入片段"
 	},
-	"aa_comment_author__js": {
-		"prefix": "aa_comment_author__js",
+	"aa_import_options__js": {
+		"prefix": "aa_import_options__js",
 		"body": [
-			"${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}"
+			"import { $1 } from '@/utils/options'",
+			""
 		],
-		"description": "注释-作者"
+		"description": "引用options中的选项值"
 	},
-	"aa_comment_time__js": {
-		"prefix": "aa_comment_time__js",
+	"aa_import_common__js": {
+		"prefix": "aa_import_common__js",
 		"body": [
-			"$CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME"
+			"import { $1 } from '@/utils/common'",
+			""
 		],
-		"description": "注释-时间"
+		"description": "引用common中的方法"
+	},
+	"aa_import_lodash__js": {
+		"prefix": "aa_import_lodash__js",
+		"body": [
+			"import _ from 'lodash'",
+			"// https://www.lodashjs.com/docs/latest"
+		],
+		"description": "引用lodash工具类"
+	},
+	"aa_import_component__js": {
+		"prefix": "aa_import_component__js",
+		"body": [
+			"import ${1:MyComponent} from '@/components/${1:MyComponent}'"
+		],
+		"description": "引用公共组件"
+	},
+	"aa_import_mixins__js": {
+		"prefix": "aa_import_mixins__js",
+		"body": [
+			"import ${1:mixinName} from '@/components/mixins/${1:mixinName}'"
+		],
+		"description": "引用混入"
 	}
 }

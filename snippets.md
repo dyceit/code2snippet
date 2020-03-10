@@ -35,6 +35,7 @@
  aa_vue_filters_val__js | vue过滤器-定义不带参数，{{ str | capitalize}} 
  aa_vue_filters_args__js | vue过滤器-定义带参数，{{ str | capitalize(arg1)}} 
  aa_vue_filter__html | 过滤器：在双花括号中，如果带参filterName(param) 
+ aa_vue_model__js | vue组件属性 
  aa_vue_props__js | vue组件属性 
  aa_vue_props_number__js | vue组件属性-数字类型 
  aa_vue_props_string__js | vue组件属性-字符串类型 
@@ -47,6 +48,7 @@
  aa_vue_props_example__js | vue组件属性-示例 
  aa_vue_data__js | vue实例的响应式数据对象，只有当实例被创建时就已经存在于data中的属性才是响应式的 
  aa_vue_data_example__js | vue实例的响应式数据对象示例 
+ aa_vue_mixins__js | vue混入 
  aa_vue_computed__js | vue计算属性 
  aa_vue_computed_val__js | vue计算属性-定义格式 
  aa_vue_computed_example__js | vue计算属性-示例 
@@ -100,10 +102,6 @@
  aa_snippet__json | 创建代码片段示例 
  aa_lang__js | 打印多语言 
  aa_helper_modal_open__js | 打开弹窗 
- aa_import_options__js | 引用options中的选项值 
- aa_import_common__js | 引用common中的方法 
- aa_import_lodash__js | 引用lodash工具类 
- aa_import_component__js | 引用公共组件 
  aa_import_frontendpage__js |  
  aa_mixins_frontendpage__js | 前端分页-混入 
  aa_frontendpage__html | 前端分页-html 
@@ -158,6 +156,18 @@
  el-form-item_select__html | 表单-下拉框 
  el-form-item_checkbox__html | 表单-多选框 
  el-form-item_radio__html | 表单-单选框 
+ 
+## 业务管理系统-引入片段
+ 
+ dbutils.import.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_import_options__js | 引用options中的选项值 
+ aa_import_common__js | 引用common中的方法 
+ aa_import_lodash__js | 引用lodash工具类 
+ aa_import_component__js | 引用公共组件 
+ aa_import_mixins__js | 引用混入 
  
 ## 业务管理系统组件片段
  

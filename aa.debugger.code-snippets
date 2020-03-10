@@ -42,8 +42,8 @@
 	"aa_log_return__js": {
 		"prefix": "aa_log_return__js",
 		"body": [
-			"if(data){",
-			"console.log('${1:data}', ${2:data})",
+			"if(${1:data}){",
+			"console.log('${1:data}', ${1:data})",
 			"return false",
 			"}"
 		],
