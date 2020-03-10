@@ -156,6 +156,7 @@
  el-form-item_select__html | 表单-下拉框 
  el-form-item_checkbox__html | 表单-多选框 
  el-form-item_radio__html | 表单-单选框 
+ el-form-item_switch__html | 表单-开关 
  
 ## 业务管理系统-引入片段
  

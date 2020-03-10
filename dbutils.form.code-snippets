@@ -117,5 +117,15 @@
 			"</el-form-item>"
 		],
 		"description": "表单-单选框"
+	},
+	"el-form-item_switch__html": {
+		"prefix": "el-form-item_switch__html",
+		"body": [
+			"<el-form-item :label=\"$$t('${1:title.schemeType}')\" prop=\"${2:disable}\">",
+			"<el-switch v-model=\"ruleForm.${2:disable}\" :active-value=\"1\" :inactive-value=\"0\" />",
+			"</el-form-item>",
+			""
+		],
+		"description": "表单-开关"
 	}
 }
