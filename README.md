@@ -30,7 +30,8 @@
 3.  `cd xxx/code2snippet` 进入工具目录，然后 `node code2snippet.js`
 4.  结果已去除多余空格、转化引号，并保存在code2snippet.snippet文件下
 5.  修改名称、prefix、description
-6.  将结果复制到相应的片段文件中
+6.  片段变量说明：https://www.jianshu.com/p/8195b73319da
+7.  将结果复制到相应的片段文件中
 
 ## 项目中引入代码片段
 
