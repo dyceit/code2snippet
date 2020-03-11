@@ -248,6 +248,19 @@
  jf-input-file__html |  
  jf-input-file__js_import |  
  
+## 业务管理系统接口请求片段
+ 
+ dbutils.request.jf.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_request_async_await__js |  
+ aa_request_then__js |  
+ aa_request_res_message__js |  
+ aa_request_res_data__js |  
+ aa_request_getDetail_then__js | 获取数据then 
+ aa_request_getDetail_async__js | 获取数据async 
+ 
 ## 验证片段
  
  aa.rules.code-snippet
