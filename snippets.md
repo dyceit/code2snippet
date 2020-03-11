@@ -5,7 +5,7 @@
  
  片段 | 描述 
  ---|--- 
- aa_comment_author_time__js | 注释-方法 
+ aa_comment_author_time__js | 方法注释-作者时间 
  aa_comment_author__js | 注释-作者 
  aa_comment_time__js | 注释-时间 
  aa_comment_function_example__js | 方法注释 

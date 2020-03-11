@@ -34,7 +34,7 @@
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" */"
 		],
-		"description": "注释-方法"
+		"description": "方法注释-作者时间"
 	},
 	"aa_comment_author__js": {
 		"prefix": "aa_comment_author__js",
