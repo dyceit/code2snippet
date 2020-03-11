@@ -50,8 +50,8 @@
 		],
 		"description": "注释-时间"
 	},
-	"aa_comment_function_example__js": {
-		"prefix": "aa_comment_function_example__js",
+	"aa_comment_func_example__js": {
+		"prefix": "aa_comment_func_example__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -86,8 +86,8 @@
 		],
 		"description": "方法注释"
 	},
-	"aa_comment_function_param_single__js": {
-		"prefix": "aa_comment_function_param_single__js",
+	"aa_comment_func_param_single__js": {
+		"prefix": "aa_comment_func_param_single__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -98,8 +98,8 @@
 		],
 		"description": "方法注释-单个参数"
 	},
-	"aa_comment_function_param_multiple__js": {
-		"prefix": "aa_comment_function_param_multiple__js",
+	"aa_comment_func_param_multiple__js": {
+		"prefix": "aa_comment_func_param_multiple__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -111,8 +111,8 @@
 		],
 		"description": "方法注释-多个参数"
 	},
-	"aa_comment_function_param_object__js": {
-		"prefix": "aa_comment_function_param_object__js",
+	"aa_comment_func_param_object__js": {
+		"prefix": "aa_comment_func_param_object__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -125,8 +125,8 @@
 		],
 		"description": "方法注释-对象参数"
 	},
-	"aa_comment_function_param_object_array__js": {
-		"prefix": "aa_comment_function_param_object_array__js",
+	"aa_comment_func_param_object_array__js": {
+		"prefix": "aa_comment_func_param_object_array__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -139,8 +139,8 @@
 		],
 		"description": "方法注释-对象数组参数"
 	},
-	"aa_comment_function_param_optional__js": {
-		"prefix": "aa_comment_function_param_optional__js",
+	"aa_comment_func_param_optional__js": {
+		"prefix": "aa_comment_func_param_optional__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -151,8 +151,8 @@
 		],
 		"description": "方法注释-可选参数"
 	},
-	"aa_comment_function_param_optional_default__js": {
-		"prefix": "aa_comment_function_param_optional_default__js",
+	"aa_comment_func_param_optional_default__js": {
+		"prefix": "aa_comment_func_param_optional_default__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -163,8 +163,8 @@
 		],
 		"description": "方法注释-可选参数带默认值"
 	},
-	"aa_comment_function_param_any__js": {
-		"prefix": "aa_comment_function_param_any__js",
+	"aa_comment_func_param_any__js": {
+		"prefix": "aa_comment_func_param_any__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -175,8 +175,8 @@
 		],
 		"description": "方法注释-任意类型参数"
 	},
-	"aa_comment_function_param_types__js": {
-		"prefix": "aa_comment_function_param_types__js",
+	"aa_comment_func_param_types__js": {
+		"prefix": "aa_comment_func_param_types__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -187,8 +187,8 @@
 		],
 		"description": "方法注释-多种类型参数"
 	},
-	"aa_comment_function_param_call__js": {
-		"prefix": "aa_comment_function_param_call__js",
+	"aa_comment_func_param_call__js": {
+		"prefix": "aa_comment_func_param_call__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -202,8 +202,8 @@
 		],
 		"description": "方法注释-回调调用"
 	},
-	"aa_comment_function_param_callback__js": {
-		"prefix": "aa_comment_function_param_callback__js",
+	"aa_comment_func_param_callback__js": {
+		"prefix": "aa_comment_func_param_callback__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
@@ -218,8 +218,8 @@
 		],
 		"description": "方法注释-回调方法"
 	},
-	"aa_comment_function_param_return__js": {
-		"prefix": "aa_comment_function_param_return__js",
+	"aa_comment_func_param_return__js": {
+		"prefix": "aa_comment_func_param_return__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",

@@ -243,8 +243,8 @@
 		],
 		"description": "vue组件属性-对象类型，引用传参，不用emit也能改变父组件的值"
 	},
-	"aa_vue_props_function__js": {
-		"prefix": "aa_vue_props_function__js",
+	"aa_vue_props_func__js": {
+		"prefix": "aa_vue_props_func__js",
 		"body": [
 			"func: {",
 			"validator: function(val) {",
