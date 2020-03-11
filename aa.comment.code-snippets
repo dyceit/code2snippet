@@ -250,6 +250,6 @@
 			" * https://github.com/Kocal/jsdoc-vuejs",
 			" */"
 		],
-		"description": "aa_comment_vue_component__js"
+		"description": "vue组件注释"
 	}
 }
