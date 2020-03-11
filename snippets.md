@@ -5,8 +5,21 @@
  
  片段 | 描述 
  ---|--- 
+ aa_comment_author_time__js | 注释-方法 
  aa_comment_author__js | 注释-作者 
  aa_comment_time__js | 注释-时间 
+ aa_comment_function_example__js | 方法注释 
+ aa_comment_function_param_single__js | 方法注释-单个参数 
+ aa_comment_function_param_multiple__js | 方法注释-多个参数 
+ aa_comment_function_param_object__js | 方法注释-对象参数 
+ aa_comment_function_param_object_array__js | 方法注释-对象数组参数 
+ aa_comment_function_param_optional__js | 方法注释-可选参数 
+ aa_comment_function_param_optional_default__js | 方法注释-可选参数带默认值 
+ aa_comment_function_param_any__js | 方法注释-任意类型参数 
+ aa_comment_function_param_types__js | 方法注释-多种类型参数 
+ aa_comment_function_param_call__js | 方法注释-回调调用 
+ aa_comment_function_param_callback__js | 方法注释-回调方法 
+ aa_comment_function_param_return__js | 方法注释-返回值 
  
 ## 测试打印数据
  

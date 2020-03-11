@@ -258,7 +258,80 @@ function requestCallback(res) {
  * 方法描述
  * @param {requestCallback} cb - 处理异步请求返回数据的回调方法
  */
-function doSomethingAsynchronously(cb) {
+function myFunction(cb) {
     // ...
 }
+```
+
+## vue组件注释
+
+比较全的示例
+
+```javascript
+/**
+  * @module components/MyComponent
+  * @author 戴思阳 <814577465@qq.com>
+  * @time 2020年03月09日 19:04:30 星期一
+  * @desc 计数器组件
+  * @example <my-component :counter-initor="5" :step="2" />
+  * @vue-prop {Number} initialCounter - 组件属性
+  * @vue-prop {Number} [step=1] - 可选带默认值组件属性
+  * @vue-data {Number} counter - 组件数据
+  * @vue-computed {String} message - 计算属性
+  * @vue-event {Number} increment - Emit事件
+  * @vue-event {Number} decrement - Emit counter's value after decrement
+  */
+export default {
+  name: 'MyComponent',
+  props: {
+    initialCounter: {
+      type: Number,
+      required: true,
+    },
+    step: {
+      type: Number,
+      default: 1,
+    }
+  },
+  data () {
+    return {
+      counter: 0,
+    }
+  },
+  computed: {
+    message() {
+      return `Current value is ${this.counter}`;
+    }
+  },
+  methods: {
+    increment() {
+      this.counter += 1;
+      this.$emit('increment', this.counter);
+    },
+    decrement() {
+      this.counter -= 1;
+      this.$emit('decrement', this.counter);
+    }
+  }
+}
+```
+
+组件注释片段
+
+```javascript
+/**
+* @module components/MyComponent
+* @author 戴思阳 <814577465@qq.com>
+* @time 2020年03月09日 19:04:30 星期一
+* @desc 计数器组件
+* @example <my-component :counter-initor="5" :step="2" />
+* @vue-prop {Number} conterInitor - 组件属性，camelCase
+* @vue-prop {Number} [step] - 可选组件属性
+* @vue-prop {Number} [step=1] - 可选带默认值组件属性
+* @vue-data {Number} counter - 组件数据
+* @vue-computed {String} message - 计算属性
+* @vue-event {Number} increment - 计数器增加后，触发事件
+* @vue-event {Number} decrement - 计数器减小后，触发事件
+* https://github.com/Kocal/jsdoc-vuejs
+*/
 ```
