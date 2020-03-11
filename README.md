@@ -34,7 +34,7 @@
 
 ## 项目中引入代码片段
 
-- 文件->将工作区另存为 `projectname.code.workspace`
+- 文件->将工作区另存为 `projectname.code-workspace`
 - 在工作区根目录新建 `.vscode` 文件
 - 去 gitee 或 github 把项目 fork 到自己的仓库，区分项目级和公司级
 - 进入工作区根目录 `cd xxx/`
