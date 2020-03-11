@@ -168,7 +168,7 @@
 	"aa_vue_filter__html": {
 		"prefix": "aa_vue_filter__html",
 		"body": [
-			"{{ message | capitalize }}",
+			"{{ msg | capitalize }}",
 			""
 		],
 		"description": "过滤器：在双花括号中，如果带参filterName(param)"

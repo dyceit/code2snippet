@@ -126,49 +126,6 @@
 		],
 		"description": ""
 	},
-	"aa_save_validate__js": {
-		"prefix": "aa_save_validate__js",
-		"body": [
-			"save(formName) {",
-			"this.$$refs[formName].validate((valid) => {",
-			"if (valid) {",
-			"addForm(this.ruleForm.name).then(res => {",
-			"this.saveCallback(res)",
-			"})",
-			"}",
-			"})",
-			"},"
-		],
-		"description": ""
-	},
-	"aa_reset_form_validate__js": {
-		"prefix": "aa_reset_form_validate__js",
-		"body": [
-			"resetForm(formName) {",
-			"this.$$refs[formName].resetFields()",
-			"},"
-		],
-		"description": ""
-	},
-	"aa_jsdoc__comment": {
-		"prefix": "aa_jsdoc__comment",
-		"body": [
-			"/**",
-			"* @module components/Counter",
-			"* @author ${1:杜伟坡} <${2:dovapour}@qq.com>",
-			"* @desc 计数器组件",
-			"* @example <Counter :counter-initor=\"5\" :step=\"2\"></Counter>",
-			"* @vue-prop {Number} conterInitor - 计数器初始值",
-			"* @vue-prop {Number} [step=1] - 增加步长",
-			"* @vue-data {Number} counter - 计数器当前值",
-			"* @vue-computed {String} message",
-			"* @vue-event {Number} increment - 计数器增加后，触发事件",
-			"* @vue-event {Number} decrement - 计数器减小后，触发事件",
-			"* https://github.com/Kocal/jsdoc-vuejs",
-			"*/"
-		],
-		"description": ""
-	},
 	"el-button_small_add__html": {
 		"prefix": "el-button_small_add__html",
 		"body": [
@@ -200,8 +157,8 @@
 			":close-on-click-modal=\"false\"",
 			":visible.sync=\"visible\"",
 			":title=\"${1:title}\"",
-			"width=\"${2:500px}\"",
-			"custom-class=\"el-dialog-form\"",
+			"width=\"${2|500px,400px,600px,720px,980px,1100px|}\"",
+			"custom-class=\"${3|el-dialog-form,el-dialog-fullscreen,el-dialog-custom|}\"",
 			"@close=\"reject\">",
 			"<!-- 注 : 弹框尺寸规范：宽度分别为400px、500px、600px、720px、980px、1100px，高度限520px以内，内容一屏展示不完加滚动条；",
 			"一般情况标题和内容离左右外边框距离20px,表单的标题字段固定宽度为6个字宽度（一般为72px）,表单为两列时，两列间距为10px。 ",
@@ -216,10 +173,11 @@
 			"",
 			"<script>",
 			"export default {",
-			"name: '${3:DemoDialog}',",
+			"name: '$TM_FILENAME_BASE',",
 			"data() {",
 			"return {",
-			"visible: false",
+			"visible: false,",
+			"title: this.$$t('common.title')",
 			"}",
 			"},",
 			"methods: {",
@@ -354,71 +312,6 @@
 			"<el-dropdown-item command=\"selected\">同步选择产品</el-dropdown-item>",
 			"</el-dropdown-menu>",
 			"</el-dropdown>"
-		],
-		"description": ""
-	},
-	// rules required
-	"aa_rules_required_input__js": {
-		"prefix": "aa_rules_required_input__js",
-		"body": [
-			"{ required: true, message: '${1:请输入名称}', trigger: 'blur' },"
-		],
-		"description": ""
-	},
-	"aa_rules_required_input_number__js": {
-		"prefix": "aa_rules_required_input_number__js",
-		"body": [
-			"{ type: 'number', message: '${1:请输入数字类型}', trigger: 'blur' },"
-		],
-		"description": ""
-	},
-	"aa_rules_required_select__js": {
-		"prefix": "aa_rules_required_select__js",
-		"body": [
-			"{ required: true, message: '${1:请选择类型}', trigger: 'change' },"
-		],
-		"description": ""
-	},
-	"aa_rules_required_checkbox__js": {
-		"prefix": "aa_rules_required_checkbox__js",
-		"body": [
-			"{ required: true, type: 'array', message: '${1:请至少选择一个性质}', trigger: 'change' },"
-		],
-		"description": ""
-	},
-	"aa_rules_required_datetime__js": {
-		"prefix": "aa_rules_required_datetime__js",
-		"body": [
-			"{ required: true, type: 'date', message: '${1:请选择日期}', trigger: 'change' },"
-		],
-		"description": ""
-	},
-	// rules length
-	"aa_rules_min_max_length__js": {
-		"prefix": "aa_rules_min_max_length__js",
-		"body": [
-			"{ min: ${1:1}, max: ${2:30}, message: '长度在 ${1:1} 到 ${2:30} 个字符', trigger: 'blur' },"
-		],
-		"description": ""
-	},
-	"aa_rules_min_length__js": {
-		"prefix": "aa_rules_min_length__js",
-		"body": [
-			"{ min: ${1:1}, message: '最少 ${1:1} 个字符', trigger: 'blur' },"
-		],
-		"description": ""
-	},
-	"aa_rules_max_length__js": {
-		"prefix": "aa_rules_max_length__js",
-		"body": [
-			"{ max: ${2:30}, message: '最多 ${2:30} 个字符', trigger: 'blur' },"
-		],
-		"description": ""
-	},
-	"aa_rules_validator__js": {
-		"prefix": "aa_rules_validator__js",
-		"body": [
-			"{ validator: this.$$rules.ipAddress, trigger: 'blur' },"
 		],
 		"description": ""
 	},

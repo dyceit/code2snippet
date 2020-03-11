@@ -1,0 +1,39 @@
+{
+	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	// 提示：使用代码片段生成工具快速生成片段：https://gitee.com/dyceit/code2snippet
+	// 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
+	// link
+	"aa.link.code-snippet": {
+		"prefix": "aa.link.code-snippet",
+		"body": [
+			""
+		],
+		"description": "链接片段"
+	},
+	"aa_link_navbar__html": {
+		"prefix": "aa_link_navbar__html",
+		"body": [
+			"<router-link class=\"inlineBlock\" to=\"${1:/demos/snippetDemo}\">",
+			"<el-dropdown-item>",
+			"<i class=\"el-icon-menu\">${2:片段demo}</i>",
+			"</el-dropdown-item>",
+			"</router-link>"
+		],
+		"description": "aa_link_navbar__html"
+	}
+}

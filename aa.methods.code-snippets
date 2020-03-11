@@ -1,0 +1,139 @@
+{
+	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	// 提示：使用代码片段生成工具快速生成片段：https://gitee.com/dyceit/code2snippet
+	// 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
+	"dbutils.methods.code-snippet": {
+		"prefix": "dbutils.methods.code-snippet",
+		"body": [
+			""
+		],
+		"description": "方法片段"
+	},
+	"aa_methods_getList_then__js": {
+		"prefix": "aa_methods_getList_then__js",
+		"body": [
+			"getList(params) {",
+			"\/\/ 获取列表数据",
+      "this.loading = true",
+			"${1:getList}(params).then(res => {",
+      "this.loading = false",
+			"if (res.success) {",
+			"\/\/ 处理获取的数据",
+			"console.log('res.data', res.data)",
+			"this.list = res.data",
+			"} else {",
+			"\/\/ 数据获取失败，根据实际情况决定是否显示提示",
+			"this.$message.warning(res.message || this.$$t('tips.getFail'))",
+			"}",
+			"})",
+			"}"
+		],
+		"description": "方法-获取列表数据then"
+	},
+	"aa_methods_getList_async__js": {
+		"prefix": "aa_methods_getList_async__js",
+		"body": [
+			"getList(params) {",
+			"\/\/ 获取列表数据",
+      "this.loading = true",
+			"const res = await ${1:getList}(params)",
+      "this.loading = false",
+			"if (res.success) {",
+			"\/\/ 处理获取的数据",
+			"console.log('res.data', res.data)",
+			"this.list = res.data",
+			"} else {",
+			"\/\/ 数据获取失败，根据实际情况决定是否显示提示",
+			"this.$message.warning(res.message || this.$t('tips.getFail'))",
+			"}",
+			"}"
+		],
+		"description": "方法-获取列表数据async"
+	},
+	"aa_methods_getDetail_then__js": {
+		"prefix": "aa_methods_getDetail_then__js",
+		"body": [
+			"getDetail(params) {",
+			"\/\/ 获取详情数据",
+      "this.loading = true",
+			"${1:getDetail}(params).then(res => {",
+      "this.loading = false",
+			"if (res.success) {",
+			"\/\/ 处理获取的数据",
+			"console.log('res.data', res.data)",
+			"this.detail = res.data",
+			"} else {",
+			"\/\/ 数据获取失败，根据实际情况决定是否显示提示",
+			"this.$message.warning(res.message || this.$$t('tips.getFail'))",
+			"}",
+			"})",
+			"}"
+		],
+		"description": "方法-获取详情数据then"
+	},
+	"aa_methods_getDetail_async__js": {
+		"prefix": "aa_methods_getDetail_async__js",
+		"body": [
+			"getDetail(params) {",
+			"\/\/ 获取详情数据",
+      "this.loading = true",
+			"const res = await ${1:getDetail}(params)",
+      "this.loading = false",
+			"if (res.success) {",
+			"\/\/ 处理获取的数据",
+			"console.log('res.data', res.data)",
+			"this.detail = res.data",
+			"} else {",
+			"\/\/ 数据获取失败，根据实际情况决定是否显示提示",
+			"this.$message.warning(res.message || this.$t('tips.getFail'))",
+			"}",
+			"}"
+		],
+		"description": "方法-获取详情数据async"
+	},
+	"aa_methods_save_form_validate__js": {
+		"prefix": "aa_methods_save_form_validate__js",
+		"body": [
+			"save(formName) {",
+			"this.$$refs[formName].validate((valid) => {",
+			"if (valid) {",
+			"saveSnippetDemo(this.ruleForm).then(res => {",
+			"if (res.success) {",
+			"this.$$message.success(this.$$t('tips.saveSuccess'))",
+			"this.resolve()",
+			"} else {",
+			"this.$$message.error(this.$$t('tips.saveFail'))",
+			"}",
+			"})",
+			"}",
+			"})",
+			"}",
+			""
+		],
+		"description": "方法-保存"
+	},
+	"aa_methods_reset_form_validate__js": {
+		"prefix": "aa_methods_reset_form_validate__js",
+		"body": [
+			"reset(formName) {",
+			"this.$$refs[formName].resetFields()",
+			"},"
+		],
+		"description": "方法-重置表单"
+	}
+}

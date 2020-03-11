@@ -24,6 +24,14 @@
 		],
 		"description": "业务管理系统-引入片段"
 	},
+	"aa_import_api__js": {
+		"prefix": "aa_import_api__js",
+		"body": [
+			"import { $1 } from '@/api/${2:api}'",
+			""
+		],
+		"description": "引用api中的接口方法"
+	},
 	"aa_import_options__js": {
 		"prefix": "aa_import_options__js",
 		"body": [

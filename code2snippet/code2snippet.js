@@ -23,7 +23,7 @@ fs.writeFile(snippetFile, result, 'utf8', function(err) {
 function toSnippet(data) {
   var arr = data.toString().split('\n')
   arr.forEach((val, index) => {
-    arr[index] = '\n' + JSON.stringify(arr[index].trim().replace(/\$/g, '\$\$'))
+    arr[index] = '\n' + JSON.stringify(arr[index].trim().replace(/\$/g, '\$\$\$'))
   })
   return arr.toString()
 }
