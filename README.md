@@ -1,5 +1,12 @@
 # code2snippet
 
+> 持续更新中...
+
+可访问以下地址查看最新版本：
+- gitee：https://gitee.com/dyceit/code2snippet
+- github: https://github.com/dyceit/code2snippet
+
+
 ## 介绍
 
 本项目包含以下内容：
@@ -24,6 +31,16 @@
 4.  结果已去除多余空格、转化引号，并保存在code2snippet.snippet文件下
 5.  修改名称、prefix、description
 6.  将结果复制到相应的片段文件中
+
+## 项目中引入代码片段
+
+- 文件->将工作区另存为 `projectname.code.workspace`
+- 在工作区根目录新建 `.vscode` 文件
+- 去 gitee 或 github 把项目 fork 到自己的仓库，区分项目级和公司级
+- 进入工作区根目录 `cd xxx/`
+- 导入项目 `git clone https://gitee.com/dyceit/code2snippet.git .vscode` 注意 git 地址替换成你自己 fork 出来的
+- 也可以把 .vscode 目录加入公司 svn
+- 提交更新 `sh git.sh`，第一次推送的时候，可用户名地密码，`git push -u orgin master`
 
 ## 参与贡献
 
