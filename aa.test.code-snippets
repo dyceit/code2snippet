@@ -1,0 +1,82 @@
+{
+  "aa.test.code-snippet": {
+    "prefix": "aa.test.code-snippet",
+    "body": [
+      ""
+    ],
+    "description": "工具测试片段"
+  },
+  "aa_vue__file": {
+    "prefix": "aa_vue__file",
+    "body": [
+      "code2snippet.vue"
+    ],
+    "description": "aa_vue__file"
+  },
+  "ccc": {
+    "prefix": "ccc",
+    "body": [
+      "<template>",
+      "<div class=\"container\">",
+      "<!--  template下只能包含一年根节点，这里统一加div.container -->",
+      "</div>",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "name: 'code2snippet'",
+      "",
+      "$${1:2}",
+      "}",
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped>",
+      ".container {",
+      "// 如果没有样式，可以删除style，本项目一般不用写样式",
+      "}",
+      "</style>",
+      ""
+    ],
+    "description": "ccc"
+  },
+  "aaaddd": {
+    "prefix": "aaaddd",
+    "body": [
+      "<template>",
+      "<div class=\"container\">",
+      "<!--  template下只能包含一年根节点，这里统一加div.container -->",
+      "</div>",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "name: 'code2snippet'",
+      "",
+      "$${1:2}",
+      "}",
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped>",
+      ".container {",
+      "// 如果没有样式，可以删除style，本项目一般不用写样式",
+      "}",
+      "</style>",
+      ""
+    ],
+    "description": "aaaddd"
+  },
+  "aa": {
+    "prefix": "aa",
+    "body": [
+      "nfffff"
+    ],
+    "description": "aa"
+  },
+  "aa_test_snippet__js": {
+    "prefix": "aa_test_snippet__js",
+    "body": [
+      "answers"
+    ],
+    "description": "aa_test_snippet__js"
+  }
+}

@@ -82,9 +82,9 @@
 - Vue VSCode Snippets
   - sdras.vue-vscode-snippets-1.8.0
 - vue-element-admin-snippet
-  - liugq.vue-element-admin-snippet-1.1.1
+  - liugq.vue-element-admin-snippet-1.1.1 需要修改
 - vue-element-snippet
-  - liugq.vue-element-snippet-1.1.8
+  - liugq.vue-element-snippet-1.1.8 需要修改
 - Vue 2 Snippets
   - hollowtree.vue-snippets-0.1.11
 

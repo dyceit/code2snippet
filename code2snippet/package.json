@@ -1,0 +1,19 @@
+{
+  "name": "code2snippet",
+  "version": "1.0.0",
+  "description": "代码转片段",
+  "main": "code2snippet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dyceit <814577465@qq.com>",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^2.2.0",
+    "colors": "^1.4.0",
+    "iconv-lite": "^0.5.1",
+    "inquirer": "^7.1.0",
+    "node-clip": "^0.1.1",
+    "shelljs": "^0.8.3"
+  }
+}

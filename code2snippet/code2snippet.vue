@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'code2snippet',
-
+  ${1:2}
 }
 </script>
 
