@@ -5,9 +5,26 @@
 </template>
 
 <script>
+/**
+ * @module components/code2snippet
+ * @author 戴思阳 <814577465@qq.com>
+ * @time 2020年03月12日 19:39:26 星期四
+ * @modifier 戴思阳 <814577465@qq.com>
+ * @lastmodified 2020年03月12日 19:59:51 星期四
+ * @desc 计数器组件
+ * @example <my-component :counter-initor="5" :step="2" />
+ * @vue-prop {Number} conterInitor - 组件属性，camelCase
+ * @vue-prop {Number} [step] - 可选组件属性
+ * @vue-prop {Number} [step=1] - 可选带默认值组件属性
+ * @vue-data {Number} counter - 组件数据
+ * @vue-computed {String} message - 计算属性
+ * @vue-event {Number} increment - 计数器增加后，触发事件
+ * @vue-event {Number} decrement - 计数器减小后，触发事件
+ * https://github.com/Kocal/jsdoc-vuejs
+ */
 export default {
   name: 'code2snippet',
-  ${1:2}
+
 }
 </script>
 
