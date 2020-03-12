@@ -40,9 +40,9 @@
 		"prefix": "aa_comment_modifier_dyce__js",
 		"body": [
 			"${1: * @modifier 戴思阳 <814577465@qq.com>",
-			" * @lastmodified $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME}",
+			" * @lastmodified $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME}"
 		],
-		"description": "方法注释-作者时间"
+		"description": "方法注释-更新人"
 	},
 	"aa_comment_author__js": {
 		"prefix": "aa_comment_author__js",
