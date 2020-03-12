@@ -10,7 +10,7 @@
  * @author 戴思阳 <814577465@qq.com>
  * @time 2020年03月12日 19:39:26 星期四
  * @modifier 戴思阳 <814577465@qq.com>
- * @lastmodified 2020年03月12日 19:59:51 星期四
+ * @lastmodified 2020年03月12日 20:10:37 星期四
  * @desc 计数器组件
  * @example <my-component :counter-initor="5" :step="2" />
  * @vue-prop {Number} conterInitor - 组件属性，camelCase
