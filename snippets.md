@@ -36,7 +36,7 @@
  片段 | 描述 
  ---|--- 
  aa_comment_author_time__js | 方法注释-作者时间 
- aa_comment_modifier_dyce__js | 方法注释-作者时间 
+ aa_comment_modifier_dyce__js | 方法注释-更新人 
  aa_comment_author__js | 注释-作者 
  aa_comment_time__js | 注释-时间 
  aa_comment_func_example__js | 方法注释 
@@ -114,7 +114,6 @@
  cccc | ddddd 
  aa_tpl_<div class="container"> | aa_tpl_<div class="container"> 
  aa_tpl_container__html | aaaa 
- aa_comment_modifier_dyce__js | 注释片段-更新人 
  
 ## Vue常用代码片段
  
