@@ -3,7 +3,6 @@ const readline = require('readline') // 读取命令行输入
 const clipboardy = require('clipboardy') // 剪切板
 const args = process.argv // node 参数
 const colors = require('colors') // 命令行颜色
-var inquirer = require('inquirer');
 
 const vueFile = 'code2snippet.vue'
 const snippetFile = '../aa.test.code-snippets'
@@ -32,23 +31,6 @@ const preHint = `
 `.grey
 
 console.log(preHint)
-
-inquirer
-  .prompt([
-    /* Pass your questions in here */
-    '测试？'
-  ])
-  .then(answers => {
-    console.log('answers', answers)
-    // Use user feedback for... whatever!!
-  })
-  .catch(error => {
-    if(error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else when wrong
-    }
-  });
 
 // 问题
 let questions = ['prefix', 'body', 'description']
