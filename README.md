@@ -44,19 +44,21 @@ vscode中能找到这方面的片段插件，但是并不是完美兼容项目�
 
 ## 代码片段生成工具
 
-- 在code2snippet.vue编写你的代码
-- vscode "cmd+k m" 更改语言模式，来高亮代码，格式化相应的代码
+已经从最早的片段升级到命令行方式：
+
 - `cd xxx/.vscode/code2snippet` 进入工具目录，然后 `node code2snippet.js`
-- 结果已去除多余空格、转化引号、'$'符号，并保存在code2snippet.snippet文件下
-- 修改片段名称、prefix、description
+- 根据提示生成片段
+  - 选择片段输出文件 默认：../aa.test.code-snippets，可进文件修改默认值
+  - 输入片段名称
+  - 选择片段来源
+    - file code2snippet.vue
+    - clip 剪切板
+  - 输入片段描述
+  - 点击链接查看生成结果，并进行优化
+- 结果已去除多余空格、转化引号、'$'符号等
 - 片段变量说明：https://www.jianshu.com/p/8195b73319da
-- 将结果复制到相应的片段文件中
 
-## 剪切板代码片段生成工具
-
-- 在开发中复制代码到剪切板 `node code2snippet-clip.js --clip`
-- 编辑 `code2snippet.vue` 的内容 `node code2snippet-clip.js`
-- 生成到配置后的结果文件 ../aa.test.code-snippets 中
+> vscode "cmd+k m" 更改 code2snippet.vue 语言模式，来高亮代码，格式化相应的代码
 
 ## 片段目录生成工具
 

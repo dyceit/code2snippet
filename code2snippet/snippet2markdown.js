@@ -9,10 +9,9 @@ init()
 function init() {
   getFiles('./../', '.code-snippets')
 
-  // console.log('fileList', fileList)
   fileList.forEach((file, index) => {
     if (file.match('vue-element-admin')) return
-    var obj = getJson(file)
+    var obj = getMap(file)
     Object.keys(obj).forEach((key, index) => {
       if (index === 0) {
         snippetList.push("\n## " + obj[key].description + "\n")
@@ -25,7 +24,6 @@ function init() {
     })
   })
 
-  // console.log('snippetList', JSON.stringify(snippetList))
   fs.writeFile(snippetFile, snippetList.join(' \n '), 'utf8', function(err) {
     if (err) {
       console.log(err);
@@ -33,21 +31,13 @@ function init() {
   });
 }
 
-function getJson(filePath) {
-  var data = fs.readFileSync(filePath);
-  data = data.toString()
-  data = data.replace(/\t\/\/.*?\n/g, '').replace(/\n/g, '').replace(/\t/g, '').trim()
-  data = data.replace(/\"body\": \[.*?\"description\": \"/mg, '"description": "')
-  data = JSON.parse(data)
-  return data
+function getMap(filePath) {
+  var txt = fs.readFileSync(filePath);
+  txt = txt.toString()
+  txt = txt.replace(/\t\/\/.*?\n/g, '').replace(/\n/g, '').replace(/\t/g, '').trim()
+  txt = txt || '{}'
+  return JSON.parse(txt)
 }
-
-
-// var fs = require("fs");
-
-// var filePath = 'code2snippet.vue';
-// var data = fs.readFileSync(vueFile);
-
 
 function getFiles(url, ext) {
   try {
@@ -58,7 +48,6 @@ function getFiles(url, ext) {
         if (stats.isFile()) {
           if (path.extname(url + file) === ext) {
             fileList.push(url + file)
-            // console.log(path.basename(file, ext))
           }
         } else if (stats.isDirectory()) {
           getFiles(url + file + '/', ext)
