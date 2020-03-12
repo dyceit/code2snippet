@@ -36,8 +36,10 @@
  片段 | 描述 
  ---|--- 
  aa_comment_author_time__js | 方法注释-作者时间 
- aa_comment_author_dyce__js | 方法注释-戴思阳 
- aa_comment_modifier_dyce__js | 方法注释-更新人 
+ aa_comment_author_dyce__js | 方法注释-作者-戴思阳 
+ aa_comment_modifier_dyce__js | 方法注释-更新人-戴思阳 
+ aa_comment_author_chenwei__js | 方法注释-作者-陈威 
+ aa_comment_modifier_chenwei__js | 方法注释-更新人-陈威 
  aa_comment_author__js | 注释-作者 
  aa_comment_time__js | 注释-时间 
  aa_comment_func_example__js | 方法注释 

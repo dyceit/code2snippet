@@ -6,6 +6,13 @@
 
 <script>
 /**
+ * 方法名称
+ * @author 戴思阳 <814577465@qq.com>
+ * @time 2020年03月12日 20:27:37 星期四
+ * @modifier 戴思阳 <814577465@qq.com>
+ * @lastmodified 2020年03月12日 20:27:49 星期四
+ */
+/**
  * @module components/code2snippet
  * @author 戴思阳 <814577465@qq.com>
  * @time 2020年03月12日 19:39:26 星期四
