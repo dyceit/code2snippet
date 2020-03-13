@@ -37,7 +37,13 @@ const questions = [
     name: 'prefix',
     type: 'input',
     default: 'aa_test_snippet__js',
-    message: '请输入片段名称'
+    message: '请输入片段名称',
+    validate (val) {
+      if (!val) {
+        return '名称不能为空'
+      }
+      return true
+    }
   },
   {
     name: 'body',
@@ -53,15 +59,14 @@ const questions = [
     name: 'description',
     type: 'input',
     default: '使用片段名称',
-    message: '请输入片段描述'
+    message: '请输入片段描述',
+    validate (val) {
+      if (!val) {
+        return '描述不能为空'
+      }
+      return true
+    }
   }
-  // {
-  //   name: 'project',
-  //   message: 'Please input the project name which you want to check:',
-  //   filter: src => src.replace(/.spec.ts$/gi, ''),
-  //   validate: str => Boolean(str.split('/').length === 2 || str.split('/').length === 3),
-  //   when: res => !Boolean(res.conf)
-  // },
 ]
 
 const prompts = () => new Promise(resolve => {

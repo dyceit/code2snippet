@@ -10,7 +10,7 @@
     "prefix": "eeee",
     "description": "adsfasdf",
     "body": [
-      "<template>,<div class=\"container\">,<!--  template下只能包含一年根节点，这里统一加div.container -->,</div>,</template>,,<script>,export default {,name: 'code2snippet',,$${1:2},},</script>,,<style lang=\"scss\" scoped>,.container {,// 如果没有样式，可以删除style，本项目一般不用写样式,},</style>,"
+      "<template>,<div class=\"container\">,<!--  template下只能包含一个根节点，这里统一加div.container -->,</div>,</template>,,<script>,export default {,name: 'code2snippet',,$${1:2},},</script>,,<style lang=\"scss\" scoped>,.container {,// 如果没有样式，可以删除style，本项目一般不用写样式,},</style>,"
     ]
   },
   "aaa": {
@@ -35,7 +35,7 @@
     "description": "aa_tpl_<div class=\"container\">",
     "body": [
       "<div class=\"container\">",
-      "    <!--  template下只能包含一年根节点，这里统一加div.container -->",
+      "    <!--  template下只能包含一个根节点，这里统一加div.container -->",
       "  </div>"
     ]
   },
@@ -44,7 +44,7 @@
     "description": "aaaa",
     "body": [
       "<div class=\"container\">",
-      "    <!--  template下只能包含一年根节点，这里统一加div.container -->",
+      "    <!--  template下只能包含一个根节点，这里统一加div.container -->",
       "  </div>"
     ]
   }

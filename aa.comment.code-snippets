@@ -55,24 +55,43 @@
 		],
 		"description": "方法注释-更新人-戴思阳"
 	},
-	"aa_comment_author_chenwei__js": {
-		"prefix": "aa_comment_author_chenwei__js",
+	"aa_comment_author_vjing__js": {
+		"prefix": "aa_comment_author_vjing__js",
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author 陈威 <490945932@qq.com>",
+			" * @author 魏静 <812065568@qq.com>",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" */"
 		],
-		"description": "方法注释-作者-陈威"
+		"description": "方法注释-作者-魏静"
 	},
-	"aa_comment_modifier_chenwei__js": {
-		"prefix": "aa_comment_modifier_chenwei__js",
+	"aa_comment_modifier_vjing__js": {
+		"prefix": "aa_comment_modifier_vjing__js",
 		"body": [
-			"${1: * @modifier 陈威 <490945932@qq.com>",
+			"${1: * @modifier 魏静 <812065568@qq.com>",
 			" * @lastmodified $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME}"
 		],
-		"description": "方法注释-更新人-陈威"
+		"description": "方法注释-更新人-魏静"
+	},
+	"aa_comment_author_gaoxingl__js": {
+		"prefix": "aa_comment_author_gaoxingl__js",
+		"body": [
+			"/**",
+			" * ${2:方法名称}",
+			" * @author 郜兴亮 <54201425@qq.com>",
+			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			" */"
+		],
+		"description": "方法注释-作者-郜兴亮"
+	},
+	"aa_comment_modifier_gaoxingl__js": {
+		"prefix": "aa_comment_modifier_gaoxingl__js",
+		"body": [
+			"${1: * @modifier 郜兴亮 <54201425@qq.com>",
+			" * @lastmodified $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME}"
+		],
+		"description": "方法注释-更新人-郜兴亮"
 	},
 	"aa_comment_author__js": {
 		"prefix": "aa_comment_author__js",

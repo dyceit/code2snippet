@@ -29,7 +29,7 @@
 		"body": [
 			"<template>",
 			"<div class=\"container\">",
-			"<!--  template下只能包含一年根节点，这里统一加div.container -->",
+			"<!--  template下只能包含一个根节点，这里统一加div.container -->",
 			"</div>",
 			"</template>",
 			"",
@@ -56,7 +56,7 @@
 		"body": [
 			"<template>",
 			"<div class=\"container\">",
-			"<!--  template下只能包含一年根节点，这里统一加div.container -->",
+			"<!--  template下只能包含一个根节点，这里统一加div.container -->",
 			"</div>",
 			"</template>",
 			"",
