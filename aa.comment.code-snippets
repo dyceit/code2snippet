@@ -36,6 +36,17 @@
 		],
 		"description": "方法注释-作者时间"
 	},
+	"aa_comment_author_todo__js": {
+		"prefix": "aa_comment_author_todo__js",
+		"body": [
+			"/**",
+			" * ${2:方法名称}",
+			" * @author // TODO",
+			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			" */"
+		],
+		"description": "方法注释-作者-戴思阳"
+	},
 	"aa_comment_author_dyce__js": {
 		"prefix": "aa_comment_author_dyce__js",
 		"body": [

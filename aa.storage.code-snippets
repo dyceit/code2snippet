@@ -1,0 +1,37 @@
+{
+	"aa.storage.code-snippet": {
+		"prefix": "aa.storage.code-snippet",
+		"body": [
+			""
+		],
+		"description": "本地存储"
+	},
+	"aa_localstorage_get__js": {
+		"prefix": "aa_localstorage_get__js",
+		"body": [
+			"const arr = JSON.parse(localStorage.getItem('${1:settingQuickScheme}')) || []"
+		],
+		"description": "本地存储-原生获取"
+	},
+	"aa_localstorage_set__js": {
+		"prefix": "aa_localstorage_set__js",
+		"body": [
+			"localStorage.setItem('${1:settingQuickScheme}', JSON.stringify(${2:this.schemeOptions}))"
+		],
+		"description": "本地存储-原生设置"
+	},
+	"aa_storage_get__js": {
+		"prefix": "aa_storage_get__js",
+		"body": [
+			"const arr = this.storage.get('erp.${1:settingQuickScheme}') || []"
+		],
+		"description": "本地存储-获取"
+	},
+	"aa_storage_set__js": {
+		"prefix": "aa_storage_set__js",
+		"body": [
+			"this.storage.set('erp.${1:settingQuickScheme}', ${2:this.schemeOptions})"
+		],
+		"description": "本地存储-设置"
+	}
+}

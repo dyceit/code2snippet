@@ -1,0 +1,240 @@
+{
+	"aa.table.code-snippet": {
+		"prefix": "aa.table.code-snippet",
+		"body": [
+			""
+		],
+		"description": "业务管理系统-表格片段"
+	},
+	"aa_el-table_loading__html": {
+		"prefix": "aa_el-table_loading__html",
+		"body": [
+			"<el-table",
+			"v-loading=\"listLoading\"",
+			"ref=\"table\"",
+			":data=\"tableData\"",
+			"element-loading-text=\"Loading\"",
+			"element-loading-spinner=\"el-icon-loading\"",
+			"size=\"mini\"",
+			"fit",
+			"highlight-current-row>",
+			"",
+			"</el-table>"
+		],
+		"description": "表格-列表容器"
+	},
+	"aa_el-table_form__html": {
+		"prefix": "aa_el-table_form__html",
+		"body": [
+			"<div class=\"editable-table\">",
+			"<el-form ref=\"ruleForm\" :model=\"ruleForm\" :rules=\"rules\" size=\"small\">",
+			"<el-table",
+			"v-loading=\"listLoading\"",
+			"ref=\"table\"",
+			":data=\"tableData\"",
+			"element-loading-text=\"Loading\"",
+			"element-loading-spinner=\"el-icon-loading\"",
+			"size=\"mini\"",
+			"fit",
+			"highlight-current-row>",
+			"",
+			"</el-table>",
+			"</el-form>",
+			"</div>"
+		],
+		"description": "表格-表单容器"
+	},
+	"aa_el-table-column__html": {
+		"prefix": "aa_el-table-column__html",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" prop=\"name\" mi align=\"center\"n-width=\"60px\" />"
+		],
+		"description": "表格行-简化"
+	},
+	"aa_el-table-column_template__html": {
+		"prefix": "aa_el-table-column_template__html",
+		"body": [
+			"<el-table-column :label=\"$$t('title.operate')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"$0",
+			"</template>",
+			"</el-table-column>"
+		],
+		"description": "表格行-插槽"
+	},
+	"aa_el-table-column_for__html": {
+		"prefix": "aa_el-table-column_for__html",
+		"body": [
+			"<el-table-column",
+			"v-for=\"(item, index) in tableHead.filter(item => item.showFlag)\"",
+			":key=\"item.name\"",
+			":label=\"item.showName\"",
+			":prop=\"item.name\"",
+			":min-width=\"item.minWidth\"",
+			"show-overflow-tooltip>",
+			"<!-- show-overflow-tooltip列比较多的情况不建议使用，影响性能 -->",
+			"<template slot-scope=\"scope\">",
+			"<controls :form-value=\"scope.row\" :index=\"index\" :item-data=\"item\" v-bind=\"item.props\" />",
+			"</template>",
+			"</el-table-column>"
+		],
+		"description": "表格行-循环"
+	},
+	"aa_el-table-column_selection__html": {
+		"prefix": "aa_el-table-column_selection__html",
+		"body": [
+			"<el-table-column :fixed=\"'left'\" type=\"selection\" align=\"center\" width=\"50\" />"
+		],
+		"description": "表格行-选择器"
+	},
+	"aa_el-table-column_operate__html": {
+		"prefix": "aa_el-table-column_operate__html",
+		"body": [
+			"<el-table-column :label=\"$$t('title.operate')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"<el-button type=\"text\" icon=\"el-icon-edit\" @click=\"edit(scope.row)\" />",
+			"<el-button type=\"text\" icon=\"el-icon-delete\" @click=\"del(scope.row)\" />",
+			"</template>",
+			"</el-table-column>"
+		],
+		"description": "表格行-行操作"
+	},
+	"aa_el-table-column_form-item_input__html": {
+		"prefix": "aa_el-table-column_form-item_input__html",
+		"description": "表格行-表单控件-输入框",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"  <el-form-item :prop=\"'tableData.' + scope.$$index + 'name'\" :rules=\"rules.name\">",
+			"    <el-input v-model=\"scope.row.name\" :placeholder=\"$$t('placeholder.input') + $$t('tables.enumType.name')\" clearable />",
+			"  </el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_number__html": {
+		"prefix": "aa_el-table-column_form-item_number__html",
+		"description": "表格行-表单控件-数字输入框",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"  <el-form-item :prop=\"'tableData.' + scope.$$index + 'name'\" :rules=\"rules.name\">",
+			"    <el-input v-model.number=\"scope.row.name\" :placeholder=\"$$t('placeholder.input') + $$t('tables.enumType.name')\" clearable />",
+			"  </el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_textarea__html": {
+		"prefix": "aa_el-table-column_form-item_textarea__html",
+		"description": "表格行-表单控件-文本域",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"  <el-form-item :prop=\"'tableData.' + scope.$$index + 'name'\" :rules=\"rules.name\">",
+			"    <el-input v-model=\"scope.row.name\" :autosize=\"{ minRows: 1, maxRows: 1}\" :placeholder=\"$$t('placeholder.input') + $$t('tables.enumType.name')\" type=\"textarea\" clearable />",
+			"  </el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_select_single__html": {
+		"prefix": "aa_el-table-column_form-item_select_single__html",
+		"description": "表格行-表单控件-选择器单值",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"  <el-form-item :prop=\"'tableData.' + scope.$$index + 'name'\" :rules=\"rules.name\">",
+			"    <el-select v-model=\"scope.row.name\" :placeholder=\"$$t('placeholder.select') + $$t('tables.enumType.name')\" clearable>",
+			"      <el-option v-for=\"item in nameOptions\" :label=\"item.label\" :value=\"item.value\" :key=\"item.value\" />",
+			"    </el-select>",
+			"  </el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_select_multiple__html": {
+		"prefix": "aa_el-table-column_form-item_select_multiple__html",
+		"description": "表格行-表单控件-选择器多值",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"<el-form-item :prop=\"'tableData.' + scope.$$index + 'multipleName'\" :rules=\"rules.multipleName\">",
+			"  <el-select v-model=\"scope.row.multipleName\" :placeholder=\"$$t('placeholder.select') + $$t('tables.enumType.name')\" multiple clearable>",
+			"    <el-option v-for=\"item in nameOptions\" :label=\"item.label\" :value=\"item.value\" :key=\"item.value\" />",
+			"  </el-select>",
+			"</el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_checkbox_single__html": {
+		"prefix": "aa_el-table-column_form-item_checkbox_single__html",
+		"description": "表格行-表单控件-多选框单值",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"  <el-form-item :prop=\"'tableData.' + scope.$$index + 'name'\" :rules=\"rules.name\">",
+			"    <el-checkbox v-model=\"scope.row.name\" :true-label=\"1\" :false-label=\"0\" />",
+			"  </el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_checkbox_multiple__html": {
+		"prefix": "aa_el-table-column_form-item_checkbox_multiple__html",
+		"description": "表格行-表单控件-多选框多值",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"<el-form-item :prop=\"'tableData.' + scope.$$index + 'multipleName'\" :rules=\"rules.multipleName\">",
+			"  <el-checkbox-group v-model=\"scope.row.multipleName\">",
+			"    <el-checkbox v-for=\"item in nameOptions\" :label=\"item.value\" :key=\"item.value\">{{ item.label }}</el-checkbox>",
+			"  </el-checkbox-group>",
+			"</el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_radio__html": {
+		"prefix": "aa_el-table-column_form-item_radio__html",
+		"description": "表格行-表单控件-单选框",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"<el-form-item :prop=\"'tableData.' + scope.$$index + 'name'\" :rules=\"rules.name\">",
+			"  <el-radio-group v-model=\"scope.row.name\">",
+			"    <el-radio v-for=\"item in nameOptions\" :label=\"item.value\" :key=\"item.value\">{{ item.label }}</el-radio>",
+			"  </el-radio-group>",
+			"</el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_switch__html": {
+		"prefix": "aa_el-table-column_form-item_switch__html",
+		"description": "表格行-表单控件-开关",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"  <el-form-item :prop=\"'tableData.' + scope.$$index + 'name'\" :rules=\"rules.name\">",
+			"    <el-switch v-model=\"scope.row.name\" :active-value=\"1\" :inactive-value=\"0\" />",
+			"  </el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	},
+	"aa_el-table-column_form-item_span__html": {
+		"prefix": "aa_el-table-column_form-item_span__html",
+		"description": "表格行-表单控件-文本框",
+		"body": [
+			"<el-table-column :label=\"$$t('tables.enumType.name')\" align=\"center\" min-width=\"60px\">",
+			"<template slot-scope=\"scope\">",
+			"  <el-form-item>",
+			"    <span>{{ scope.row.name }}</span>",
+			"  </el-form-item>",
+			"</template>",
+			"</el-table-column>"
+		]
+	}
+}

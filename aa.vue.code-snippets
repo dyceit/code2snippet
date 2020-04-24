@@ -1,22 +1,4 @@
 {
-	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
-	// 提示：使用代码片段生成工具快速生成片段：https://gitee.com/dyceit/code2snippet
-	// 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
 	"aa.vue.code-snippet": {
 		"prefix": "aa.vue.code-snippet",
 		"body": [
@@ -50,7 +32,6 @@
 		],
 		"description": "aa_vue__file"
 	},
-	// vue file
 	"aa_vue__file": {
 		"prefix": "aa_vue__file",
 		"body": [
@@ -76,7 +57,13 @@
 		],
 		"description": "vue组件模板，生成template、script、style，并根据文件名生成组件name"
 	},
-	// 全局
+	"aa_vue_name__js": {
+		"prefix": "aa_vue_name__js",
+		"body": [
+			"name: '$TM_FILENAME_BASE',"
+		],
+		"description": "vue组件-名称"
+	},
 	"aa_vue_global_directive_example__js": {
 		"prefix": "aa_vue_global_directive_example__js",
 		"body": [
@@ -105,24 +92,22 @@
 		],
 		"description": "vue全局过滤器-示例"
 	},
-	// vue components
 	"aa_vue_components__js": {
 		"prefix": "aa_vue_components__js",
 		"body": [
 			"components: {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue组件引入"
 	},
-	// vue directives
 	"aa_vue_directives__js": {
 		"prefix": "aa_vue_directives__js",
 		"body": [
 			"// 局部指令，https://cn.vuejs.org/v2/guide/custom-directive.html",
 			"directives: {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue局部指令"
 	},
@@ -159,13 +144,12 @@
 		],
 		"description": "vue局部指令-指令第一次绑定到元素时调用"
 	},
-	// vue filters
 	"aa_vue_filters__js": {
 		"prefix": "aa_vue_filters__js",
 		"body": [
 			"filters: {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue过滤器"
 	},
@@ -197,9 +181,8 @@
 			"{{ msg | capitalize }}",
 			""
 		],
-		"description": "过滤器：在双花括号中，如果带参filterName(param)"
+		"description": "vue过滤器：在双花括号中，如果带参filterName(param)"
 	},
-	// vue model
 	"aa_vue_model__js": {
 		"prefix": "aa_vue_model__js",
 		"body": [
@@ -209,13 +192,12 @@
 		],
 		"description": "vue组件属性"
 	},
-	// vue props
 	"aa_vue_props__js": {
 		"prefix": "aa_vue_props__js",
 		"body": [
 			"props: {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue组件属性"
 	},
@@ -351,7 +333,6 @@
 		],
 		"description": "vue组件属性-示例"
 	},
-	// vue data
 	"aa_vue_data__js": {
 		"prefix": "aa_vue_data__js",
 		"body": [
@@ -390,7 +371,6 @@
 		],
 		"description": "vue实例的响应式数据对象示例"
 	},
-	// vue mixins
 	"aa_vue_mixins__js": {
 		"prefix": "aa_vue_mixins__js",
 		"body": [
@@ -398,13 +378,12 @@
 		],
 		"description": "vue混入"
 	},
-	// vue computed
 	"aa_vue_computed__js": {
 		"prefix": "aa_vue_computed__js",
 		"body": [
 			"computed: {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue计算属性"
 	},
@@ -417,6 +396,30 @@
 		],
 		"description": "vue计算属性-定义格式"
 	},
+  "aa_vue_computed_title__js": {
+    "prefix": "aa_vue_computed_title__js",
+    "description": "vue计算-标题",
+    "body": [
+      "// 弹窗标题",
+      "    title() {",
+      "      return (this.ruleForm.id ? this.$$t('common.edit') : this.$$t('common.add')) + this.$$t('views.panel.title')",
+      "    }"
+    ]
+  },
+  "aa_vue_computed_currentValue__js": {
+    "prefix": "aa_vue_computed_currentValue__js",
+    "description": "aa_vue_computed_currentValue__js",
+    "body": [
+      "currentValue: {",
+      "      get() {",
+      "        return this.value",
+      "      },",
+      "      set(val) {",
+      "        this.$$emit('update', val)",
+      "      }",
+      "    },"
+    ]
+  },
 	"aa_vue_computed_example__js": {
 		"prefix": "aa_vue_computed_example__js",
 		"body": [
@@ -430,13 +433,12 @@
 		],
 		"description": "vue计算属性-示例"
 	},
-	// vue watch
 	"aa_vue_watch__js": {
 		"prefix": "aa_vue_watch__js",
 		"body": [
 			"watch: {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue数据侦听"
 	},
@@ -545,7 +547,7 @@
 		"body": [
 			"beforeCreate() {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue生命周期-在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。"
 	},
@@ -554,7 +556,7 @@
 		"body": [
 			"created() {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue生命周期-在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。"
 	},
@@ -563,7 +565,7 @@
 		"body": [
 			"beforeMount() {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue生命周期-在挂载开始之前被调用：相关的 render 函数首次被调用。该钩子在服务器端渲染期间不被调用。"
 	},
@@ -572,7 +574,7 @@
 		"body": [
 			"mounted() {",
 			"$0",
-			"}"
+			"},"
 		],
 		"description": "vue生命周期-el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted"
 	},
@@ -654,7 +656,7 @@
 			"mounted() {",
 			"// el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。",
 			"// 注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted：",
-			"this.$nextTick(function() {",
+			"this.$nextTick(() => {",
 			"// Code that will run only after the",
 			"// entire view has been rendered",
 			"})",
@@ -666,7 +668,7 @@
 			"// 由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。",
 			"// 当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。",
 			"// 注意 updated 不会承诺所有的子组件也都一起被重绘。如果你希望等到整个视图都重绘完毕，可以用 vm.$nextTick 替换掉 updated：",
-			"this.$nextTick(function() {",
+			"this.$nextTick(() => {",
 			"// Code that will run only after the",
 			"// entire view has been re-rendered",
 			"})",
@@ -706,7 +708,7 @@
 	"aa_vue_nextTick__js": {
 		"prefix": "aa_vue_nextTick__js",
 		"body": [
-			"this.$$nextTick(function() {",
+			"this.$$nextTick(() => {",
 			"// Code that will run only after the",
 			"// entire view has been re-rendered",
 			"$0",

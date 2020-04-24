@@ -26,14 +26,14 @@
   - aa_api__file 生成模块接口，如果后端接口命名统一的话
   - 删除多余的接口方法
   - aa_api_get__js，aa_api_post__js添加新的接口方法
-- 添加页面
+- 新建页面
   - 新建 @/views/demos/SnippetDemo.vue
   - 生成组件模板代码 aa_vue__file
   - 添加组件注释 aa_comment_vue_component__js
   - 随便加点内容 这是一个vue代码片段开发的示例
-- 添加路由
+- 新建路由
   - 打开路由配置文件 @/router/index.js
-  - 添加路由 aa_router_notag__js
+  - 新建路由 aa_router_notag__js
 - 添加链接
   - 打开导航条组件 @/views/layout/components/Navbar.vue
   - aa_link_navbar__html

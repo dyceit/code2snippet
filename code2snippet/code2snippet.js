@@ -38,7 +38,7 @@ const questions = [
     type: 'input',
     default: 'aa_test_snippet__js',
     message: '请输入片段名称',
-    validate (val) {
+    validate(val) {
       if (!val) {
         return '名称不能为空'
       }
@@ -60,7 +60,7 @@ const questions = [
     type: 'input',
     default: '使用片段名称',
     message: '请输入片段描述',
-    validate (val) {
+    validate(val) {
       if (!val) {
         return '描述不能为空'
       }
@@ -87,6 +87,7 @@ const prompts = () => new Promise(resolve => {
         let data = fs.readFileSync(codeFile)
         content = toSnippet(data)
       }
+      content = content.replace(/\$/mg, "\$\$\$");
       resultMap.body = content.split('\n')
     }
     let params = '**/**/*'
@@ -127,7 +128,7 @@ function getMap(fileName) {
 function toSnippet(data) {
   var arr = data.toString().split('\n')
   arr.forEach((val, index) => {
-    arr[index] = arr[index].trim().replace(/\$/g, '\$\$\$')
+    arr[index] = arr[index].trim();
   })
   return arr.toString()
 }

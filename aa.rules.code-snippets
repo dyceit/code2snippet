@@ -1,0 +1,87 @@
+{
+	"aa.rules.code-snippet": {
+		"prefix": "aa.rules.code-snippet",
+		"body": [
+			""
+		],
+		"description": "验证片段"
+	},
+	"aa_ruleForm_rules__js": {
+		"prefix": "aa_ruleForm_rules__js",
+		"body": [
+			"ruleForm: {",
+			"name: undefined",
+			"},",
+			"rules: {",
+			"name: [",
+			"{ required: true, message: this.$$t('placeholder.input') + this.$$t('tables.formula.name'), trigger: 'blur' }",
+			"]",
+			"}",
+			""
+		],
+		"description": "验证-数据"
+	},
+	"aa_rules_required_input__js": {
+		"prefix": "aa_rules_required_input__js",
+		"body": [
+			"{ required: true, message: '${1:请输入名称}', trigger: 'blur' },"
+		],
+		"description": "验证-必填"
+	},
+	"aa_rules_required_input_number__js": {
+		"prefix": "aa_rules_required_input_number__js",
+		"body": [
+			"{ type: 'number', message: '${1:请输入数字类型}', trigger: 'blur' },"
+		],
+		"description": "验证-数字"
+	},
+	"aa_rules_required_select__js": {
+		"prefix": "aa_rules_required_select__js",
+		"body": [
+			"{ required: true, message: '${1:请选择类型}', trigger: 'change' },"
+		],
+		"description": "验证-必选"
+	},
+	"aa_rules_required_checkbox__js": {
+		"prefix": "aa_rules_required_checkbox__js",
+		"body": [
+			"{ required: true, type: 'array', message: '${1:请至少选择一个性质}', trigger: 'change' },"
+		],
+		"description": "验证-数组必填"
+	},
+	"aa_rules_required_datetime__js": {
+		"prefix": "aa_rules_required_datetime__js",
+		"body": [
+			"{ required: true, type: 'date', message: '${1:请选择日期}', trigger: 'change' },"
+		],
+		"description": "验证-日期"
+	},
+	"aa_rules_min_max_length__js": {
+		"prefix": "aa_rules_min_max_length__js",
+		"body": [
+			"{ min: ${1:1}, max: ${2:30}, message: '长度在 ${1:1} 到 ${2:30} 个字符', trigger: 'blur' },"
+		],
+		"description": "验证-字符区间"
+	},
+	"aa_rules_min_length__js": {
+		"prefix": "aa_rules_min_length__js",
+		"body": [
+			"{ min: ${1:1}, message: '最少 ${1:1} 个字符', trigger: 'blur' },"
+		],
+		"description": "验证-最短"
+	},
+	"aa_rules_max_length__js": {
+		"prefix": "aa_rules_max_length__js",
+		"body": [
+			"{ max: ${2:30}, message: '最多 ${2:30} 个字符', trigger: 'blur' },"
+		],
+		"description": "验证-最长"
+	},
+	"aa_rules_validator__js": {
+		"prefix": "aa_rules_validator__js",
+		"body": [
+			"{ validator: this.$$rules.ipAddress, trigger: 'blur' },"
+		],
+		"description": "验证-正则"
+	}
+}

@@ -1,139 +1,298 @@
 {
-	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
-	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
-	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
-	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
-	// Placeholders with the same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"scope": "javascript,typescript",
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
-	// 提示：使用代码片段生成工具快速生成片段：https://gitee.com/dyceit/code2snippet
-	// 片段变量使用说明：https://www.jianshu.com/p/8195b73319da
-	"dbutils.methods.code-snippet": {
-		"prefix": "dbutils.methods.code-snippet",
-		"body": [
-			""
-		],
-		"description": "方法片段"
-	},
-	"aa_methods_getList_then__js": {
-		"prefix": "aa_methods_getList_then__js",
-		"body": [
-			"getList(params) {",
-			"\/\/ 获取列表数据",
+  "aa.methods.code-snippet": {
+    "prefix": "aa.methods.code-snippet",
+    "body": [
+      ""
+    ],
+    "description": "方法片段"
+  },
+  "aa_methods_getPageList_then__js": {
+    "prefix": "aa_methods_getPageList_then__js",
+    "description": "vue方法-获取分页列表数据",
+    "body": [
+      "// 获取分页列表数据",
+      "getPageList() {",
+      "  const params = {",
+      "    pageNo: this.currentPage,",
+      "    pageSize: this.pageSize,",
+      "    params: this.queryParams",
+      "  }",
+      "  this.listLoading = true",
+      "  getModulePageList(params).then(res => {",
+      "    this.listLoading = false",
+      "    if (res.success) {",
+      "      console.log('res.data', res.data)",
+      "      this.dataTotal = res.total",
+      "      this.list = res.data",
+      "    } else {",
+      "      this.dataTotal = 0",
+      "      this.list = []",
+      "    }",
+      "  })",
+      "}"
+    ]
+  },
+  "aa_methods_getPageList_async__js": {
+    "prefix": "aa_methods_getPageList_async__js",
+    "description": "vue方法-获取分页列表数据",
+    "body": [
+      "// 获取分页列表数据",
+      "async getPageList() {",
+      "  const params = {",
+      "    pageNo: this.currentPage,",
+      "    pageSize: this.pageSize,",
+      "    params: this.queryParams",
+      "  }",
+      "  this.listLoading = true",
+      "  const res = await getModulePageList(params)",
+      "  this.listLoading = false",
+      "  if (res.success) {",
+      "    console.log('res.data', res.data)",
+      "    this.dataTotal = res.total",
+      "    this.list = res.data",
+      "  } else {",
+      "    this.dataTotal = 0",
+      "    this.$$message.warning(res.message || this.t('tips.getFail'))",
+      "  }",
+      "}"
+    ]
+  },
+  "aa_methods_getList_then__js": {
+    "prefix": "aa_methods_getList_then__js",
+    "description": "vue方法-获取列表数据",
+    "body": [
+      "// 获取列表数据",
+      "getList(params) {",
+      "  this.listLoading = true",
+      "  getModulePageList(params).then(res => {",
+      "    this.listLoading = false",
+      "    if (res.success) {",
+      "      console.log('res.data', res.data)",
+      "      this.list = res.data",
+      "    } else {",
+      "      this.$$message.warning(res.message || this.$$t('tips.getFail'))",
+      "    }",
+      "  })",
+      "}"
+    ]
+  },
+  "aa_methods_getList_async__js": {
+    "prefix": "aa_methods_getList_async__js",
+    "description": "vue方法-获取列表数据",
+    "body": [
+      "// 获取列表数据",
+      "async getList(params) {",
+      "  this.listLoading = true",
+      "  const res = await getList(params)",
+      "  this.listLoading = false",
+      "  if (res.success) {",
+      "    console.log('res.data', res.data)",
+      "    this.list = res.data",
+      "  } else {",
+      "    this.$$message.warning(res.message || this.t('tips.getFail'))",
+      "  }",
+      "}"
+    ]
+  },
+  "aa_methods_getDetail_then__js": {
+    "prefix": "aa_methods_getDetail_then__js",
+    "body": [
+      "getDetail(params) {",
+      "// 获取详情数据",
       "this.loading = true",
-			"${1:getList}(params).then(res => {",
+      "${1:getDetail}(params).then(res => {",
       "this.loading = false",
-			"if (res.success) {",
-			"\/\/ 处理获取的数据",
-			"console.log('res.data', res.data)",
-			"this.list = res.data",
-			"} else {",
-			"\/\/ 数据获取失败，根据实际情况决定是否显示提示",
-			"this.$message.warning(res.message || this.$$t('tips.getFail'))",
+      "if (res.success) {",
+      "console.log('res.data', res.data)",
+      "this.detail = res.data",
+      "} else {",
+      "this.$$message.warning(res.message || this.$$t('tips.getFail'))",
+      "}",
+      "})",
+      "}"
+    ],
+    "description": "vue方法-获取详情数据then"
+  },
+  "aa_methods_getDetail_async__js": {
+    "prefix": "aa_methods_getDetail_async__js",
+    "body": [
+      "getDetail(params) {",
+      "// 获取详情数据",
+      "this.loading = true",
+      "const res = await ${1:getDetail}(params)",
+      "this.loading = false",
+      "if (res.success) {",
+      "console.log('res.data', res.data)",
+      "this.detail = res.data",
+      "} else {",
+      "this.$$message.warning(res.message || this.$t('tips.getFail'))",
+      "}",
+      "}"
+    ],
+    "description": "vue方法-获取详情数据async"
+  },
+  "aa_methods_ruleForm_init__js": {
+    "prefix": "aa_methods_ruleForm_init__js",
+    "description": "vue方法-编辑回显",
+    "body": [
+      "init(data){",
+      "if (Object.keys(data).length) {",
+      "Object.keys(this.ruleForm).forEach(key => {",
+      "if (data.hasOwnProperty(key)) {",
+      "this.ruleForm[key] = data[key]",
+      "}",
+      "})",
+      "}",
+      "}"
+    ]
+  },
+  "aa_methods_save_form_validate_then__js": {
+    "prefix": "aa_methods_save_form_validate_then__js",
+    "body": [
+      "save(formName) {",
+      "this.$$refs[formName].validate(valid => {",
+      "if (valid) {",
+      "saveSnippetDemo(this.ruleForm).then(res => {",
+      "if (res.success) {",
+      "this.$$message.success(this.$$t('tips.saveSuccess'))",
+      "this.resolve()",
+      "} else {",
+      "this.$$message.error(res.message || this.$$t('tips.saveFail'))",
+      "}",
+      "})",
+      "}",
+      "})",
+      "}",
+      ""
+    ],
+    "description": "vue方法-保存then"
+  },
+  "aa_methods_save_form_validate_async__js": {
+    "prefix": "aa_methods_save_form_validate_async__js",
+    "body": [
+      "save(formName) {",
+      "this.$$refs[formName].validate(async valid => {",
+      "if (valid) {",
+      "const res = await saveSnippetDemo(this.ruleForm)",
+      "if (res.success) {",
+      "this.$$message.success(this.$$t('tips.saveSuccess'))",
+      "this.resolve()",
+      "} else {",
+      "this.$$message.error(res.message || this.$$t('tips.saveFail'))",
+      "}",
+      "}",
+      "})",
+      "}",
+      ""
+    ],
+    "description": "vue方法-保存async"
+  },
+  "aa_methods_reset_form_validate__js": {
+    "prefix": "aa_methods_reset_form_validate__js",
+    "body": [
+      "reset(formName) {",
+      "this.$$refs[formName].resetFields()",
+      "},"
+    ],
+    "description": "vue方法-重置表单"
+  },
+  "aa_methods_del__js": {
+    "prefix": "aa_methods_del__js",
+    "description": "vue方法-删除",
+    "body": [
+      "del(row) {",
+      "      this.$$confirm(this.$$t('tips.isDelete') , this.$$t('title.tips'), {",
+      "        confirmButtonText: this.$$t('button.confirm'),",
+      "        cancelButtonText: this.$$t('button.cancel'),",
+      "        type: 'warning'",
+      "      }).then(() => {",
+      "        deleteDiyTableField({ ids: [row.id] }).then(res => {",
+      "          if (res.success) {",
+      "            this.$$message.success(this.$$t('tips.deleteSuccess'))",
+      "            this.getList()",
+      "          } else {",
+      "            this.$$message.success(res.message || this.$$t('tips.deleteFail'))",
+      "          }",
+      "        })",
+      "      }).catch(err => {",
+      "        console.log('close-confirm:', err)",
+      "      })",
+      "    },"
+    ]
+  },
+  "aa_methods_debounce__js": {
+    "prefix": "aa_methods_debounce__js",
+    "description": "vue方法-防抖动(周期内没有重复执行事件后执行一次，类似setTimeout)",
+    "body": [
+      "setTableHeight: _.debounce(function() {",
+      "      this.tableHeight = this.$$refs.container.offsetHeight - 64",
+      "      console.log('1', 1)",
+      "    }, 150),"
+    ]
+  },
+  "aa_methods_throttle__js": {
+    "prefix": "aa_methods_throttle__js",
+    "description": "vue方法-节流(固定周期执行一次，类似setInterval)",
+    "body": [
+      "setTableHeight: _.throttle(function() {",
+      "      this.tableHeight = this.$$refs.container.offsetHeight - 64",
+      "      console.log('1', 1)",
+      "    }, 150),"
+    ]
+  },
+  "aa_methods_edit__js": {
+    "prefix": "aa_methods_edit__js",
+    "description": "vue方法-编辑弹窗",
+    "body": [
+      "edit(row) {",
+      "      this.helper.modal.open(${1:EnumDateAdd}, {",
+      "        parent: this,",
+      "        propsData: {",
+      "          currentData: row",
+      "        }",
+      "      }).then(res => {",
+      "        this.getList()",
+      "      }, err => {",
+      "        console.log('close-dialog:', err)",
+      "      })",
+      "    },"
+    ]
+  },
+  "aa_methods_sortable_call__js": {
+		"prefix": "aa_methods_sortable_call__js",
+		"body": [
+			"setTimeout(() => {",
+			"this.rowSort()",
+			"}, 500)"
+		],
+		"description": "调用表格行拖动排序方法"
+	},
+	"aa_methods_sortable_rowsort__js": {
+		"prefix": "aa_methods_sortable_rowsort__js",
+		"body": [
+			"// 表格行拖动排序",
+			"// el-table ref=\"table\" 确定要排序的表格，:row-key=\"rowKey\" 唯一键解决渲染复用问题，:row-style=\"{'cursor':'move'}\" 设置鼠标样式",
+			"// this.tableData 是要排序的对象数组，根据情况设置",
+			"rowSort() {",
+			"const tbody = this.$$refs.table.$$el.querySelector('.el-table__body-wrapper table tbody')",
+			"const _this = this",
+			"Sortable.create(tbody, {",
+			"onEnd({ newIndex, oldIndex }) {",
+			"const currRow = _this.tableData.splice(oldIndex, 1)[0]",
+			"_this.tableData.splice(newIndex, 0, currRow)",
 			"}",
 			"})",
-			"}"
-		],
-		"description": "方法-获取列表数据then"
-	},
-	"aa_methods_getList_async__js": {
-		"prefix": "aa_methods_getList_async__js",
-		"body": [
-			"getList(params) {",
-			"\/\/ 获取列表数据",
-      "this.loading = true",
-			"const res = await ${1:getList}(params)",
-      "this.loading = false",
-			"if (res.success) {",
-			"\/\/ 处理获取的数据",
-			"console.log('res.data', res.data)",
-			"this.list = res.data",
-			"} else {",
-			"\/\/ 数据获取失败，根据实际情况决定是否显示提示",
-			"this.$message.warning(res.message || this.$t('tips.getFail'))",
-			"}",
-			"}"
-		],
-		"description": "方法-获取列表数据async"
-	},
-	"aa_methods_getDetail_then__js": {
-		"prefix": "aa_methods_getDetail_then__js",
-		"body": [
-			"getDetail(params) {",
-			"\/\/ 获取详情数据",
-      "this.loading = true",
-			"${1:getDetail}(params).then(res => {",
-      "this.loading = false",
-			"if (res.success) {",
-			"\/\/ 处理获取的数据",
-			"console.log('res.data', res.data)",
-			"this.detail = res.data",
-			"} else {",
-			"\/\/ 数据获取失败，根据实际情况决定是否显示提示",
-			"this.$message.warning(res.message || this.$$t('tips.getFail'))",
-			"}",
-			"})",
-			"}"
-		],
-		"description": "方法-获取详情数据then"
-	},
-	"aa_methods_getDetail_async__js": {
-		"prefix": "aa_methods_getDetail_async__js",
-		"body": [
-			"getDetail(params) {",
-			"\/\/ 获取详情数据",
-      "this.loading = true",
-			"const res = await ${1:getDetail}(params)",
-      "this.loading = false",
-			"if (res.success) {",
-			"\/\/ 处理获取的数据",
-			"console.log('res.data', res.data)",
-			"this.detail = res.data",
-			"} else {",
-			"\/\/ 数据获取失败，根据实际情况决定是否显示提示",
-			"this.$message.warning(res.message || this.$t('tips.getFail'))",
-			"}",
-			"}"
-		],
-		"description": "方法-获取详情数据async"
-	},
-	"aa_methods_save_form_validate__js": {
-		"prefix": "aa_methods_save_form_validate__js",
-		"body": [
-			"save(formName) {",
-			"this.$$refs[formName].validate((valid) => {",
-			"if (valid) {",
-			"saveSnippetDemo(this.ruleForm).then(res => {",
-			"if (res.success) {",
-			"this.$$message.success(this.$$t('tips.saveSuccess'))",
-			"this.resolve()",
-			"} else {",
-			"this.$$message.error(this.$$t('tips.saveFail'))",
-			"}",
-			"})",
-			"}",
-			"})",
-			"}",
-			""
-		],
-		"description": "方法-保存"
-	},
-	"aa_methods_reset_form_validate__js": {
-		"prefix": "aa_methods_reset_form_validate__js",
-		"body": [
-			"reset(formName) {",
-			"this.$$refs[formName].resetFields()",
 			"},"
 		],
-		"description": "方法-重置表单"
+		"description": "vue方法-表格行拖动排序"
+	},
+	"aa_sortable_rowkey__js": {
+		"prefix": "aa_sortable_rowkey__js",
+		"body": [
+			"rowKey(row) {",
+			"return row.tableName + '_' + row.name",
+			"},"
+		],
+		"description": "vue方法-表格行拖动排序的唯一键"
 	}
 }

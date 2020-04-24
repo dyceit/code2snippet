@@ -8,15 +8,21 @@
  aa_api__file | api请求-示例 
  aa_api_get__js | api请求-get 
  aa_api_post__js | api请求-post 
- aa_api_add__js | api请求-添加信息 
- aa_api_update__js | api请求-修改信息 
- aa_api_delete__js | api请求-删除信息 
- aa_api_list__js | api请求-获取列表 
- aa_api_detail__js | api请求-获取详情 
- aa_api_copy__js | api请求-复制信息 
- aa_api_setIsEnable__js | api请求-启用禁用 
- aa_api_export__js | api请求-导出列表 
- aa_api_options__js | api请求-获取选项 
+ aa_api_insert__js | api请求-新增 
+ aa_api_update__js | api请求-编辑 
+ aa_api_save__js | api请求-保存 
+ aa_api_save_insert_update__js | api请求-保存(新增+编辑) 
+ aa_api_delete__js | api请求-删除 
+ aa_api_recover__js | api请求-恢复 
+ aa_api_list__js | api请求-分页列表 
+ aa_api_query__js | api请求-列表 
+ aa_api_detail__js | api请求-详情 
+ aa_api_copy__js | api请求-复制 
+ aa_api_setIsEnable__js | api请求-启用/禁用 
+ aa_api_setStatus__js | api请求-设置状态 
+ aa_api_export__js | api请求-导出 
+ aa_api_exportPage__js | api请求-按页导出 
+ aa_api_exportSelected__js | api请求-选中导出 
  
 ## 按钮片段
  
@@ -24,7 +30,7 @@
  
  片段 | 描述 
  ---|--- 
- el-button_small_add__html | 按钮-添加 
+ el-button_small_add__html | 按钮-新建 
  el-button_small_save__html | 按钮-保存 
  el-button_small_reset__html | 按钮-重置 
  el-button_small_cancel__html | 按钮-取消 
@@ -36,10 +42,13 @@
  片段 | 描述 
  ---|--- 
  aa_comment_author_time__js | 方法注释-作者时间 
+ aa_comment_author_todo__js | 方法注释-作者-戴思阳 
  aa_comment_author_dyce__js | 方法注释-作者-戴思阳 
  aa_comment_modifier_dyce__js | 方法注释-更新人-戴思阳 
- aa_comment_author_chenwei__js | 方法注释-作者-陈威 
- aa_comment_modifier_chenwei__js | 方法注释-更新人-陈威 
+ aa_comment_author_vjing__js | 方法注释-作者-魏静 
+ aa_comment_modifier_vjing__js | 方法注释-更新人-魏静 
+ aa_comment_author_gaoxingl__js | 方法注释-作者-郜兴亮 
+ aa_comment_modifier_gaoxingl__js | 方法注释-更新人-郜兴亮 
  aa_comment_author__js | 注释-作者 
  aa_comment_time__js | 注释-时间 
  aa_comment_func_example__js | 方法注释 
@@ -56,6 +65,26 @@
  aa_comment_func_param_return__js | 方法注释-返回值 
  aa_comment_vue_component__js | vue组件注释 
  
+## 业务管理系统常用片段
+ 
+ dbutils.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_snippet__json | 创建代码片段示例 
+ aa_lang__js | 打印多语言 
+ aa_helper_modal_open__js | 打开弹窗 
+ aa_frontendpage__html | 前端分页 
+ aa_component_vuedraggable__html | 拖动 
+ 
+## 数据片段
+ 
+ aa.data.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_data_enumOptions__js | vue数据-系统枚举 
+ 
 ## 测试打印数据
  
  aa.debugger.code-snippet
@@ -66,37 +95,142 @@
  aa_log_stringify__js | 打印对象为字符串，方便复制 
  aa_log_return__js | 打印并终止 
  
+## element片段
+ 
+ dbutils.el.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_el-alert__html | element-警告提示信息 
+ aa_el-scrollbar_y__html | element-滚动条(纵向) 
+ aa_el-scrollbar_x__html | element-滚动条(横向) 
+ aa_el-dialog__file | element-弹窗页面 
+ aa_el-dialog__html | element-弹窗 
+ aa_el-tooltip__html |  
+ aa_el-dropdown__html | element-下拉菜单 
+ 
+## 业务管理系统-表单片段
+ 
+ aa.form.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_el-form__html | 表单容器-默认 
+ aa_el-form_detail__html | 表单容器-详情 
+ aa_el-form-item_span__html | 表单控件-文本框 
+ aa_el-form-item_input__html | 表单控件-输入框 
+ aa_el-form-item_lang__html | 表单控件-多语言输入框 
+ aa_el-form-item_number__html | 表单控件-数字输入框 
+ aa_el-form-item_textarea__html | 表单控件-文本域 
+ aa_el-form-item_select_single__html | 表单控件-选择器单值 
+ aa_el-form-item_select_multiple__html | 表单控件-选择器多值 
+ aa_el-form-item_checkbox_single__html | 表单控件-多选框单值 
+ aa_el-form-item_checkbox_multiple__html | 表单控件-多选框多值 
+ aa_el-form-item_radio__html | 表单控件-单选框 
+ aa_el-form-item_switch__html | 表单控件-开关 
+ 
+## 业务管理系统-引入片段
+ 
+ dbutils.import.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_import_api__js | 引用-api中的接口方法 
+ aa_import_options__js | 引用-options中的选项值 
+ aa_import_common__js | 引用-common中的方法 
+ aa_import_lodash__js | 引用-lodash工具类 
+ aa_import_moment__js | 引用-moment工具类 
+ aa_import_component__js | 引用-公共组件 
+ aa_import_vuedraggable__js_import | 引用-拖动排序 
+ aa_sortable_import__js | 引用-引入拖动排序 
+ aa_import_vuex__js | 引用-vuex 
+ aa_import_JfContainer__js | 引用-JfContainer 
+ aa_import_mixins__js | 引用-混入 
+ aa_import_mixins_frontendpage__js |  
+ aa_import_mixin_CustomControls__js | 引用-动态控件 
+ aa_import_mixin_JfPaginationBox__js | 引用-分页组件 
+ aa_import_mixins_enumOptions__js | 引用-系统枚举 
+ aa_import_mixins_formula__js | 引用-计算公式 
+ 
+## 业务管理系统jf组件片段
+ 
+ dbutils.jf.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_JfContainer__html | jf组件-左右布局(客户端) 
+ aa_JfContainer_dev__html | jf组件-左右布局(开发端) 
+ aa_JfTipsBox__html | jf组件-温馨提示 
+ aa_JfTipsBox__js_import | 引用-jf组件-温馨提示 
+ aa_JfFormGroupBox__html | jf组件-表单分组 
+ aa_JfFormGroupBox__js_import | 引用-jf组件-表单分组 
+ aa_JfSelectUser__js_import | 引用-jf组件-用户选择 
+ aa_JfSelectUser__js_modal_open | jf组件-用户选择弹窗 
+ aa_JfImageUpload__js_import | 引用-jf组件-图片上传 
+ aa_JfImageUpload__html | jf组件-图片上传 
+ aa_JfPaginationBox__html | jf组件-分页栏 
+ aa_JfSelectProduct__js_open_dialog | jf组件-产品选择弹窗 
+ aa_JfSelectProduct__js_import | 引用-jf组件-产品选择 
+ aa_JfIcometProgress__js_import | 引用-jf组件-保存进度 
+ aa_JfIcometProgress__js_open_dialog | jf组件-保存进度弹窗 
+ aa_JfInputFile__html | jf组件-上传文件 
+ aa_JfInputFile__js_import | 引用-jf组件-上传文件 
+ 
 ## 链接片段
  
  aa.link.code-snippet
  
  片段 | 描述 
  ---|--- 
- aa_link_navbar__html | aa_link_navbar__html 
+ aa_link_navbar__html | 链接-navbar 
  
 ## 方法片段
  
- dbutils.methods.code-snippet
+ aa.methods.code-snippet
  
  片段 | 描述 
  ---|--- 
- aa_methods_getList_then__js | 方法-获取列表数据then 
- aa_methods_getList_async__js | 方法-获取列表数据async 
- aa_methods_getDetail_then__js | 方法-获取详情数据then 
- aa_methods_getDetail_async__js | 方法-获取详情数据async 
- aa_methods_save_form_validate__js | 方法-保存 
- aa_methods_reset_form_validate__js | 方法-重置表单 
+ aa_methods_getPageList_then__js | vue方法-获取分页列表数据 
+ aa_methods_getPageList_async__js | vue方法-获取分页列表数据 
+ aa_methods_getList_then__js | vue方法-获取列表数据 
+ aa_methods_getList_async__js | vue方法-获取列表数据 
+ aa_methods_getDetail_then__js | vue方法-获取详情数据then 
+ aa_methods_getDetail_async__js | vue方法-获取详情数据async 
+ aa_methods_ruleForm_init__js | vue方法-编辑回显 
+ aa_methods_save_form_validate_then__js | vue方法-保存then 
+ aa_methods_save_form_validate_async__js | vue方法-保存async 
+ aa_methods_reset_form_validate__js | vue方法-重置表单 
+ aa_methods_del__js | vue方法-删除 
+ aa_methods_debounce__js | vue方法-防抖动(周期内没有重复执行事件后执行一次，类似setTimeout) 
+ aa_methods_throttle__js | vue方法-节流(固定周期执行一次，类似setInterval) 
+ aa_methods_edit__js | vue方法-编辑弹窗 
+ aa_methods_sortable_call__js | 调用表格行拖动排序方法 
+ aa_methods_sortable_rowsort__js | vue方法-表格行拖动排序 
+ aa_sortable_rowkey__js | vue方法-表格行拖动排序的唯一键 
  
-## 业务管理系统接口请求片段
+## 混入片段
  
- dbutils.request.jf.code-snippet
+ aa.mixins.code-snippet
  
  片段 | 描述 
  ---|--- 
- aa_request_async_await__js |  
- aa_request_then__js |  
- aa_request_res_message__js |  
- aa_request_res_data__js |  
+ aa_mixins_frontendpage__js | 混入-前端分页 
+ aa_mixins_paginationBox__js | 混入-后端分页 
+ aa_mixins_initRules__js | 混入-动态验证初始化 
+ aa_mixins_enumOptions__js | 混入-系统枚举 
+ aa_mixins_CustomControls__js | 混入-动态控件 
+ aa_mixins_formula__js | 混入-计算公式 
+ 
+## 接口请求片段
+ 
+ aa.request.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_request_async_await__js | 接口请求-异步async 
+ aa_request_then__js | 接口请求-同步then 
+ aa_request_res_message__js | 接口请求-返回消息处理 
+ aa_request_res_data__js | 接口请求-返回数据处理 
  
 ## 路由片段
  
@@ -104,7 +238,59 @@
  
  片段 | 描述 
  ---|--- 
- aa_router_notags__js | aa_router_notags__js 
+ aa_router_notags__js | 路由-无标签页 
+ 
+## 验证片段
+ 
+ aa.rules.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_ruleForm_rules__js | 验证-数据 
+ aa_rules_required_input__js | 验证-必填 
+ aa_rules_required_input_number__js | 验证-数字 
+ aa_rules_required_select__js | 验证-必选 
+ aa_rules_required_checkbox__js | 验证-数组必填 
+ aa_rules_required_datetime__js | 验证-日期 
+ aa_rules_min_max_length__js | 验证-字符区间 
+ aa_rules_min_length__js | 验证-最短 
+ aa_rules_max_length__js | 验证-最长 
+ aa_rules_validator__js | 验证-正则 
+ 
+## 本地存储
+ 
+ aa.storage.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_localstorage_get__js | 本地存储-原生获取 
+ aa_localstorage_set__js | 本地存储-原生设置 
+ aa_storage_get__js | 本地存储-获取 
+ aa_storage_set__js | 本地存储-设置 
+ 
+## 业务管理系统-表格片段
+ 
+ aa.table.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_el-table_loading__html | 表格-列表容器 
+ aa_el-table_form__html | 表格-表单容器 
+ aa_el-table-column__html | 表格行-简化 
+ aa_el-table-column_template__html | 表格行-插槽 
+ aa_el-table-column_for__html | 表格行-循环 
+ aa_el-table-column_selection__html | 表格行-选择器 
+ aa_el-table-column_operate__html | 表格行-行操作 
+ aa_el-table-column_form-item_input__html | 表格行-表单控件-输入框 
+ aa_el-table-column_form-item_number__html | 表格行-表单控件-数字输入框 
+ aa_el-table-column_form-item_textarea__html | 表格行-表单控件-文本域 
+ aa_el-table-column_form-item_select_single__html | 表格行-表单控件-选择器单值 
+ aa_el-table-column_form-item_select_multiple__html | 表格行-表单控件-选择器多值 
+ aa_el-table-column_form-item_checkbox_single__html | 表格行-表单控件-多选框单值 
+ aa_el-table-column_form-item_checkbox_multiple__html | 表格行-表单控件-多选框多值 
+ aa_el-table-column_form-item_radio__html | 表格行-表单控件-单选框 
+ aa_el-table-column_form-item_switch__html | 表格行-表单控件-开关 
+ aa_el-table-column_form-item_span__html | 表格行-表单控件-文本框 
  
 ## 工具测试片段
  
@@ -112,11 +298,7 @@
  
  片段 | 描述 
  ---|--- 
- eeee | adsfasdf 
- aaa | aaa 
- cccc | ddddd 
- aa_tpl_<div class="container"> | aa_tpl_<div class="container"> 
- aa_tpl_container__html | aaaa 
+ aa | aa 
  
 ## Vue常用代码片段
  
@@ -126,6 +308,7 @@
  ---|--- 
  aa_vue__fileauto | aa_vue__file 
  aa_vue__file | vue组件模板，生成template、script、style，并根据文件名生成组件name 
+ aa_vue_name__js | vue组件-名称 
  aa_vue_global_directive_example__js | vue全局指令-示例 
  aa_vue_global_filter_example__js | vue全局过滤器-示例 
  aa_vue_components__js | vue组件引入 
@@ -135,7 +318,7 @@
  aa_vue_filters__js | vue过滤器 
  aa_vue_filters_val__js | vue过滤器-定义不带参数，{{ str | capitalize}} 
  aa_vue_filters_args__js | vue过滤器-定义带参数，{{ str | capitalize(arg1)}} 
- aa_vue_filter__html | 过滤器：在双花括号中，如果带参filterName(param) 
+ aa_vue_filter__html | vue过滤器：在双花括号中，如果带参filterName(param) 
  aa_vue_model__js | vue组件属性 
  aa_vue_props__js | vue组件属性 
  aa_vue_props_number__js | vue组件属性-数字类型 
@@ -152,6 +335,8 @@
  aa_vue_mixins__js | vue混入 
  aa_vue_computed__js | vue计算属性 
  aa_vue_computed_val__js | vue计算属性-定义格式 
+ aa_vue_computed_title__js | vue计算-标题 
+ aa_vue_computed_currentValue__js | aa_vue_computed_currentValue__js 
  aa_vue_computed_example__js | vue计算属性-示例 
  aa_vue_watch__js | vue数据侦听 
  aa_vue_watch_val__js | vue数据侦听-基本类型 
@@ -173,125 +358,4 @@
  aa_vue_lifecycle_errorCaptured__js | vue生命周期-异常捕获 
  aa_vue_lifecycle_example__js | vue生命周期-示例 
  aa_vue_methods__js | vue方法 
- aa_vue_nextTick__js | aa_vue_nextTick__js 
- 
-## 业务管理系统常用片段
- 
- dbutils.code-snippet
- 
- 片段 | 描述 
- ---|--- 
- aa_snippet__json | 创建代码片段示例 
- aa_lang__js | 打印多语言 
- aa_helper_modal_open__js | 打开弹窗 
- aa_import_frontendpage__js |  
- aa_mixins_frontendpage__js | 前端分页-混入 
- aa_frontendpage__html | 前端分页-html 
- aa_customControls__js_import |  
- aa_customControls__js_mixins |  
- aa_component_vuedraggable__js_import |  
- aa_component_vuedraggable__html |  
- el-button_small_add__html |  
- el-button_small_save__html |  
- el-button_small_cancel__html |  
- el-dialog__file |  
- el-dialog__html |  
- el-tooltip__html |  
- el-table_loading__html |  
- el-table_rowclick__html |  
- el-table-column_for__html |  
- el-table-column_selection__html |  
- el-table-column_operate__html |  
- el-dropdown__html |  
- aa_sortable_import__js | 引入拖动排序 
- aa_sortable_call__js | 调用表格行拖动排序方法 
- aa_sortable_rowkey__js | 表格行拖动排序的唯一键 
- aa_sortable_rowsort__js |  
- el-scrollbar__html |  
- aa_localstorage_get__js |  
- aa_localstorage_set__js |  
- aa_bb__js | aa_bb__js 
- 
-## 业务管理系统-表单片段
- 
- dbutils.form.code-snippet
- 
- 片段 | 描述 
- ---|--- 
- el-form__html | 表单容器-默认 
- el-form_detail__html | 表单容器-详情 
- el-form-item_span__html | 表单-详情文本 
- el-form-item_input__html | 表单-文本框 
- el-form-item_input_number__html | 表单-数字文本框 
- el-form-item_textarea__html | 表单-文本域 
- el-form-item_select__html | 表单-下拉框 
- el-form-item_checkbox__html | 表单-多选框 
- el-form-item_radio__html | 表单-单选框 
- el-form-item_switch__html | 表单-开关 
- 
-## 业务管理系统-引入片段
- 
- dbutils.import.code-snippet
- 
- 片段 | 描述 
- ---|--- 
- aa_import_api__js | 引用api中的接口方法 
- aa_import_options__js | 引用options中的选项值 
- aa_import_common__js | 引用common中的方法 
- aa_import_lodash__js | 引用lodash工具类 
- aa_import_component__js | 引用公共组件 
- aa_import_mixins__js | 引用混入 
- 
-## 业务管理系统组件片段
- 
- dbutils.jf.code-snippet
- 
- 片段 | 描述 
- ---|--- 
- jf-container__js_import | jf-container__js_import 
- jf-container__html | jf-container__html 
- jf-tips-box__html | jf-tips-box__html 
- jf-tips-box__js_import | jf-tips-box__js_import 
- jf-form-group-box__html | jf-form-group-box__html 
- jf-form-group-box__js_import | jf-form-group-box__js_import 
- jf-select-user__js_import | jf-select-user__js_import 
- jf-select-user__js_modal_open | jf-select-user__js_modal_open 
- jf-image-upload__js_import | jf-image-upload__js_import 
- jf-image-upload__html | jf-image-upload__html 
- jf-pagination-box__html | jf-pagination-box__html 
- jf-select-product__js_open_dialog | jf-select-product__js_open_dialog 
- jf-select-product__js_import | jf-select-product__js_import 
- jf-icomet-progress__js_import |  
- jf-icomet-progress__js_open_dialog |  
- jf-input-file__html |  
- jf-input-file__js_import |  
- 
-## 业务管理系统接口请求片段
- 
- dbutils.request.jf.code-snippet
- 
- 片段 | 描述 
- ---|--- 
- aa_request_async_await__js |  
- aa_request_then__js |  
- aa_request_res_message__js |  
- aa_request_res_data__js |  
- aa_request_getDetail_then__js | 获取数据then 
- aa_request_getDetail_async__js | 获取数据async 
- 
-## 验证片段
- 
- aa.rules.code-snippet
- 
- 片段 | 描述 
- ---|--- 
- aa_ruleForm_rules__js | aa_ruleForm_rules__js 
- aa_rules_required_input__js |  
- aa_rules_required_input_number__js |  
- aa_rules_required_select__js |  
- aa_rules_required_checkbox__js |  
- aa_rules_required_datetime__js |  
- aa_rules_min_max_length__js |  
- aa_rules_min_length__js |  
- aa_rules_max_length__js |  
- aa_rules_validator__js | 
+ aa_vue_nextTick__js | aa_vue_nextTick__js

@@ -34,6 +34,6 @@
 			"</el-dropdown-item>",
 			"</router-link>"
 		],
-		"description": "aa_link_navbar__html"
+		"description": "链接-navbar"
 	}
 }

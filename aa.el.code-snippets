@@ -1,0 +1,130 @@
+{
+	"aa.el.code-snippet": {
+		"prefix": "dbutils.el.code-snippet",
+		"body": [
+			""
+		],
+		"description": "element片段"
+	},
+	"aa_el-alert__html": {
+		"prefix": "aa_el-alert__html",
+		"description": "element-警告提示信息",
+		"body": [
+			"<el-alert :title=\"$$t('views.enumData.tips1')\" type=\"warning\" show-icon class=\"mar-b-10\" />"
+		]
+	},
+	"aa_el-scrollbar_y__html": {
+		"prefix": "aa_el-scrollbar_y__html",
+		"body": [
+			"<el-scrollbar ref=\"elscrollbar\" class=\"height-full hidden-x\">",
+			"$0",
+			"</el-scrollbar>"
+		],
+		"description": "element-滚动条(纵向)"
+	},
+	"aa_el-scrollbar_x__html": {
+		"prefix": "aa_el-scrollbar_x__html",
+		"body": [
+			"<el-scrollbar ref=\"elscrollbar\" :vertical=\"false\" class=\"width-full\">",
+			"$0",
+			"</el-scrollbar>"
+		],
+		"description": "element-滚动条(横向)"
+	},
+	"aa_el-dialog__file": {
+		"prefix": "aa_el-dialog__file",
+		"body": [
+			"<template>",
+			"<el-dialog",
+			"v-el-drag-dialog",
+			":close-on-click-modal=\"false\"",
+			":visible.sync=\"visible\"",
+			":title=\"${1:title}\"",
+			"custom-class=\"${3|el-dialog-form,el-dialog-fullscreen,el-dialog-custom|} ${2:modal-sm}\"",
+			"@close=\"reject\">",
+			"<!-- 注 : 弹框尺寸规范：宽度分别为modal-xs 400px、modal-sm 500px、modal-md 600px、modal-lg 720px、modal-xl 980px、modal-xxl 1100px，高度限520px以内，内容一屏展示不完加滚动条；",
+			"一般情况标题和内容离左右外边框距离20px,表单的标题字段固定宽度为6个字宽度（一般为72px）,表单为两列时，两列间距为10px。 ",
+			"custom-class: el-dialog-fullscreen全屏、el-dialog-form表单、el-dialog-custom上填充为0-->",
+			"",
+			"<div slot=\"footer\" class=\"dialog-footer\">",
+			"<el-button size=\"small\" @click=\"reject\">{{ $$t('button.cancel') }}<\/el-button>",
+			"<el-button size=\"small\" type=\"primary\" @click=\"save('ruleForm')\">{{ $$t('button.save') }}<\/el-button>",
+			"<\/div>",
+			"<\/el-dialog>",
+			"<\/template>",
+			"",
+			"<script>",
+			"export default {",
+			"name: '$TM_FILENAME_BASE',",
+			"data() {",
+			"return {",
+			"visible: false,",
+			"title: this.$$t('common.title')",
+			"}",
+			"},",
+			"methods: {",
+			"save() {",
+			"console.log('save button clicked.')",
+			"this.resolve(1)",
+			"}",
+			"}",
+			"}",
+			"<\/script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			"",
+			"<\/style>",
+			"",
+			"$0"
+		],
+		"description": "element-弹窗页面"
+	},
+	"aa_el-dialog__html": {
+		"prefix": "aa_el-dialog__html",
+		"body": [
+			"<el-dialog",
+			"v-el-drag-dialog",
+			":close-on-click-modal=\"false\"",
+			":visible.sync=\"visible\"",
+			":title=\"${1:title}\"",
+			"custom-class=\"${3|el-dialog-form,el-dialog-fullscreen,el-dialog-custom|} ${2:modal-sm}\"",
+			"@close=\"reject\">",
+			"<!-- 注 : 弹框尺寸规范：宽度分别为modal-xs 400px、modal-sm 500px、modal-md 600px、modal-lg 720px、modal-xl 980px、modal-xxl 1100px，高度限520px以内，内容一屏展示不完加滚动条；",
+			"一般情况标题和内容离左右外边框距离20px,表单的标题字段固定宽度为6个字宽度（一般为72px）,表单为两列时，两列间距为10px。 ",
+			"custom-class: el-dialog-fullscreen全屏、el-dialog-form表单、el-dialog-custom上填充为0-->",
+			"",
+			"<div slot=\"footer\" class=\"dialog-footer\">",
+			"<el-button size=\"small\" @click=\"reject\">{{ $$t('button.cancel') }}<\/el-button>",
+			"<el-button size=\"small\" type=\"primary\" @click=\"save('ruleForm')\">{{ $$t('button.save') }}<\/el-button>",
+			"<\/div>",
+			"<\/el-dialog>",
+			"$0"
+		],
+		"description": "element-弹窗"
+	},
+	"aa_el-tooltip__html": {
+		"prefix": "aa_el-tooltip__html",
+		"body": [
+			"<el-tooltip :enterable=\"false\" :open-delay=\"300\" :content=\"${1:'提示内容'}\" placement=\"${2:right}\">",
+			"${3:<icon :size=\"14\" :color=\"gColor.iconColorDefault\" type=\"jf-icon-help\" />}",
+			"</el-tooltip>"
+		],
+		"description": ""
+	},
+	"aa_el-dropdown__html": {
+		"prefix": "aa_el-dropdown__html",
+		"body": [
+			"<el-dropdown @command=\"syncProduct\">",
+			"<el-button size=\"small\">",
+			"{{ $t('button.sync') }}",
+			"<i class=\"el-icon-arrow-down el-icon--right\" />",
+			"</el-button>",
+			"<el-dropdown-menu slot=\"dropdown\">",
+			"<el-dropdown-item command=\"all\">同步全部产品</el-dropdown-item>",
+			"<el-dropdown-item command=\"selected\">同步选择产品</el-dropdown-item>",
+			"</el-dropdown-menu>",
+			"</el-dropdown>"
+		],
+		"description": "element-下拉菜单"
+	}
+}

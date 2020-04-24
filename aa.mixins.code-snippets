@@ -1,0 +1,51 @@
+{
+	"aa.mixins.code-snippet": {
+		"prefix": "aa.mixins.code-snippet",
+		"body": [
+			""
+		],
+		"description": "混入片段"
+	},
+	"aa_mixins_frontendpage__js": {
+		"prefix": "aa_mixins_frontendpage__js",
+		"body": [
+			"mixins: [frontEndPage],"
+		],
+		"description": "混入-前端分页"
+	},
+	"aa_mixins_paginationBox__js": {
+		"prefix": "aa_mixins_paginationBox__js",
+		"body": [
+			"mixins: [paginationBox],"
+		],
+		"description": "混入-后端分页"
+	},
+	"aa_mixins_initRules__js": {
+		"prefix": "aa_mixins_initRules__js",
+		"body": [
+			"mixins: [initRules],"
+		],
+		"description": "混入-动态验证初始化"
+	},
+	"aa_mixins_enumOptions__js": {
+		"prefix": "aa_mixins_enumOptions__js",
+		"body": [
+			"mixins: [enumOptions],"
+		],
+		"description": "混入-系统枚举"
+	},
+	"aa_mixins_CustomControls__js": {
+		"prefix": "aa_mixins_CustomControls__js",
+		"body": [
+			"mixins: [CustomControls],"
+		],
+		"description": "混入-动态控件"
+	},
+	"aa_mixins_formula__js": {
+		"prefix": "aa_mixins_formula__js",
+		"body": [
+			"mixins: [formula],"
+		],
+		"description": "混入-计算公式"
+	}
+}

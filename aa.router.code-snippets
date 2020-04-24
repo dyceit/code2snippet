@@ -35,6 +35,6 @@
 			"meta: { title: '${2:snippetDemo}', affix: true, noTags: true }",
 			"}"
 		],
-		"description": "aa_router_notags__js"
+		"description": "路由-无标签页"
 	}
 }

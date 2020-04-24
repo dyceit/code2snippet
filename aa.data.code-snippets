@@ -1,0 +1,19 @@
+{
+	"aa.data.code-snippet": {
+		"prefix": "aa.data.code-snippet",
+		"body": [
+			""
+		],
+		"description": "数据片段"
+	},
+  "aa_data_enumOptions__js": {
+    "prefix": "aa_data_enumOptions__js",
+    "description": "vue数据-系统枚举",
+    "body": [
+      "enumOptions: {",
+      "page_type: [],",
+      "panel_display: []",
+      "},"
+    ]
+  }
+}

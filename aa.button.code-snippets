@@ -27,9 +27,9 @@
 	"el-button_small_add__html": {
 		"prefix": "el-button_small_add__html",
 		"body": [
-			"<el-button size=\"small\" type=\"primary\" icon=\"el-icon-plus\" @click=\"add\">{{ $$t('button.add') }}</el-button>"
+			"<el-button size=\"small\" type=\"primary\" icon=\"el-icon-plus\" @click=\"edit()\">{{ $$t('button.add') }}</el-button>"
 		],
-		"description": "按钮-添加"
+		"description": "按钮-新建"
 	},
 	"el-button_small_save__html": {
 		"prefix": "el-button_small_save__html",
