@@ -1,0 +1,48 @@
+{
+  "aa.store.code-snippet": {
+    "prefix": "aa.store.code-snippet",
+    "body": [
+      ""
+    ],
+    "description": "状态片段"
+  },
+  "aa_store_modules__file": {
+    "prefix": "aa_store_modules__file",
+    "description": "状态模块文件",
+    "body": [
+      "import { getModuleList } from '@dev/api/module'",
+      "",
+      "const module = {",
+      "  state: {",
+      "    modules: []",
+      "  },",
+      "  mutations: {",
+      "    SET_MODULES: (state, modules) => {",
+      "      state.modules = modules",
+      "    }",
+      "  },",
+      "  actions: {",
+      "    GetModules({",
+      "      commit",
+      "    }) {",
+      "      return new Promise((resolve, reject) => {",
+      "        getModuleList({ moduleTypes: [1] }).then(res => {",
+      "          if (res.success) {",
+      "            commit('SET_MODULES', res.data)",
+      "            resolve(res.data)",
+      "          } else {",
+      "            resolve([])",
+      "          }",
+      "        }).catch(error => {",
+      "          reject(error)",
+      "        })",
+      "      })",
+      "    }",
+      "  }",
+      "}",
+      "",
+      "export default module",
+      ""
+    ]
+  }
+}

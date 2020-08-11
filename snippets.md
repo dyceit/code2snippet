@@ -5,7 +5,8 @@
  
  片段 | 描述 
  ---|--- 
- aa_api__file | api请求-示例 
+ aa_api__file | api请求-文件 
+ aa_api_example__file | api请求-示例 
  aa_api_get__js | api请求-get 
  aa_api_post__js | api请求-post 
  aa_api_insert__js | api请求-新增 
@@ -16,6 +17,7 @@
  aa_api_recover__js | api请求-恢复 
  aa_api_list__js | api请求-分页列表 
  aa_api_query__js | api请求-列表 
+ aa_api_options__js | api请求-列表 
  aa_api_detail__js | api请求-详情 
  aa_api_copy__js | api请求-复制 
  aa_api_setIsEnable__js | api请求-启用/禁用 
@@ -104,10 +106,13 @@
  aa_el-alert__html | element-警告提示信息 
  aa_el-scrollbar_y__html | element-滚动条(纵向) 
  aa_el-scrollbar_x__html | element-滚动条(横向) 
+ aa_el-tree__file | element-目录树文件 
+ aa_el-tabs__file | aa_el-tabs__file 
  aa_el-dialog__file | element-弹窗页面 
  aa_el-dialog__html | element-弹窗 
  aa_el-tooltip__html |  
  aa_el-dropdown__html | element-下拉菜单 
+ aa_el-card__html | element-卡片 
  
 ## 业务管理系统-表单片段
  
@@ -117,17 +122,18 @@
  ---|--- 
  aa_el-form__html | 表单容器-默认 
  aa_el-form_detail__html | 表单容器-详情 
- aa_el-form-item_span__html | 表单控件-文本框 
- aa_el-form-item_input__html | 表单控件-输入框 
- aa_el-form-item_lang__html | 表单控件-多语言输入框 
- aa_el-form-item_number__html | 表单控件-数字输入框 
- aa_el-form-item_textarea__html | 表单控件-文本域 
- aa_el-form-item_select_single__html | 表单控件-选择器单值 
- aa_el-form-item_select_multiple__html | 表单控件-选择器多值 
- aa_el-form-item_checkbox_single__html | 表单控件-多选框单值 
- aa_el-form-item_checkbox_multiple__html | 表单控件-多选框多值 
- aa_el-form-item_radio__html | 表单控件-单选框 
- aa_el-form-item_switch__html | 表单控件-开关 
+ aa_el-form_span__html | 表单控件-文本框 
+ aa_el-form_input__html | 表单控件-输入框 
+ aa_el-form_lang__html | 表单控件-多语言输入框 
+ aa_el-form_number__html | 表单控件-数字输入框 
+ aa_el-form_textarea__html | 表单控件-文本域 
+ aa_el-form_select_single__html | 表单控件-选择器单值 
+ aa_el-form_select_multiple__html | 表单控件-选择器多值 
+ aa_el-form_cascader__html | 表单控件-级联选择器 
+ aa_el-form_checkbox_single__html | 表单控件-单选框单值 
+ aa_el-form_checkbox_multiple__html | 表单控件-多选框多值 
+ aa_el-form_radio__html | 表单控件-单选框 
+ aa_el-form_switch__html | 表单控件-开关 
  
 ## 业务管理系统-引入片段
  
@@ -146,7 +152,8 @@
  aa_import_vuex__js | 引用-vuex 
  aa_import_JfContainer__js | 引用-JfContainer 
  aa_import_mixins__js | 引用-混入 
- aa_import_mixins_frontendpage__js |  
+ aa_import_mixins_frontEndPage__js |  
+ aa_import_mixins_listSearch__js |  
  aa_import_mixin_CustomControls__js | 引用-动态控件 
  aa_import_mixin_JfPaginationBox__js | 引用-分页组件 
  aa_import_mixins_enumOptions__js | 引用-系统枚举 
@@ -257,6 +264,14 @@
  aa_rules_max_length__js | 验证-最长 
  aa_rules_validator__js | 验证-正则 
  
+## 搜索栏
+ 
+ aa.search.code-snippet
+ 
+ 片段 | 描述 
+ ---|--- 
+ aa_search_keywords__html | 搜索栏-关键词 
+ 
 ## 本地存储
  
  aa.storage.code-snippet
@@ -276,21 +291,21 @@
  ---|--- 
  aa_el-table_loading__html | 表格-列表容器 
  aa_el-table_form__html | 表格-表单容器 
- aa_el-table-column__html | 表格行-简化 
- aa_el-table-column_template__html | 表格行-插槽 
- aa_el-table-column_for__html | 表格行-循环 
- aa_el-table-column_selection__html | 表格行-选择器 
- aa_el-table-column_operate__html | 表格行-行操作 
- aa_el-table-column_form-item_input__html | 表格行-表单控件-输入框 
- aa_el-table-column_form-item_number__html | 表格行-表单控件-数字输入框 
- aa_el-table-column_form-item_textarea__html | 表格行-表单控件-文本域 
- aa_el-table-column_form-item_select_single__html | 表格行-表单控件-选择器单值 
- aa_el-table-column_form-item_select_multiple__html | 表格行-表单控件-选择器多值 
- aa_el-table-column_form-item_checkbox_single__html | 表格行-表单控件-多选框单值 
- aa_el-table-column_form-item_checkbox_multiple__html | 表格行-表单控件-多选框多值 
- aa_el-table-column_form-item_radio__html | 表格行-表单控件-单选框 
- aa_el-table-column_form-item_switch__html | 表格行-表单控件-开关 
- aa_el-table-column_form-item_span__html | 表格行-表单控件-文本框 
+ aa_el-table-col__html | 表格行-简化 
+ aa_el-table-col_template__html | 表格行-插槽 
+ aa_el-table-col_for__html | 表格行-循环 
+ aa_el-table-col_selection__html | 表格行-选择器 
+ aa_el-table-col_operate__html | 表格行-行操作 
+ aa_el-table-col_form_input__html | 表格行-表单控件-输入框 
+ aa_el-table-col_form_number__html | 表格行-表单控件-数字输入框 
+ aa_el-table-col_form_textarea__html | 表格行-表单控件-文本域 
+ aa_el-table-col_form_select_single__html | 表格行-表单控件-选择器单值 
+ aa_el-table-col_form_select_multiple__html | 表格行-表单控件-选择器多值 
+ aa_el-table-col_form_checkbox_single__html | 表格行-表单控件-多选框单值 
+ aa_el-table-col_form_checkbox_multiple__html | 表格行-表单控件-多选框多值 
+ aa_el-table-col_form_radio__html | 表格行-表单控件-单选框 
+ aa_el-table-col_form_switch__html | 表格行-表单控件-开关 
+ aa_el-table-col_form_span__html | 表格行-表单控件-文本框 
  
 ## 工具测试片段
  
@@ -299,6 +314,7 @@
  片段 | 描述 
  ---|--- 
  aa | aa 
+ aa_vue__file | veu文件 
  
 ## Vue常用代码片段
  
@@ -358,4 +374,11 @@
  aa_vue_lifecycle_errorCaptured__js | vue生命周期-异常捕获 
  aa_vue_lifecycle_example__js | vue生命周期-示例 
  aa_vue_methods__js | vue方法 
- aa_vue_nextTick__js | aa_vue_nextTick__js
+ aa_vue_nextTick__js | aa_vue_nextTick__js 
+ 
+## 业务管理系统常用片段
+ 
+ dbutils.code-snippet
+ 
+ 片段 | 描述 
+ ---|---

@@ -1,5 +1,5 @@
 {
-	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// Place your joinf-bms workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
 	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
 	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
 	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
@@ -10,7 +10,6 @@
 	// 	"scope": "javascript,typescript",
 	// 	"prefix": "log",
 	// 	"body": [
-	// 		"console.log('$1');",
 	// 		"$2"
 	// 	]
 	// 	"description": "Log output to console"
@@ -28,7 +27,7 @@
 		"prefix": "aa_JfContainer__html",
 		"description": "jf组件-左右布局(客户端)",
 		"body": [
-			"<JfContainer>",
+			"<JfContainer aside-width=\"180px\">",
 			"<div slot=\"aside\">",
 			"<!-- 侧边栏 -->",
 			"</div>",
@@ -66,7 +65,7 @@
 		"prefix": "aa_JfTipsBox__js_import",
 		"description": "引用-jf组件-温馨提示",
 		"body": [
-			"import JfTipsBox from '@/components/JfTipsBox'",
+			"import JfTipsBox from '@client/components/JfTipsBox'",
 			"$0"
 		]
 	},
@@ -93,7 +92,7 @@
 		"prefix": "aa_JfFormGroupBox__js_import",
 		"description": "引用-jf组件-表单分组",
 		"body": [
-			"import JfFormGroupBox from '@/components/JfFormGroupBox'",
+			"import JfFormGroupBox from '@client/components/JfFormGroupBox'",
 			"$0"
 		]
 	},
@@ -101,7 +100,7 @@
 		"prefix": "aa_JfSelectUser__js_import",
 		"description": "引用-jf组件-用户选择",
 		"body": [
-			"import JfSelectUser from '@/components/JfSelectUser'",
+			"import JfSelectUser from '@client/components/JfSelectUser'",
 			"$0"
 		]
 	},
@@ -114,7 +113,7 @@
 			"parent: this,",
 			"propsData: {",
 			"title: '选择用户',",
-			"isMultiple: true",
+			"multiple: true",
 			"},",
 			"data: {}",
 			"})",
@@ -123,7 +122,7 @@
 			"console.log(res)",
 			"},",
 			"err => {",
-			"console.log('close-dialog:', err)",
+			"console.warn('close-dialog:', err)",
 			"}",
 			")"
 		]
@@ -132,7 +131,7 @@
 		"prefix": "aa_JfImageUpload__js_import",
 		"description": "引用-jf组件-图片上传",
 		"body": [
-			"import JfImageUpload from '@/components/JfImageUpload'",
+			"import JfImageUpload from '@client/components/JfImageUpload'",
 			"$0"
 		]
 	},
@@ -148,7 +147,7 @@
 		"prefix": "aa_JfPaginationBox__html",
 		"description": "jf组件-分页栏",
 		"body": [
-			"<JfPaginationBox v-if=\"tableData.length > 0\" :current-page=\"currentPage\" :page-size=\"pageSize\" :total=\"dataTotal\" @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" />"
+			"<JfPaginationBox v-if=\"tableData.length\" :current-page=\"currentPage\" :page-size=\"pageSize\" :total=\"dataTotal\" @size-change=\"handleSizeChange\" @current-change=\"handleCurrentChange\" />"
 		]
 	},
 	"aa_JfSelectProduct__js_open_dialog": {
@@ -160,7 +159,7 @@
 			"parent: this,",
 			"propsData: {",
 			"title: '选择产品目录',",
-			"isMultiple: true",
+			"multiple: true",
 			"},",
 			"data: {}",
 			"})",
@@ -169,7 +168,7 @@
 			"console.log(res)",
 			"},",
 			"err => {",
-			"console.log('close-dialog:', err)",
+			"console.warn('close-dialog:', err)",
 			"}",
 			")"
 		]
@@ -178,7 +177,7 @@
 		"prefix": "aa_JfSelectProduct__js_import",
 		"description": "引用-jf组件-产品选择",
 		"body": [
-			"import JfProductCategory from '@/components/JfProductCategory'",
+			"import JfProductCategory from '@client/components/JfProductCategory'",
 			"$0"
 		]
 	},
@@ -186,7 +185,7 @@
 		"prefix": "aa_JfIcometProgress__js_import",
 		"description": "引用-jf组件-保存进度",
 		"body": [
-			"import JfIcometProgress from '@/components/JfIcometProgress'",
+			"import JfIcometProgress from '@client/components/JfIcometProgress'",
 			"$0"
 		]
 	},
@@ -203,7 +202,7 @@
 			"}).then(res => {",
 			"console.log(res)",
 			"}, err => {",
-			"console.log('close-dialog:', err)",
+			"console.warn('close-dialog:', err)",
 			"})",
 			"}"
 		]
@@ -219,7 +218,7 @@
 		"prefix": "aa_JfInputFile__js_import",
 		"description": "引用-jf组件-上传文件",
 		"body": [
-			"import JfInputFile from '@/components/JfInputFile'"
+			"import JfInputFile from '@client/components/JfInputFile'"
 		]
 	}
 }

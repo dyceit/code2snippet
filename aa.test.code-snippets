@@ -5,12 +5,5 @@
       ""
     ],
     "description": "工具测试片段"
-  },
-  "aa": {
-    "prefix": "aa",
-    "description": "aa",
-    "body": [
-      "<mt-header title=\"标题过长会隐藏后面的内容啊哈哈哈哈\">\r    <mt-button v-link=\"'/'\" icon=\"back\" slot=\"left\">返回</mt-button>\r    <mt-button icon=\"more\" slot=\"right\"></mt-button>\r  </mt-header>"
-    ]
   }
 }

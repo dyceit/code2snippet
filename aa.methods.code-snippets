@@ -52,7 +52,7 @@
       "    this.list = res.data",
       "  } else {",
       "    this.dataTotal = 0",
-      "    this.$$message.warning(res.message || this.t('tips.getFail'))",
+      "    this.$$message.warning(res.message || this.$$t('tips.getFail'))",
       "  }",
       "}"
     ]
@@ -61,14 +61,14 @@
     "prefix": "aa_methods_getList_then__js",
     "description": "vue方法-获取列表数据",
     "body": [
-      "// 获取列表数据",
       "getList(params) {",
+      "  this.tableData = []",
       "  this.listLoading = true",
       "  getModulePageList(params).then(res => {",
       "    this.listLoading = false",
       "    if (res.success) {",
       "      console.log('res.data', res.data)",
-      "      this.list = res.data",
+      "      this.tableData = res.data || []",
       "    } else {",
       "      this.$$message.warning(res.message || this.$$t('tips.getFail'))",
       "    }",
@@ -80,16 +80,16 @@
     "prefix": "aa_methods_getList_async__js",
     "description": "vue方法-获取列表数据",
     "body": [
-      "// 获取列表数据",
       "async getList(params) {",
+      "  this.tableData = []",
       "  this.listLoading = true",
       "  const res = await getList(params)",
       "  this.listLoading = false",
       "  if (res.success) {",
       "    console.log('res.data', res.data)",
-      "    this.list = res.data",
+      "    this.tableData = res.data || []",
       "  } else {",
-      "    this.$$message.warning(res.message || this.t('tips.getFail'))",
+      "    this.$$message.warning(res.message || this.$$t('tips.getFail'))",
       "  }",
       "}"
     ]
@@ -98,13 +98,12 @@
     "prefix": "aa_methods_getDetail_then__js",
     "body": [
       "getDetail(params) {",
-      "// 获取详情数据",
       "this.loading = true",
       "${1:getDetail}(params).then(res => {",
       "this.loading = false",
       "if (res.success) {",
       "console.log('res.data', res.data)",
-      "this.detail = res.data",
+      "this.detail = res.data || {}",
       "} else {",
       "this.$$message.warning(res.message || this.$$t('tips.getFail'))",
       "}",
@@ -117,13 +116,12 @@
     "prefix": "aa_methods_getDetail_async__js",
     "body": [
       "getDetail(params) {",
-      "// 获取详情数据",
       "this.loading = true",
       "const res = await ${1:getDetail}(params)",
       "this.loading = false",
       "if (res.success) {",
       "console.log('res.data', res.data)",
-      "this.detail = res.data",
+      "this.detail = res.data || {}",
       "} else {",
       "this.$$message.warning(res.message || this.$t('tips.getFail'))",
       "}",
@@ -211,11 +209,11 @@
       "            this.$$message.success(this.$$t('tips.deleteSuccess'))",
       "            this.getList()",
       "          } else {",
-      "            this.$$message.success(res.message || this.$$t('tips.deleteFail'))",
+      "            this.$$message.error(res.message || this.$$t('tips.deleteFail'))",
       "          }",
       "        })",
       "      }).catch(err => {",
-      "        console.log('close-confirm:', err)",
+      "        console.warn('close-confirm:', err)",
       "      })",
       "    },"
     ]
@@ -226,7 +224,6 @@
     "body": [
       "setTableHeight: _.debounce(function() {",
       "      this.tableHeight = this.$$refs.container.offsetHeight - 64",
-      "      console.log('1', 1)",
       "    }, 150),"
     ]
   },
@@ -236,7 +233,6 @@
     "body": [
       "setTableHeight: _.throttle(function() {",
       "      this.tableHeight = this.$$refs.container.offsetHeight - 64",
-      "      console.log('1', 1)",
       "    }, 150),"
     ]
   },
@@ -253,7 +249,7 @@
       "      }).then(res => {",
       "        this.getList()",
       "      }, err => {",
-      "        console.log('close-dialog:', err)",
+      "        console.warn('close-dialog:', err)",
       "      })",
       "    },"
     ]
@@ -261,9 +257,9 @@
   "aa_methods_sortable_call__js": {
 		"prefix": "aa_methods_sortable_call__js",
 		"body": [
-			"setTimeout(() => {",
+			"this.$$nextTick(() => {",
 			"this.rowSort()",
-			"}, 500)"
+			"})"
 		],
 		"description": "调用表格行拖动排序方法"
 	},
@@ -271,17 +267,20 @@
 		"prefix": "aa_methods_sortable_rowsort__js",
 		"body": [
 			"// 表格行拖动排序",
-			"// el-table ref=\"table\" 确定要排序的表格，:row-key=\"rowKey\" 唯一键解决渲染复用问题，:row-style=\"{'cursor':'move'}\" 设置鼠标样式",
+			"// el-table ref=\"table\" 确定要排序的表格，:row-key=\"rowKey\" 唯一键解决渲染复用问题",
 			"// this.tableData 是要排序的对象数组，根据情况设置",
-			"rowSort() {",
-			"const tbody = this.$$refs.table.$$el.querySelector('.el-table__body-wrapper table tbody')",
+      "rowSort() {",
+      "if (this.$$refs.table) {",
+			"const tbody = this.$$refs.table.$$el.querySelector('.el-table__fixed-right .el-table__fixed-body-wrapper table tbody') || this.$$refs.table.$$el.querySelector('.el-table__body-wrapper table tbody')",
 			"const _this = this",
-			"Sortable.create(tbody, {",
+      "Sortable.create(tbody, {",
+      "handle: '.el-icon-rank',",
 			"onEnd({ newIndex, oldIndex }) {",
 			"const currRow = _this.tableData.splice(oldIndex, 1)[0]",
 			"_this.tableData.splice(newIndex, 0, currRow)",
 			"}",
 			"})",
+			"}",
 			"},"
 		],
 		"description": "vue方法-表格行拖动排序"

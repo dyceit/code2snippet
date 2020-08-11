@@ -12,7 +12,7 @@
     "body": [
       "enumOptions: {",
       "page_type: [],",
-      "panel_display: []",
+      "panel_type: []",
       "},"
     ]
   }

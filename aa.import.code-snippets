@@ -9,7 +9,7 @@
   "aa_import_api__js": {
     "prefix": "aa_import_api__js",
     "body": [
-      "import { $1 } from '@/api/${2:api}'",
+      "import { $1 } from '@client/api/${2:api}'",
       ""
     ],
     "description": "引用-api中的接口方法"
@@ -17,7 +17,7 @@
   "aa_import_options__js": {
     "prefix": "aa_import_options__js",
     "body": [
-      "import { $1 } from 'src2/utils/options'",
+      "import { $1 } from '@client/utils/options'",
       ""
     ],
     "description": "引用-options中的选项值"
@@ -25,7 +25,7 @@
   "aa_import_common__js": {
     "prefix": "aa_import_common__js",
     "body": [
-      "import { $1 } from 'src2/utils/common'",
+      "import { $1 } from '@client/utils/common'",
       ""
     ],
     "description": "引用-common中的方法"
@@ -79,27 +79,34 @@
     "prefix": "aa_import_JfContainer__js",
     "description": "引用-JfContainer",
     "body": [
-      "import JfContainer from 'src2/components/JfContainer.vue'"
+      "import JfContainer from '@client/components/JfContainer.vue'"
     ]
   },
   "aa_import_mixins__js": {
     "prefix": "aa_import_mixins__js",
     "body": [
-      "import ${1:mixinName} from '@/components/mixins/${1:mixinName}'"
+      "import ${1:mixinName} from '@client/mixins/${1:mixinName}'"
     ],
     "description": "引用-混入"
   },
-	"aa_import_mixins_frontendpage__js": {
-		"prefix": "aa_import_mixins_frontendpage__js",
+	"aa_import_mixins_frontEndPage__js": {
+		"prefix": "aa_import_mixins_frontEndPage__js",
 		"body": [
-			"import frontEndPage from '@/components/mixins/frontEndPage'"
+			"import frontEndPage from '@client/mixins/frontEndPage'"
+		],
+		"description": ""
+	},
+	"aa_import_mixins_listSearch__js": {
+		"prefix": "aa_import_mixins_listSearch__js",
+		"body": [
+			"import listSearch from '@client/mixins/listSearch'"
 		],
 		"description": ""
 	},
 	"aa_import_mixin_CustomControls__js": {
 		"prefix": "aa_import_mixin_CustomControls__js",
 		"body": [
-			"import CustomControls from 'src2/components/CustomControls/mixins/controls'"
+			"import CustomControls from '@client/components/CustomControls/mixins/controls'"
 		],
 		"description": "引用-动态控件"
 	},
@@ -107,22 +114,29 @@
     "prefix": "aa_import_mixin_JfPaginationBox__js",
     "description": "引用-分页组件",
     "body": [
-      "import JfPaginationBox from 'src2/components/JfPaginationBox.vue'",
-      "import paginationBox from 'src2/mixins/paginationBox'"
+      "import JfPaginationBox from '@client/components/JfPaginationBox.vue'",
+      "import paginationBox from '@client/mixins/paginationBox'"
     ]
   },
   "aa_import_mixins_enumOptions__js": {
     "prefix": "aa_import_mixins_enumOptions__js",
     "description": "引用-系统枚举",
     "body": [
-      "import enumOptions from 'src2/mixins/enumOptions'"
+      "import enumOptions from '@client/mixins/enumOptions'"
     ]
   },
   "aa_import_mixins_formula__js": {
     "prefix": "aa_import_mixins_formula__js",
     "description": "引用-计算公式",
     "body": [
-      "import formula from 'src2/mixins/formula'"
+      "import formula from '@client/mixins/formula'"
+    ]
+  },
+  "aa_import_mixins_multiLangRule__js": {
+    "prefix": "aa_import_mixins_multiLangRule__js",
+    "description": "引用-多语言验证",
+    "body": [
+      "import multiLangRule from '@client/mixins/multiLangRule'"
     ]
   }
 }

@@ -1,5 +1,5 @@
 {
-	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// Place your joinf-bms workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
 	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
 	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
 	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
@@ -10,7 +10,6 @@
 	// 	"scope": "javascript,typescript",
 	// 	"prefix": "log",
 	// 	"body": [
-	// 		"console.log('$1');",
 	// 		"$2"
 	// 	],
 	// 	"description": "Log output to console"
@@ -30,7 +29,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" */"
 		],
@@ -65,6 +64,25 @@
 			" * @lastmodified $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME}"
 		],
 		"description": "方法注释-更新人-戴思阳"
+	},
+	"aa_comment_author_zhanghao__js": {
+		"prefix": "aa_comment_author_zhanghao__js",
+		"body": [
+			"/**",
+			" * ${2:方法名称}",
+			" * @author 张浩 <858258334@qq.com>",
+			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			" */"
+		],
+		"description": "方法注释-作者-张浩"
+	},
+	"aa_comment_modifier_zhanghao__js": {
+		"prefix": "aa_comment_modifier_zhanghao__js",
+		"body": [
+			"${1: * @modifier 张浩 <858258334@qq.com>",
+			" * @lastmodified $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME}"
+		],
+		"description": "方法注释-更新人-张浩"
 	},
 	"aa_comment_author_vjing__js": {
 		"prefix": "aa_comment_author_vjing__js",
@@ -107,7 +125,7 @@
 	"aa_comment_author__js": {
 		"prefix": "aa_comment_author__js",
 		"body": [
-			"${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}"
+			"${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}"
 		],
 		"description": "注释-作者"
 	},
@@ -123,7 +141,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" *",
 			" * @param {string} ${3:param} - 参数",
@@ -159,7 +177,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {string} ${3:param} - 参数",
 			" */"
@@ -171,7 +189,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {string} ${3:param}1 - 参数",
 			" * @param {string} ${3:param}2 - 参数",
@@ -184,7 +202,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {Object} ${3:param} - 对象",
 			" * @param {string} ${3:param}.name - 对象的属性",
@@ -198,7 +216,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {Object[]} ${3:param}s - 对象数组",
 			" * @param {string} ${3:param}s[].name - 对象数组元素的属性",
@@ -212,7 +230,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {string} [${3:param}] - 可选参数",
 			" */"
@@ -224,7 +242,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {string} [${3:param}=${4:param}] - 可选参数带默认值",
 			" */"
@@ -236,7 +254,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {*} ${3:param} - 任意类型参数",
 			" */"
@@ -248,7 +266,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {(string|string[])} ${3:param} - 多种类型参数",
 			" */"
@@ -260,7 +278,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {requestCallback} cb - 处理异步请求返回数据的回调方法",
 			" */",
@@ -275,7 +293,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @callback requestCallback",
 			" * @param {Object} res 请求返回数据参数",
@@ -291,7 +309,7 @@
 		"body": [
 			"/**",
 			" * ${2:方法名称}",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @param {string} ${3:param} - 参数",
 			" * @return {string} 返回值放在方法注释的最后",
@@ -304,7 +322,7 @@
 		"body": [
 			"/**",
 			" * @module ${2:components}/$TM_FILENAME_BASE",
-			" * @author ${1|戴思阳 <814577465@qq.com>,杜伟坡 <362380046@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
+			" * @author ${1|戴思阳 <814577465@qq.com>,张浩 <858258334@qq.com>,魏静 <812065568@qq.com>,郜兴亮 <54201425@qq.com>|}",
 			" * @time $CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
 			" * @desc ${3:计数器组件}",
 			" * @example <my-component :counter-initor=\"5\" :step=\"2\" />",

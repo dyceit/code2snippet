@@ -1,5 +1,5 @@
 {
-	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// Place your joinf-bms workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
 	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
 	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
 	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
@@ -10,7 +10,6 @@
 	// 	"scope": "javascript,typescript",
 	// 	"prefix": "log",
 	// 	"body": [
-	// 		"console.log('$1');",
 	// 		"$2"
 	// 	],
 	// 	"description": "Log output to console"
@@ -57,7 +56,7 @@
 			"}).then(res => {",
 			"console.log(res)",
 			"}, err => {",
-			"console.log('close-dialog:', err)",
+			"console.warn('close-dialog:', err)",
 			"})",
 			"},",
 			"$0"
@@ -89,5 +88,19 @@
 			"</draggable>"
 		],
 		"description": "拖动"
+	},
+	"aa_message_success__js": {
+		"prefix": "aa_message_success__js",
+		"body": [
+			"this.$$message.success(this.$$t('tips.operateSuccess'))"
+		],
+		"description": "消息-操作成功"
+	},
+	"aa_message_error__js": {
+		"prefix": "aa_message_error__js",
+		"body": [
+			"this.$$message.error(this.$$t('tips.operateFail'))"
+		],
+		"description": "消息-操作失败"
 	}
 }

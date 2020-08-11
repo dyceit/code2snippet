@@ -4,9 +4,11 @@
     "baseUrl": ".",
     "paths": {
       // "@/*": ["src/*"] // 相对工作区文件的根目录
-      "@/*": [
-        "./joinf-dbutils-client/src/*",
-        "./joinf-dbutils-dev/src/*"
+      "@clien/*": [
+        "./joinf-bms-client/src/*"
+      ],
+      "@dev/*": [
+        "./joinf-bms-dev/src/*"
       ]
     },
     "target": "ES6",

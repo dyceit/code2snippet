@@ -1,0 +1,24 @@
+{
+	"aa.data.code-snippet": {
+		"prefix": "aa.search.code-snippet",
+		"body": [
+			""
+		],
+		"description": "搜索栏"
+	},
+  "aa_search_keywords__html": {
+    "prefix": "aa_search_keywords__html",
+    "description": "搜索栏-关键词",
+    "body": [
+      "<el-input",
+      "v-model=\"filterText\"",
+      ":placeholder=\"$$t('placeholder.input') + $$t('placeholder.keywords')\"",
+      "size=\"small\"",
+      "prefix-icon=\"el-icon-search\"",
+      "class=\"btn-r\"",
+      "style=\"width:200px;\"",
+      "clearable",
+      "@change=\"handleFilterText()\" />"
+    ]
+  }
+}

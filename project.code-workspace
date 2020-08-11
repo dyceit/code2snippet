@@ -7,8 +7,8 @@
 	"settings": {
 		// 多个项目放在一个工作区，隐藏一些不想搜索的项目目录
 		"files.exclude": {
-			// "**/joinf-dbutils-client": true,
-			"**/joinf-dbutils-dev": true,
+			// "**/joinf-bms-client": true,
+			"**/joinf-bms-dev": true,
 			"**/*.1.vue": true,
 			"**/*.2.vue": true,
 			"**/*.3.vue": true,

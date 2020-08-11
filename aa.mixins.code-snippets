@@ -47,5 +47,12 @@
 			"mixins: [formula],"
 		],
 		"description": "混入-计算公式"
+	},
+	"aa_mixins_multiLangRule__js": {
+		"prefix": "aa_mixins_multiLangRule__js",
+		"body": [
+			"mixins: [multiLangRule],"
+		],
+		"description": "混入-多语言验证"
 	}
 }

@@ -1,5 +1,5 @@
 {
-	// Place your joinf-dbutils workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// Place your joinf-bms workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
 	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
 	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
 	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
@@ -10,7 +10,6 @@
 	// 	"scope": "javascript,typescript",
 	// 	"prefix": "log",
 	// 	"body": [
-	// 		"console.log('$1');",
 	// 		"$2"
 	// 	],
 	// 	"description": "Log output to console"
@@ -27,9 +26,9 @@
 	"el-button_small_add__html": {
 		"prefix": "el-button_small_add__html",
 		"body": [
-			"<el-button size=\"small\" type=\"primary\" icon=\"el-icon-plus\" @click=\"edit()\">{{ $$t('button.add') }}</el-button>"
+			"<el-button size=\"small\" type=\"primary\" @click=\"edit()\">{{ $$t('button.add') }}</el-button>"
 		],
-		"description": "按钮-新建"
+		"description": "按钮-添加"
 	},
 	"el-button_small_save__html": {
 		"prefix": "el-button_small_save__html",

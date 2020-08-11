@@ -24,86 +24,95 @@
 		],
 		"description": "表单容器-详情"
 	},
-	"aa_el-form-item_span__html": {
-		"prefix": "aa_el-form-item_span__html",
+	"aa_el-form_span__html": {
+		"prefix": "aa_el-form_span__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\">",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\">",
 			"<span>{{ ruleForm.${2:name} }}</span>",
 			"</el-form-item>"
 		],
 		"description": "表单控件-文本框"
 	},
-	"aa_el-form-item_input__html": {
-		"prefix": "aa_el-form-item_input__html",
+	"aa_el-form_input__html": {
+		"prefix": "aa_el-form_input__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:name}\">",
-			"<el-input v-model=\"ruleForm.${2:name}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('${1:tables.enumType}.${2:name}')\" clearable />",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:name}\">",
+			"<el-input v-model=\"ruleForm.${2:name}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('tables.${1:enumType}.${2:name}')\" clearable />",
 			"</el-form-item>"
 		],
 		"description": "表单控件-输入框"
 	},
-	"aa_el-form-item_lang__html": {
-		"prefix": "aa_el-form-item_lang__html",
+	"aa_el-form_lang__html": {
+		"prefix": "aa_el-form_lang__html",
 		"description": "表单控件-多语言输入框",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:name}\">",
-			"<MultiLangItem v-model=\"ruleForm.${2:name}\" :rules=\"rules.${2:name}\" />",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:caption}')\" prop=\"${2:caption}\">",
+			"<MultiLangItem v-model=\"ruleForm.${2:caption}\" :placeholder=\"$$t('placeholder.input') + $$t('tables.${1:enumType}.${2:caption}')\" />",
 			"</el-form-item>"
 		]
 	},
-	"aa_el-form-item_number__html": {
-		"prefix": "aa_el-form-item_number__html",
+	"aa_el-form_number__html": {
+		"prefix": "aa_el-form_number__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:name}\">",
-			"<el-input v-model.number=\"ruleForm.${2:name}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('${1:tables.enumType}.${2:name}')\" clearable />",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:name}\">",
+			"<el-input v-model.number=\"ruleForm.${2:name}\" :placeholder=\"$$t('${3:placeholder.input}') + $$t('tables.${1:enumType}.${2:name}')\" clearable />",
 			"</el-form-item>"
 		],
 		"description": "表单控件-数字输入框"
 	},
-	"aa_el-form-item_textarea__html": {
-		"prefix": "aa_el-form-item_textarea__html",
+	"aa_el-form_textarea__html": {
+		"prefix": "aa_el-form_textarea__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:memo}\">",
-			"<el-input v-model=\"ruleForm.${2:memo}\" :autosize=\"{ minRows: 2, maxRows: 4}\" :placeholder=\"$$t('placeholder.input') + $$t('${1:tables.enumType}.${2:name}')\" type=\"textarea\" clearable />",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:memo}\">",
+			"<el-input v-model=\"ruleForm.${2:memo}\" :autosize=\"{ minRows: 2, maxRows: 4}\" :placeholder=\"$$t('placeholder.input') + $$t('tables.${1:enumType}.${2:name}')\" type=\"textarea\" clearable />",
 			"</el-form-item>"
 		],
 		"description": "表单控件-文本域"
 	},
-	"aa_el-form-item_select_single__html": {
-		"prefix": "aa_el-form-item_select_single__html",
+	"aa_el-form_select_single__html": {
+		"prefix": "aa_el-form_select_single__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:name}\">",
-			"<el-select v-model=\"ruleForm.${2:name}\" :placeholder=\"$$t('placeholder.select') + $$t('${1:tables.enumType}.${2:name}')\" clearable>",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:name}\">",
+			"<el-select v-model=\"ruleForm.${2:name}\" :placeholder=\"$$t('placeholder.select') + $$t('tables.${1:enumType}.${2:name}')\" clearable>",
 			"<el-option v-for=\"item in ${2:name}Options\" :label=\"item.label\" :value=\"item.value\" :key=\"item.value\" />",
 			"</el-select>",
 			"</el-form-item>"
 		],
 		"description": "表单控件-选择器单值"
 	},
-	"aa_el-form-item_select_multiple__html": {
-		"prefix": "aa_el-form-item_select_multiple__html",
+	"aa_el-form_select_multiple__html": {
+		"prefix": "aa_el-form_select_multiple__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:name}\">",
-			"<el-select v-model=\"ruleForm.${2:name}\" :placeholder=\"$$t('placeholder.select') + $$t('${1:tables.enumType}.${2:name}')\" multiple clearable>",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:name}\">",
+			"<el-select v-model=\"ruleForm.${2:name}\" :placeholder=\"$$t('placeholder.select') + $$t('tables.${1:enumType}.${2:name}')\" multiple clearable>",
 			"<el-option v-for=\"item in ${2:name}Options\" :label=\"item.label\" :value=\"item.value\" :key=\"item.value\" />",
 			"</el-select>",
 			"</el-form-item>"
 		],
 		"description": "表单控件-选择器多值"
 	},
-	"aa_el-form-item_checkbox_single__html": {
-		"prefix": "aa_el-form-item_checkbox_single__html",
+  "aa_el-form_cascader__html": {
+    "prefix": "aa_el-form_cascader__html",
+    "description": "表单控件-级联选择器",
+    "body": [
+      "<el-form-item :label=\"$$t('tables.${1:enumType}.${2:parentId}')\" prop=\"parentId\">",
+      "<el-cascader v-model=\"ruleForm.parentId\" :options=\"enumTypeOptions\" :props=\"cascaderProps\" clearable filterable />",
+      "</el-form-item>"
+    ]
+  },
+	"aa_el-form_checkbox_single__html": {
+		"prefix": "aa_el-form_checkbox_single__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:name}\">",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:name}\">",
 			"<el-checkbox v-model=\"ruleForm.${2:name}\" :true-label=\"1\" :false-label=\"0\" />",
 			"</el-form-item>"
 		],
-		"description": "表单控件-多选框单值"
+		"description": "表单控件-单选框单值"
 	},
-	"aa_el-form-item_checkbox_multiple__html": {
-		"prefix": "aa_el-form-item_checkbox_multiple__html",
+	"aa_el-form_checkbox_multiple__html": {
+		"prefix": "aa_el-form_checkbox_multiple__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:name}\">",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:name}\">",
 			"<el-checkbox-group v-model=\"ruleForm.${2:name}\">",
 			"<el-checkbox v-for=\"item in ${2:name}Options\" :label=\"item.value\" :key=\"item.value\">{{ item.label }}</el-checkbox>",
 			"</el-checkbox-group>",
@@ -111,10 +120,10 @@
 		],
 		"description": "表单控件-多选框多值"
 	},
-	"aa_el-form-item_radio__html": {
-		"prefix": "aa_el-form-item_radio__html",
+	"aa_el-form_radio__html": {
+		"prefix": "aa_el-form_radio__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:name}\">",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:name}\">",
 			"<el-radio-group v-model=\"ruleForm.${2:name}\">",
 			"<el-radio v-for=\"item in ${2:name}Options\" :label=\"item.value\" :key=\"item.value\">{{ item.label }}</el-radio>",
 			"</el-radio-group>",
@@ -122,10 +131,10 @@
 		],
 		"description": "表单控件-单选框"
 	},
-	"aa_el-form-item_switch__html": {
-		"prefix": "aa_el-form-item_switch__html",
+	"aa_el-form_switch__html": {
+		"prefix": "aa_el-form_switch__html",
 		"body": [
-			"<el-form-item :label=\"$$t('${1:tables.enumType}.${2:name}')\" prop=\"${2:enable}\">",
+			"<el-form-item :label=\"$$t('tables.${1:enumType}.${2:name}')\" prop=\"${2:enable}\">",
 			"<el-switch v-model=\"ruleForm.${2:enable}\" :active-value=\"1\" :inactive-value=\"0\" />",
 			"</el-form-item>"
 		],
